@@ -1,0 +1,77 @@
+html, body{
+  height: 100%
+}
+
+@font-face {
+    font-family: 'Santor';
+    src: url('fonts/santor-webfont.eot');
+    src: url('fonts/santor-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/santor-webfont.woff') format('woff'),
+         url('fonts/santor-webfont.ttf') format('truetype'),
+         url('fonts/santor-webfont.svg#santorregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+canvas { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  background: #29abe2;
+}
+.wireframe-wrapper{
+  min-height: 100%;
+}
+
+.wireframe-wrapper .button{
+  border-color: #ffffff;
+  margin: 0 auto;
+  display: block;
+  height: 100%;
+}
+.wireframe-wrapper .button:focus{
+  background: none;
+}
+
+body{
+  background: #ffffff;
+  width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+  color: white;
+  font-family: "Santor";
+}
+
+#logo{
+  width: 100%;
+  margin-top: 40%;
+}
+
+.full-width{
+  width: 100%;
+}
+
+#uvp{
+  font-size: 1000%;
+}
+
+.uvp-row{
+  height: 80%;
+}
+
+.section-2{
+  background: #D3EBF5;
+}
+
+.button{
+  background: none;
+  border: solid 1px #29abe2;
+}
+
+.bottom{
+  position: absolute;
+  bottom: 20px;
+}
