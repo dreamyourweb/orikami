@@ -1,11 +1,12 @@
 Template.home.rendered = function (){
 	init(this.find(".wireframe-wrapper"));
 	animate();
+	$('.wireframe-wrapper canvas').parallax({ "coeff":0.5});
 }
 
-Template.goButton.events({
-	'click button': function(){
-		$.scrollTo( $('.section-2'), 500);
+Template.home.events({
+	'click .go-button': function(){
+		$.scrollTo( $('.s2'), 500);
 	}
 });
 

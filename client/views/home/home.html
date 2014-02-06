@@ -1,5 +1,5 @@
 <template name="home">
-  <div class="wireframe-wrapper full-width">	
+  <div class="wireframe-wrapper section s1">	
 		{{#constant}}{{/constant}}
 
     <div class="row">
@@ -9,23 +9,52 @@
     </div>
 
     <div class="bottom full-width">
-      {{>goButton}}
+      <button class="button round go-button">Read more</button>
     </div>
 
 	</div>
 
-  <div class="full-width section-2">
+  <div class="section s2">
+    <div class="row">
+      <ul class="small-block-grid-3 hexes">
+        <li class="hex green"><span>1</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="150px" height="150px" version="1.1"><polygon style="fill: none; stroke: #47b39d; stroke-width: 2px;" points="148,183.138 52,183.138 4,100 52,16.8616 148,16.8616 196,100 148,183.138" transform="rotate(30,100,100)"/></svg></li>
+        <li class="hex orange"><span>2</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="150px" height="150px" version="1.1"><polygon style="fill: none; stroke: #ffc662; stroke-width: 2px;" points="148,183.138 52,183.138 4,100 52,16.8616 148,16.8616 196,100 148,183.138" transform="rotate(30,100,100)"/></svg></li>
+        <li class="hex red"><span>3</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="150px" height="150px" version="1.1"><polygon style="fill: none; stroke: #ed7865; stroke-width: 2px;" points="148,183.138 52,183.138 4,100 52,16.8616 148,16.8616 196,100 148,183.138" transform="rotate(30,100,100)"/></svg></li>
+      </ul>
+    </div>
+    <div class="row">
+      <div class="small-4 columns">
+        <h3 class="centered green">Blabla blala</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.</p>
+      </div>
+      <div class="small-4 columns">
+        <h3 class="centered orange">Blabla blala</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.</p>
+      </div>
+      <div class="small-4 columns">
+        <h3 class="centered red">Blabla blala</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section s3">
     <div class="row">
       <div class="small-6 columns small-centered">
         <div id="logo">
-          <img src="images/logo.png"></div>
+          <img src="images/logo.png">
         </div>
       </div>
     </div>
   </div>
   
-</template>
-
-<template name="goButton">
-  <button class="button round">Read more</button>
 </template>
