@@ -106,5 +106,6 @@ function onWindowResize() {
 	camera.updateProjectionMatrix();
 
 	renderer.setSize( window.innerWidth, window.innerHeight );
+	$('.wireframe-wrapper canvas').parallax({ "coeff":0.5});
 
 }
