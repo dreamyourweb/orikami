@@ -22,7 +22,7 @@ function init(element) {
 	scene = new THREE.Scene();
 	camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
-	scene.add( new THREE.AmbientLight( 0x021F1F ) );
+	// scene.add( new THREE.AmbientLight( 0x021F1F ) );
 	pointLight = new THREE.PointLight( 0xffffff, 0.9 );
 	pointLight.position.z = 100;
 	scene.add( pointLight );
@@ -44,8 +44,9 @@ function init(element) {
 	vertices = [];
 	geometry.inits = [];
 	for (var i = 0; i < 200; i++) {
-		vert = new THREE.Vector3( w * Math.random() - w/2, h * Math.random() - h/2, Math.random())
+		vert = new THREE.Vector3( w * Math.random() - w/2, h * Math.random() - h/2, 0)
 		geometry.vertices.push(vert);
+
 		geometry.inits.push({z: vert.z, speed: Math.random()});
 		vertices.push([vert.x,vert.y])
 	}
@@ -53,7 +54,7 @@ function init(element) {
 	var triangles = Delaunay.triangulate(vertices);
 	// console.log(JSON.stringify(triangles));
 
-	colors = [];
+	// colors = [];
 	for (var i = 0; i < triangles.length; i+=3) {
 		// geometry.vertices.push( new THREE.Vector3( vertices[triangles[i]][0], vertices[triangles[i]][1], 0 ));
 		// geometry.vertices.push( new THREE.Vector3( vertices[triangles[i+1]][0], vertices[triangles[i+1]][1], 0 ));
@@ -62,7 +63,13 @@ function init(element) {
 		velocities.push( new THREE.Vector3( 2 * Math.random() - 1, 2 *  Math.random() - 1, 0) );
 		velocities.push( new THREE.Vector3( 2 * Math.random() - 1, 2 *  Math.random() - 1, 0) );
 
-		geometry.faces.push( new THREE.Face3( triangles[i+2], triangles[i+1], triangles[i] ) );
+		color = new THREE.Color();
+		color.setHSL(0.549, 0.76, 0.525 + 0.2*Math.random());		 
+
+		geometry.faces.push( new THREE.Face3( triangles[i+2], triangles[i+1], triangles[i] , new THREE.Vector3(0,0,1), color ));
+
+		
+		// geometry.colors.push(color);
 		// s1 = new THREE.Vector3( vertices[triangles[i]][0], vertices[triangles[i]][1], 0 ));
 		// s2 = new THREE.Vector3( vertices[triangles[i+1]][0], vertices[triangles[i+1]][1], 0 ));
 		// s3 = new THREE.Vector3( vertices[triangles[i+2]][0], vertices[triangles[i+2]][1], 0 ));
@@ -74,6 +81,7 @@ function init(element) {
 		// geometry.colors.[triangles[i+2] =
 	}
 
+	geometry.colorsNeedUpdate = true;
 	geometry.computeLineDistances();
 	geometry.computeFaceNormals();
 	console.log(JSON.stringify(geometry.lineDistances));
@@ -83,8 +91,11 @@ function init(element) {
 	// material = new THREE.ParticleBasicMaterial( { color: 0x000000, size: 5 } );
 	// particles = new THREE.ParticleSystem( geometry, material );
 
-	wireframeMaterial = new THREE.MeshBasicMaterial( {color: 0x29abe2, wireframe: true} );
-	polygonMaterial = new THREE.MeshLambertMaterial({shading: THREE.FlatShading, color: 0x29abe2, emissive: 0x010D0D});	
+	color = new THREE.Color();
+	color.setHSL(0.549, 0.76, 0.8);		 
+
+	wireframeMaterial = new THREE.MeshBasicMaterial( {color: color, wireframe: true} );
+	polygonMaterial = new THREE.MeshLambertMaterial({shading: THREE.FlatShading, vertexColors: THREE.FaceColors});	
 	polygons = new THREE.Mesh( geometry, polygonMaterial );
 	wireframe = new THREE.Mesh( geometry, wireframeMaterial );
 	wireframe.position.z += 0.01;
