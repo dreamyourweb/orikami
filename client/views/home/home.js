@@ -23,7 +23,7 @@ function init(element) {
 	camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
 	// scene.add( new THREE.AmbientLight( 0x021F1F ) );
-	pointLight = new THREE.PointLight( 0xffffff, 0.9 );
+	pointLight = new THREE.PointLight( 0xffffff, 1 );
 	pointLight.position.z = 100;
 	scene.add( pointLight );
 	// directionalLight = new THREE.DirectionalLight( 0xffffff, 0.125 );
@@ -49,6 +49,7 @@ function init(element) {
 
 		geometry.inits.push({z: vert.z, speed: Math.random()});
 		vertices.push([vert.x,vert.y])
+		velocities.push( new THREE.Vector3( 2 * Math.random() - 1, 2 *  Math.random() - 1, 0) );
 	}
 
 	var triangles = Delaunay.triangulate(vertices);
@@ -56,29 +57,11 @@ function init(element) {
 
 	// colors = [];
 	for (var i = 0; i < triangles.length; i+=3) {
-		// geometry.vertices.push( new THREE.Vector3( vertices[triangles[i]][0], vertices[triangles[i]][1], 0 ));
-		// geometry.vertices.push( new THREE.Vector3( vertices[triangles[i+1]][0], vertices[triangles[i+1]][1], 0 ));
-		// geometry.vertices.push( new THREE.Vector3( vertices[triangles[i+2]][0], vertices[triangles[i+2]][1], 0 ));
-		velocities.push( new THREE.Vector3( 2 * Math.random() - 1, 2 *  Math.random() - 1, 0) );
-		velocities.push( new THREE.Vector3( 2 * Math.random() - 1, 2 *  Math.random() - 1, 0) );
-		velocities.push( new THREE.Vector3( 2 * Math.random() - 1, 2 *  Math.random() - 1, 0) );
-
+		
 		color = new THREE.Color();
 		color.setHSL(0.549, 0.76, 0.525 + 0.2*Math.random());		 
 
 		geometry.faces.push( new THREE.Face3( triangles[i+2], triangles[i+1], triangles[i] , new THREE.Vector3(0,0,1), color ));
-
-		
-		// geometry.colors.push(color);
-		// s1 = new THREE.Vector3( vertices[triangles[i]][0], vertices[triangles[i]][1], 0 ));
-		// s2 = new THREE.Vector3( vertices[triangles[i+1]][0], vertices[triangles[i+1]][1], 0 ));
-		// s3 = new THREE.Vector3( vertices[triangles[i+2]][0], vertices[triangles[i+2]][1], 0 ));
-
-		// particles.geometry.vertices[i].distanceTo(particles.geometry.vertices[j]);
-
-		// geometry.colors.[triangles[i] =
-		// geometry.colors.[triangles[i+1] =
-		// geometry.colors.[triangles[i+2] =
 	}
 
 	geometry.colorsNeedUpdate = true;
@@ -103,7 +86,7 @@ function init(element) {
 	// geometry = new THREE.CubeGeometry( 10, 10, 10 );
 	// polygons = new THREE.Mesh( geometry, polygonMaterial );
 	scene.add(polygons);
-	scene.add(wireframe);
+	// scene.add(wireframe);
 
 	camera.position.z = 5;
 	window.addEventListener( 'resize', onWindowResize, false );
