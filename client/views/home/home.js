@@ -14,13 +14,13 @@ var container, stats;
 var camera, scene, renderer, particles, geometry, materials = [], parameters, i, h, w, color, velocities, polygons, pointLight, initial_z=[];
 var mouseX = 0, mouseY = 0;
 
-var windowHalfX = window.innerWidth / 2;
+var windowHalfX = $('.wireframe-wrapper').width() / 2;
 var windowHalfY = window.innerHeight / 2;
 var clock = new THREE.Clock;
 
 function init(element) {
 	scene = new THREE.Scene();
-	camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+	camera = new THREE.PerspectiveCamera( 75, $('.wireframe-wrapper').width() / window.innerHeight, 0.1, 1000 );
 
 	// scene.add( new THREE.AmbientLight( 0x021F1F ) );
 	pointLight = new THREE.PointLight( 0xffffff, 1 );
@@ -31,7 +31,7 @@ function init(element) {
 	// scene.add(directionalLight);
 
 	renderer = new THREE.WebGLRenderer({antialias: true});
-	renderer.setSize( window.innerWidth, window.innerHeight );
+	renderer.setSize( $('.wireframe-wrapper').width(), window.innerHeight );
 
 	element.appendChild( renderer.domElement );
 
@@ -57,9 +57,9 @@ function init(element) {
 
 	// colors = [];
 	for (var i = 0; i < triangles.length; i+=3) {
-		
+
 		color = new THREE.Color();
-		color.setHSL(0.549, 0.76, 0.525 + 0.2*Math.random());		 
+		color.setHSL(0.549, 0.76, 0.525 + 0.2*Math.random());
 
 		geometry.faces.push( new THREE.Face3( triangles[i+2], triangles[i+1], triangles[i] , new THREE.Vector3(0,0,1), color ));
 	}
@@ -75,10 +75,10 @@ function init(element) {
 	// particles = new THREE.ParticleSystem( geometry, material );
 
 	color = new THREE.Color();
-	color.setHSL(0.549, 0.76, 0.8);		 
+	color.setHSL(0.549, 0.76, 0.8);
 
 	wireframeMaterial = new THREE.MeshBasicMaterial( {color: color, wireframe: true} );
-	polygonMaterial = new THREE.MeshLambertMaterial({shading: THREE.FlatShading, vertexColors: THREE.FaceColors});	
+	polygonMaterial = new THREE.MeshLambertMaterial({shading: THREE.FlatShading, vertexColors: THREE.FaceColors});
 	polygons = new THREE.Mesh( geometry, polygonMaterial );
 	wireframe = new THREE.Mesh( geometry, wireframeMaterial );
 	wireframe.position.z += 0.01;
@@ -113,16 +113,16 @@ function render() {
 
 	// lines.geometry.vertices = [];
 	// lines.geometry.colors = [];
-	
+
 	// for (var i = particles.geometry.vertices.length - 1; i >= 0; i--) {
 	// 	for (var j = particles.geometry.vertices.length - 1; j >= 0; j--) {
-	// 		// if (particles.geometry.vertices[i].length() < 4 && 
+	// 		// if (particles.geometry.vertices[i].length() < 4 &&
 	// 		// 		particles.geometry.vertices[j].length() < 4){
 
 	// 			distance = particles.geometry.vertices[i].distanceTo(particles.geometry.vertices[j]);
 	// 			if (distance < h/5){
 	// 				lines.geometry.vertices.push(new THREE.Vector3( particles.geometry.vertices[i].x, particles.geometry.vertices[i].y, particles.geometry.vertices[i].z ));
-	// 				lines.geometry.vertices.push(new THREE.Vector3( particles.geometry.vertices[j].x, particles.geometry.vertices[j].y, particles.geometry.vertices[j].z ));				
+	// 				lines.geometry.vertices.push(new THREE.Vector3( particles.geometry.vertices[j].x, particles.geometry.vertices[j].y, particles.geometry.vertices[j].z ));
 	// 				color = new THREE.Color();
 	// 				color.setHSL(0.549, 0.76, 0.525 + ( 0.475 * (1 - distance/(h/5)))  );
 	// 				lines.geometry.colors.push(color);
@@ -130,7 +130,7 @@ function render() {
 	// 			}
 	// 		// }
 	// 	};
-	// };	
+	// };
 
 	polygons.geometry.verticesNeedUpdate = true;
 	// lines.geometry.verticesNeedUpdate = true;
@@ -148,10 +148,10 @@ function animate() {
 
 function onWindowResize() {
 
-	camera.aspect = window.innerWidth / window.innerHeight;
+	camera.aspect = $('.wireframe-wrapper').width() / window.innerHeight;
 	camera.updateProjectionMatrix();
 
-	renderer.setSize( window.innerWidth, window.innerHeight );
+	renderer.setSize( $('.wireframe-wrapper').width(), window.innerHeight );
 	$('.wireframe-wrapper canvas').parallax({ "coeff":0.5});
 
 }

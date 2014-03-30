@@ -6,8 +6,6 @@
 standard-app-packages
 autopublish
 insecure
-preserve-inputs
-iron-router
 three.js
-foundation-5
-jquery-scrollTo
+iron-router
+foundation5-sass

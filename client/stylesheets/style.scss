@@ -1,3 +1,5 @@
+@import "packages/foundation5-sass/foundation";
+
 html, body{
   height: 100%
 }
@@ -24,9 +26,6 @@ html, body{
     font-style: normal;
 
 }
-
-
-
 
 @font-face {
     font-family: 'Montserrat Regular';
