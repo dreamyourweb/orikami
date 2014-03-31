@@ -41,6 +41,7 @@ html, body{
     font-style: normal;
 
 }
+img { -ms-interpolation-mode: bicubic; }
 
 .section{
   padding-top: 50px;
@@ -245,5 +246,12 @@ span.brand{
     letter-spacing: 0;
     color: #eee;
     font-size: 50%;
+  }
+  object.navbar-logo{
+    height: $topnav-height - 20px;
+    // margin-top: 5px;
+    // margin-bottom: 15px;
+    margin-right: 10px;
+    display: inline;
   }
 }

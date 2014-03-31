@@ -3,7 +3,9 @@ template(name='home')
   .topnav(class="#{showNavBar}")
     .row
       .small-12.columns
-        span.brand orikami
+        span.brand
+          object.navbar-logo(type="image/svg+xml" data="images/logo_boat.svg")
+          | orikami
           small  data science boutique
         dl.sub-nav.right
           dd(data-arrival="core")
