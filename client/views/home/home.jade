@@ -1,0 +1,104 @@
+template(name='home')
+
+  .topnav(class="#{showNavBar}")
+    .row
+      .small-12.columns
+        span.brand orikami
+          small  data science boutique
+        dl.sub-nav.right
+          dd(data-arrival="core")
+            a(href="#core") Core values
+          dd(data-arrival="products")
+            a(href="#products") Products
+          dd(data-arrival="data-science")
+            a(href="#data-science") Data science
+
+  .wireframe-wrapper.section.s1
+    .row
+      .small-12.columns
+        #uvp
+          h1 Explore the seas of data
+          h2 Orikami believes there is more to be learned from data
+    .row
+      .small-4.columns.small-centered
+        #logo
+          img(src='images/logo_boat.png')
+
+    .bottom.full-width
+      button.button.round.go-button Read more
+
+  .section.s2(data-destination="core")
+    a(name="core")
+    .row
+      ul.small-block-grid-3.hexes
+        li.hex.green
+          span 1
+          svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 200 200', width='150px', height='150px', version='1.1')
+            polygon(style='fill: none; stroke: #47b39d; stroke-width: 2px;', points='148,183.138 52,183.138 4,100 52,16.8616 148,16.8616 196,100 148,183.138', transform='rotate(30,100,100)')
+        li.hex.orange
+          span 2
+          svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 200 200', width='150px', height='150px', version='1.1')
+            polygon(style='fill: none; stroke: #ffc662; stroke-width: 2px;', points='148,183.138 52,183.138 4,100 52,16.8616 148,16.8616 196,100 148,183.138', transform='rotate(30,100,100)')
+        li.hex.red
+          span 3
+          svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 200 200', width='150px', height='150px', version='1.1')
+            polygon(style='fill: none; stroke: #ed7865; stroke-width: 2px;', points='148,183.138 52,183.138 4,100 52,16.8616 148,16.8616 196,100 148,183.138', transform='rotate(30,100,100)')
+    .row
+      .small-4.columns
+        h3.centered.green Curious
+        p
+          | Orikami stimulates curiousity. We don't stop where the world ends. We reach further and ask more questions. That's how we uncover the most fascinating and rewarding stories. Our data scientists push the envelop. Curiousity is the key.
+      .small-4.columns
+        h3.centered.orange Analytic
+        p
+          | Data always has its secrets. Fully equipped with the most modern tools our extremely mathematically trained data scientists are up to reveal.  That's how these brilliant analytical talents are able to enrich, couple and analyze data. The end result: pure wisdom.
+      .small-4.columns
+        h3.centered.red Together
+        p
+          | At Orikami we collaborate. We partner up. Together with our partners we form innovation teams. The teams usually consist of domain experts, data scientists and business developers. Nobody is perfect, but a team can be.
+
+      //-  <div class="bottom full-width">
+      //-   <button class="button round go-button">About Orikami</button>
+      //- </div>
+
+  .section.parallax.s3(data-destination="products")
+    a(name="products")
+    .row
+      .small-12.columns
+        h2 At Orikami we fold data into products
+
+
+  .section.s4
+    .row
+      .small-12.columns
+        p
+          | Orikami is a product innovation boutique. Together with our partners we innovate by creating excellent data products. We investigate and build the most ellegant algorithms, the most predictive models and the smartest sensors.
+          | Orikami is a product innovation boutique. Together with our partners we innovate by creating excellent data products. We investigate and build the most ellegant algorithms, the most predictive models and the smartest sensors.
+          | Orikami is a product innovation boutique. Together with our partners we innovate by creating excellent data products. We investigate and build the most ellegant algorithms, the most predictive models and the smartest sensors.
+
+  .section.parallax.s5(data-destination="data-science")
+    a(name="data-science")
+    .row
+      .small-12.columns
+        h2 A selection of excellent data science
+
+  .section.s6
+    .row
+      .small-6.columns
+        object.bayes-eq(type="image/svg+xml" data="images/bayes_eq.svg")
+      .small-6.columns
+        p
+          | Orikami is a product innovation boutique. Together with our partners we innovate by creating excellent data products. We investigate and build the most ellegant algorithms, the most predictive models and the smartest sensors.
+          | Orikami is a product innovation boutique. Together with our partners we innovate by creating excellent data products. We investigate and build the most ellegant algorithms, the most predictive models and the smartest sensors.
+          | Orikami is a product innovation boutique. Together with our partners we innovate by creating excellent data products. We investigate and build the most ellegant algorithms, the most predictive models and the smartest sensors.
+
+  .section.parallax.s7
+    .row
+      .small-12.columns
+        h2 Our team
+
+  .section.s8
+    .row
+      .small-12.columns
+        h3 Our team
+        p Bram den Teuling, Andres Lamont, Luc Vandewall

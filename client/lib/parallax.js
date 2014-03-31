@@ -12,10 +12,10 @@
             $(window).bind('scroll', function() {
                 windowTop = $(window).scrollTop();
                 if((windowTop >= opts.start) && (windowTop <= opts.stop)) {
-                    newCoord = windowTop * opts.coeff;
+                    newCoord = windowTop - (opts.start) * opts.coeff;
                     $$.css("top", newCoord + "px");
                 }
             });
         });
     };
-})(jQuery); 
+})(jQuery);

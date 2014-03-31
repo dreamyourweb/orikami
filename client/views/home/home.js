@@ -1,14 +1,34 @@
 Template.home.rendered = function (){
 	init(this.find(".wireframe-wrapper"));
-	animate();
-	$('.wireframe-wrapper canvas').parallax({ "coeff":0.5});
+	// animate();
+	$('.wireframe-wrapper canvas').attr('data-stellar-ratio', 0,5);
+	// $('.s3 .background').parallax({ "coeff":0.5, "start": $('.s3 .background').offset().top - window.innerHeight});
+	$('.s3').attr('data-stellar-background-ratio', 0.8);
+	$('.s3').attr('data-stellar-vertical-offset', -400);
+	$('.s5').attr('data-stellar-background-ratio', 0.8);
+	$('.s5').attr('data-stellar-vertical-offset', -400);
+	$('.s7').attr('data-stellar-background-ratio', 0.8);
+	$('.s7').attr('data-stellar-vertical-offset', -400);
+  $.stellar();
+  $(document).foundation();
 }
+
+Template.home.helpers({
+	showNavBar: function(){
+		if ( !Session.get("navbar_visible") ){
+			return "closed"
+		}
+	}
+})
 
 Template.home.events({
 	'click .go-button': function(){
-		$.scrollTo( $('.s2'), 500);
+		$.scrollTo( $('.s2'), 500, {offset:-50});
+		$("[data-arrival=core]").addClass("active");
+		Session.set("navbar_visible", true);
 	}
 });
+
 
 var container, stats;
 var camera, scene, renderer, particles, geometry, materials = [], parameters, i, h, w, color, velocities, polygons, pointLight, initial_z=[];
@@ -59,7 +79,8 @@ function init(element) {
 	for (var i = 0; i < triangles.length; i+=3) {
 
 		color = new THREE.Color();
-		color.setHSL(0.549, 0.76, 0.525 + 0.2*Math.random());
+		// 0.525 0.2
+		color.setHSL(0.549, 0.76, 0.9 + 0.1*Math.random());
 
 		geometry.faces.push( new THREE.Face3( triangles[i+2], triangles[i+1], triangles[i] , new THREE.Vector3(0,0,1), color ));
 	}
@@ -91,13 +112,13 @@ function init(element) {
 	camera.position.z = 5;
 	window.addEventListener( 'resize', onWindowResize, false );
 	clock.start();
-
+	renderer.render(scene, camera);
 }
 
 
 function render() {
 	// var delta = clock.getDelta() * 1000;
-	pointLight.position.y = 16 - $(window).scrollTop() / 10;
+	// pointLight.position.y = 16 - $(window).scrollTop() / 10;
 
 	// for (var i = 0 ; i < polygons.geometry.vertices.length; i++) {
 
@@ -153,5 +174,6 @@ function onWindowResize() {
 
 	renderer.setSize( $('.wireframe-wrapper').width(), window.innerHeight );
 	$('.wireframe-wrapper canvas').parallax({ "coeff":0.5});
+	render();
 
 }

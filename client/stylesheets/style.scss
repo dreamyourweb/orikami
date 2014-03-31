@@ -1,5 +1,8 @@
 @import "packages/foundation5-sass/foundation";
 
+$primary-color: #29abe2;
+$secondary-color: #8dd8d8;
+
 html, body{
   height: 100%
 }
@@ -44,7 +47,7 @@ html, body{
   padding-bottom: 50px;
   width: 100%;
   position: relative;
-  background-color: white;
+  background: white;
 }
 
 canvas {
@@ -62,7 +65,8 @@ canvas {
 }
 
 .wireframe-wrapper .button{
-  border-color: #ffffff;
+  color: $primary-color;
+  border-color: $primary-color;
   margin: 0 auto;
   display: block;
   height: 100%;
@@ -73,6 +77,15 @@ canvas {
 
 .wireframe-wrapper .button:hover{
   background: #8dd8d8;
+  // border-color: #fff;
+  // color: #fff;
+}
+
+.background{
+  width: 100%;
+  position: absolute;
+  // top: -50%;
+  // z-index: -1;
 }
 
 body{
@@ -99,18 +112,50 @@ h1{
 }
 
 #uvp{
-  font-size: 1000%;
+  h1{
+    color: $primary-color;
+    font-size: 1000%;
+    line-height: 0.9;
+  }
+  h2{
+    color: darken($secondary-color,20%);
+  }
+
 }
 
-.uvp-row{
-  height: 80%;
+.parallax.section h2{
+  padding-top: 250px;
+  color: white;
+  font-size: 300%;
 }
 
 .s2{
   background: #D3EBF5;
 }
+.s3{
+  background: url(images/boat_water.jpg);
+  background-size: 100% auto;
+  height: 400px;
+}
+.s4{
+
+}
+.s5{
+  background: url(images/origami_hand.jpg);
+  background-size: 100% auto;
+  height: 400px;
+}
+.s6{
+
+}
+.s7{
+  background: url(images/a_team.jpg);
+  background-size: 100% auto;
+  height: 400px;
+}
 
 .button{
+  color: $primary-color;
   background: none;
   border: solid 1px #29abe2;
 }
@@ -148,4 +193,57 @@ h1{
 
 .centered{
   text-align: center;
+}
+
+.bayes-eq{
+  width: 100%;
+}
+
+$topnav-height: 50px;
+.topnav{
+  position: fixed;
+  top: 0;
+  z-index: 50;
+  height: $topnav-height;
+  background: black;
+  overflow: hidden;
+  width: 100%;
+  transition: top 200ms linear;
+  &.closed{
+    // margin: 0;
+    top: -$topnav-height;
+    transition: top 200ms linear;
+  }
+  .sub-nav dd{
+    margin-left: 0;
+    line-height:  $topnav-height;
+    font-weight: bold;
+    a{
+      color: #eee;
+      padding: 0.3rem 0.5rem;
+    }
+    &.active{
+      a{
+        font-weight: bold;
+        color: black;
+        border-radius: 0;
+        background-color: #eee;
+      }
+    }
+  }
+}
+
+span.brand{
+  font-size: $topnav-height - 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  line-height: $topnav-height;
+  font-family: "Santor";
+  color: $primary-color;
+  letter-spacing: 6px;
+  small{
+    letter-spacing: 0;
+    color: #eee;
+    font-size: 50%;
+  }
 }
