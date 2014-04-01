@@ -1,10 +1,17 @@
-@import "packages/foundation5-sass/foundation";
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+$base-font-size: 14px;
+// $rem-base: $base-font-size;
 
 $primary-color: #29abe2;
 $secondary-color: #8dd8d8;
+$black: #111;
+$white: #afafaf;
+
+@import "packages/foundation5-sass/foundation";
 
 html, body{
-  height: 100%
+  height: 100%;
 }
 
 @font-face {
@@ -18,29 +25,6 @@ html, body{
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'Montserrat Bold';
-    src: url('fonts/montserrat-bold-webfont.eot');
-    src: url('fonts/montserrat-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/montserrat-bold-webfont.woff') format('woff'),
-         url('fonts/montserrat-bold-webfont.ttf') format('truetype'),
-         url('fonts/montserrat-bold-webfont.svg#montserratbold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'Montserrat Regular';
-    src: url('fonts/montserrat-regular-webfont.eot');
-    src: url('fonts/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/montserrat-regular-webfont.woff') format('woff'),
-         url('fonts/montserrat-regular-webfont.ttf') format('truetype'),
-         url('fonts/montserrat-regular-webfont.svg#montserratregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
 img { -ms-interpolation-mode: bicubic; }
 
 .section{
@@ -92,7 +76,10 @@ canvas {
 body{
   background: #ffffff;
   width: 100%;
-  font-family: "Open Sans";
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  // font-family: "Open Sans";
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -104,8 +91,9 @@ h1{
 }
 
 #logo{
-  width: 100%;
-  margin-top: 40%;
+  height: 200px;
+  margin: 40px auto 40px auto;
+  display: block;
 }
 
 .full-width{
@@ -155,10 +143,36 @@ h1{
   height: 400px;
 }
 
+.section.our-team{
+  h5{
+    text-align: center;
+  }
+  .hexagon{
+    margin: 0 auto;
+  }
+}
+
+.section#map{
+  background-color: #eeece1;
+  height: 100px;
+  &.large{
+    height: 400px;
+  }
+  transition: height 200ms linear;
+}
+.section.contact{
+  background-color: lighten($secondary-color,10%);
+}
+
 .button{
+  font-family: 'Montserrat', sans-serif;
   color: $primary-color;
   background: none;
   border: solid 1px #29abe2;
+}
+
+button:hover, button:focus, .button:hover, .button:focus{
+  background: $primary-color;
 }
 
 .bottom{
@@ -172,20 +186,21 @@ h1{
 
 .hex{
   /*background: url('images/hex-green.png');*/
-  background-repeat: no-repeat;
-  background-position: center;
   font-size: 500%;
   font-family: "Santor";
   position: relative;
+  svg{
+    display: block;
+    margin: 0 auto;
+  }
   line-height: 0;
 }
 
 .hex span{
   position: absolute;
   width: 100%;
-  text-align:center;
+  text-align: center;
   padding-top: 75px;
-  padding-right: 20px;
 }
 
 .green{ color: #47b39d; }
@@ -202,11 +217,12 @@ h1{
 
 $topnav-height: 50px;
 .topnav{
+  font-family: "Santor";
   position: fixed;
   top: 0;
   z-index: 50;
   height: $topnav-height;
-  background: black;
+  background: $black;
   overflow: hidden;
   width: 100%;
   transition: top 200ms linear;
@@ -222,16 +238,23 @@ $topnav-height: 50px;
     a{
       color: #eee;
       padding: 0.3rem 0.5rem;
+      &:focus{
+        outline: none;
+      }
     }
     &.active{
       a{
         font-weight: bold;
-        color: black;
+        color: $black;
         border-radius: 0;
         background-color: #eee;
       }
     }
   }
+}
+
+.tweet{
+
 }
 
 span.brand{
@@ -244,7 +267,7 @@ span.brand{
   letter-spacing: 6px;
   small{
     letter-spacing: 0;
-    color: #eee;
+    color: $white;
     font-size: 50%;
   }
   object.navbar-logo{
@@ -254,4 +277,24 @@ span.brand{
     margin-right: 10px;
     display: inline;
   }
+}
+
+footer.section{
+  background: $black;
+  color: $white;
+  h3{color: $white;}
+  .footer-logo{
+    width: 100%;
+    padding: 50px 50px 0;
+  }
+}
+
+span.all-caps{
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+ul.notifications{
+  position: fixed;
+  top: $topnav-height;
 }

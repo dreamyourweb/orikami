@@ -5,6 +5,10 @@
     "iron-router": {},
     "foundation5-sass": {},
     "jade": {},
-    "stellar": {}
+    "stellar": {},
+    "npm": {},
+    "leaflet": {},
+    "autoform": {},
+    "notifications": {}
   }
 }

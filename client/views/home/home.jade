@@ -14,6 +14,8 @@ template(name='home')
             a(href="#products") Products
           dd(data-arrival="data-science")
             a(href="#data-science") Data science
+          dd(data-arrival="contact")
+            a(href="#contact") Contact
 
   .wireframe-wrapper.section.s1
     .row
@@ -22,9 +24,8 @@ template(name='home')
           h1 Explore the seas of data
           h2 Orikami believes there is more to be learned from data
     .row
-      .small-4.columns.small-centered
-        #logo
-          img(src='images/logo_boat.png')
+      .small-12.columns
+        object#logo(type="image/svg+xml" data="images/logo_boat.svg")
 
     .bottom.full-width
       button.button.round.go-button Read more
@@ -32,29 +33,28 @@ template(name='home')
   .section.s2(data-destination="core")
     a(name="core")
     .row
-      ul.small-block-grid-3.hexes
-        li.hex.green
+      .medium-4.columns
+        .hex.green
           span 1
           svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 200 200', width='150px', height='150px', version='1.1')
             polygon(style='fill: none; stroke: #47b39d; stroke-width: 2px;', points='148,183.138 52,183.138 4,100 52,16.8616 148,16.8616 196,100 148,183.138', transform='rotate(30,100,100)')
-        li.hex.orange
-          span 2
-          svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 200 200', width='150px', height='150px', version='1.1')
-            polygon(style='fill: none; stroke: #ffc662; stroke-width: 2px;', points='148,183.138 52,183.138 4,100 52,16.8616 148,16.8616 196,100 148,183.138', transform='rotate(30,100,100)')
-        li.hex.red
-          span 3
-          svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 200 200', width='150px', height='150px', version='1.1')
-            polygon(style='fill: none; stroke: #ed7865; stroke-width: 2px;', points='148,183.138 52,183.138 4,100 52,16.8616 148,16.8616 196,100 148,183.138', transform='rotate(30,100,100)')
-    .row
-      .small-4.columns
+              image(src="a_team.jpg")
         h3.centered.green Curious
         p
           | Orikami stimulates curiousity. We don't stop where the world ends. We reach further and ask more questions. That's how we uncover the most fascinating and rewarding stories. Our data scientists push the envelop. Curiousity is the key.
-      .small-4.columns
+      .medium-4.columns
+        .hex.orange
+          span 2
+          svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 200 200', width='150px', height='150px', version='1.1')
+            polygon(style='fill: none; stroke: #ffc662; stroke-width: 2px;', points='148,183.138 52,183.138 4,100 52,16.8616 148,16.8616 196,100 148,183.138', transform='rotate(30,100,100)')
         h3.centered.orange Analytic
         p
           | Data always has its secrets. Fully equipped with the most modern tools our extremely mathematically trained data scientists are up to reveal.  That's how these brilliant analytical talents are able to enrich, couple and analyze data. The end result: pure wisdom.
-      .small-4.columns
+      .medium-4.columns
+        .hex.red
+          span 3
+          svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 200 200', width='150px', height='150px', version='1.1')
+            polygon(style='fill: none; stroke: #ed7865; stroke-width: 2px;', points='148,183.138 52,183.138 4,100 52,16.8616 148,16.8616 196,100 148,183.138', transform='rotate(30,100,100)')
         h3.centered.red Together
         p
           | At Orikami we collaborate. We partner up. Together with our partners we form innovation teams. The teams usually consist of domain experts, data scientists and business developers. Nobody is perfect, but a team can be.
@@ -86,8 +86,15 @@ template(name='home')
 
   .section.s6
     .row
+      .small-12.columns
+        object.bayes-eq(type="image/svg+xml" data="images/nbc.svg")
+    .row
       .small-6.columns
-        object.bayes-eq(type="image/svg+xml" data="images/bayes_eq.svg")
+        //- //- input#sentimentInput(type="text" name="sentiment_input")
+        //- p #{sentiment} #{sentiment_raw}
+        //- .panel
+        //-   | #{tweet}
+
       .small-6.columns
         p
           | Orikami is a product innovation boutique. Together with our partners we innovate by creating excellent data products. We investigate and build the most ellegant algorithms, the most predictive models and the smartest sensors.
@@ -99,8 +106,75 @@ template(name='home')
       .small-12.columns
         h2 Our team
 
-  .section.s8
+  .section.our-team
+    .row
+      .medium-4.columns
+        .hexagon.hexagon1
+          .hexagon-in1
+            .hexagon-in2
+        h5 Bram den Teuling
+      .medium-4.columns
+        .hexagon.hexagon1
+          .hexagon-in1
+            .hexagon-in2
+        h5 Andres Lamont
+      .medium-4.columns
+        .hexagon.hexagon1
+          .hexagon-in1
+            .hexagon-in2
+        h5 Luc Vandewall
+
+  .section#map
+
+  .section.contact(data-destination="contact")
+    a(name="contact")
     .row
       .small-12.columns
-        h3 Our team
-        p Bram den Teuling, Andres Lamont, Luc Vandewall
+        h2 Check us out!
+    .row
+      .medium-6.columns
+        .row
+          .medium-12.columns
+            h5 Address
+        .row
+          .medium-6.columns
+            ul.no-bullet
+              li Stationsplein 13-22
+              li 6512 AB Nijmegen
+              li Room 2.07 en 2.08
+          .medium-6.columns
+            ul.no-bullet
+              li +31 (0)24-301 0100
+              li: a(href="skype:info-dyw?call") Call with Skype
+              li: a(href="mailto:info@orikami.nl") info@orikami.nl
+        .row
+          .medium-12.columns
+            dl
+              dt:| KvK:
+              dd:| 52749096
+              dt:| BTW:
+              dd:| 8505.80.626
+            h5 Route from Nijmegen central station
+            p: |We make our awesome products in the office building across the square at Nijmegen central station.
+
+
+      .medium-6.columns
+        +contactForm
+
+  footer.section
+    .row
+      .small-6.columns
+        object.footer-logo(type="image/svg+xml" data="images/logo.svg")
+      .small-6.columns
+        p We investigate and build the most ellegant algorithms, the most predictive models and the smartest sensors.
+        span.all-caps We are a data science boutique.
+
+        ul.side-nav
+          li(data-arrival="core")
+            a(href="#core") Core values
+          li(data-arrival="products")
+            a(href="#products") Products
+          li(data-arrival="data-science")
+            a(href="#data-science") Data science
+          li(data-arrival="contact")
+            a(href="#contact") Contact

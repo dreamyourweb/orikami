@@ -1,3 +1,5 @@
+var map;
+
 Template.home.rendered = function (){
 	init(this.find(".wireframe-wrapper"));
 	// animate();
@@ -10,12 +12,23 @@ Template.home.rendered = function (){
 	$('.s7').attr('data-stellar-vertical-offset', -400);
   $.stellar();
   $(document).foundation();
+  leaflet();
 }
+
 
 Template.home.helpers({
 	showNavBar: function(){
-		if ( !Session.get("navbar_visible") ){
+		if ( !Session.get("navbar_visible")){
 			return "closed"
+		}
+	},
+	sentiment: function(){
+		if(Session.get("sentiment_result") == "1"){
+			return "Positive";
+		}
+		else
+		{
+			return "Negative";
 		}
 	}
 })
@@ -28,6 +41,22 @@ Template.home.events({
 	},
 	'click [data-arrival]': function(event){
 		$.scrollTo($("[data-destination=" + $(event.currentTarget).data("arrival") + "]"), 500);
+	},
+	'keyup #sentimentInput': function(event){
+		Meteor.call("classify",$(event.currentTarget).val(),function(err,result){
+			Session.set("sentiment_result", result);
+		});
+		// Meteor.call("prob",$(event.currentTarget).val(),function(err,result){
+		// 	Session.set("sentiment_result", result);
+		// });
+	},
+	'mouseenter #map': function(event){
+		$("#map").addClass("large");
+		Meteor.setTimeout(function(){map.invalidateSize(true)}, 250);
+	},
+	'mouseleave #map': function(event){
+		$("#map").removeClass("large");
+		Meteor.setTimeout(function(){map.invalidateSize(true)}, 250);
 	}
 });
 
@@ -123,4 +152,18 @@ function onWindowResize() {
 	$('.wireframe-wrapper canvas').parallax({ "coeff":0.5});
 	render();
 
+}
+
+
+leaflet = function (){
+
+	map = L.map('map',{
+		zoomControl: false
+	}).setView([51.8430446,5.8545186], 18);
+	L.Icon.Default.imagePath = 'packages/leaflet/images';
+
+	L.marker([51.8430446,5.8545186]).addTo(map)
+	    .bindPopup('Orikami')
+	    .openPopup();
+	L.tileLayer.provider('OpenStreetMap.HOT').addTo(map)
 }
