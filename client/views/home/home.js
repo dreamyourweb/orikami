@@ -158,7 +158,7 @@ function onWindowResize() {
 leaflet = function (){
 
 	map = L.map('map',{
-		zoomControl: false
+		scrollWheelZoom: false
 	}).setView([51.8430446,5.8545186], 18);
 	L.Icon.Default.imagePath = 'packages/leaflet/images';
 

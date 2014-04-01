@@ -162,6 +162,10 @@ h1{
 }
 .section.contact{
   background-color: lighten($secondary-color,10%);
+  input, textarea{
+    background: lighten($secondary-color,20%);
+    border-color: lighten($primary-color,20%);
+  }
 }
 
 .button{
@@ -220,7 +224,7 @@ $topnav-height: 50px;
   font-family: "Santor";
   position: fixed;
   top: 0;
-  z-index: 50;
+  z-index: 5000;
   height: $topnav-height;
   background: $black;
   overflow: hidden;
@@ -251,10 +255,6 @@ $topnav-height: 50px;
       }
     }
   }
-}
-
-.tweet{
-
 }
 
 span.brand{
@@ -297,4 +297,23 @@ span.all-caps{
 ul.notifications{
   position: fixed;
   top: $topnav-height;
+}
+
+span.help-block{
+  @extend small.error;
+}
+
+.form-group{
+  span.help-block{
+    display: none;
+  }
+  input, textarea{
+    transition-property: none;
+  }
+  &.has-error{
+    input, textarea{
+      margin-bottom: 0;
+    }
+    span.help-block{display: block;}
+  }
 }
