@@ -25,21 +25,20 @@ html, body{
     font-style: normal;
 }
 
-img { -ms-interpolation-mode: bicubic; }
-
 .section{
   padding-top: 50px;
   padding-bottom: 50px;
   width: 100%;
   position: relative;
   background: white;
+  overflow: hidden;
 }
 
 canvas {
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 0;
+  position: fixed;
+  top: 0px;
   z-index: -1;
   background: #29abe2;
 }
@@ -54,7 +53,6 @@ canvas {
   border-color: $primary-color;
   margin: 0 auto;
   display: block;
-  height: 100%;
 }
 .wireframe-wrapper .button:focus{
   background: none;
@@ -152,13 +150,19 @@ h1{
   }
 }
 
-.section#map{
-  background-color: #eeece1;
-  height: 100px;
-  &.large{
-    height: 400px;
+.section.map{
+  height: 350px;
+  z-index: -1;
+  #map{
+    position: relative;
+    top: -150px;
+    background-color: #eeece1;
+    height: 100px;
+    &.large{
+      height: 650px;
+    }
+    transition: height 200ms linear;
   }
-  transition: height 200ms linear;
 }
 .section.contact{
   background-color: lighten($secondary-color,10%);
@@ -227,13 +231,13 @@ $topnav-height: 50px;
   z-index: 5000;
   height: $topnav-height;
   background: $black;
-  overflow: hidden;
+  // overflow: hidden;
   width: 100%;
   transition: top 200ms linear;
   &.closed{
     // margin: 0;
     top: -$topnav-height;
-    transition: top 200ms linear;
+    // transition: top 200ms linear;
   }
   .sub-nav dd{
     margin-left: 0;
@@ -285,7 +289,10 @@ footer.section{
   h3{color: $white;}
   .footer-logo{
     width: 100%;
-    padding: 50px 50px 0;
+    display: block;
+    margin: 0 auto;
+    // height: 250px;
+    padding: 50px;
   }
 }
 

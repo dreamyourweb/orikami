@@ -124,8 +124,6 @@ template(name='home')
             .hexagon-in2
         h5 Luc Vandewall
 
-  .section#map
-
   .section.contact(data-destination="contact")
     a(name="contact")
     .row
@@ -161,11 +159,14 @@ template(name='home')
       .medium-6.columns
         +contactForm
 
+  .section.map
+    #map.large(data-stellar-ratio="0.8")
+
   footer.section
     .row
-      .small-6.columns
+      .medium-6.columns
         object.footer-logo(type="image/svg+xml" data="images/logo.svg")
-      .small-6.columns
+      .medium-6.columns
         p We investigate and build the most ellegant algorithms, the most predictive models and the smartest sensors.
         span.all-caps We are a data science boutique.
 

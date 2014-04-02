@@ -3,7 +3,7 @@ var map;
 Template.home.rendered = function (){
 	init(this.find(".wireframe-wrapper"));
 	// animate();
-	$('.wireframe-wrapper canvas').attr('data-stellar-ratio', 0,5);
+	$('.wireframe-wrapper canvas').attr('data-stellar-ratio', 0.5);
 	$('.s3').attr('data-stellar-background-ratio', 0.8);
 	$('.s3').attr('data-stellar-vertical-offset', -400);
 	$('.s5').attr('data-stellar-background-ratio', 0.8);
@@ -35,9 +35,11 @@ Template.home.helpers({
 
 Template.home.events({
 	'click .go-button': function(){
-		$.scrollTo( $('.s2'), 500, {offset:-50});
+		$.scrollTo( $('.s2'), 500, {
+			offset:-49
+		});
 		$("[data-arrival=core]").addClass("active");
-		Session.set("navbar_visible", true);
+		// Session.set("navbar_visible", true);
 	},
 	'click [data-arrival]': function(event){
 		$.scrollTo($("[data-destination=" + $(event.currentTarget).data("arrival") + "]"), 500);
@@ -49,15 +51,15 @@ Template.home.events({
 		// Meteor.call("prob",$(event.currentTarget).val(),function(err,result){
 		// 	Session.set("sentiment_result", result);
 		// });
-	},
-	'mouseenter #map': function(event){
-		$("#map").addClass("large");
-		Meteor.setTimeout(function(){map.invalidateSize(true)}, 250);
-	},
-	'mouseleave #map': function(event){
-		$("#map").removeClass("large");
-		Meteor.setTimeout(function(){map.invalidateSize(true)}, 250);
 	}
+	// 'mouseenter #map': function(event){
+	// 	$("#map").addClass("large");
+	// 	Meteor.setTimeout(function(){map.invalidateSize(true)}, 250);
+	// },
+	// 'mouseleave #map': function(event){
+	// 	$("#map").removeClass("large");
+	// 	Meteor.setTimeout(function(){map.invalidateSize(true)}, 250);
+	// }
 });
 
 
@@ -76,7 +78,7 @@ function init(element) {
 	pointLight = new THREE.PointLight( 0xffffff, 1 );
 	pointLight.position.z = 100;
 	scene.add( pointLight );
-	renderer = new THREE.WebGLRenderer({antialias: true});
+	renderer = new THREE.CanvasRenderer({antialias: true});
 	renderer.setSize( $('.wireframe-wrapper').width(), window.innerHeight );
 
 	element.appendChild( renderer.domElement );
@@ -158,7 +160,8 @@ function onWindowResize() {
 leaflet = function (){
 
 	map = L.map('map',{
-		scrollWheelZoom: false
+		scrollWheelZoom: false,
+		zoomControl: false
 	}).setView([51.8430446,5.8545186], 18);
 	L.Icon.Default.imagePath = 'packages/leaflet/images';
 
