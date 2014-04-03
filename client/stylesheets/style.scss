@@ -196,14 +196,12 @@ h1{
 
 .section.map{
   height: 350px;
-  z-index: -1;
+  padding: 0;
   #map{
-    position: relative;
-    top: -150px;
     background-color: #eeece1;
     height: 100px;
     &.large{
-      height: 650px;
+      height: 350px;
     }
     transition: height 200ms linear;
   }

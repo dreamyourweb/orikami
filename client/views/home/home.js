@@ -151,8 +151,9 @@ function onWindowResize() {
 	camera.updateProjectionMatrix();
 
 	renderer.setSize( $('.wireframe-wrapper').width(), window.innerHeight );
-	$('.wireframe-wrapper canvas').parallax({ "coeff":0.5});
+	// $('.wireframe-wrapper canvas').parallax({ "coeff":0.5});
 	render();
+	map.invalidateSize(true);
 
 }
 
@@ -160,8 +161,8 @@ function onWindowResize() {
 leaflet = function (){
 
 	map = L.map('map',{
-		scrollWheelZoom: false,
-		zoomControl: false
+		scrollWheelZoom: false
+		// zoomControl: false
 	}).setView([51.8430446,5.8545186], 18);
 	L.Icon.Default.imagePath = 'packages/leaflet/images';
 
