@@ -146,7 +146,7 @@ h1{
 
 }
 .s7{
-  background: url(images/a_team.jpg);
+  background: url(images/orikami_team.jpg);
   background-size: 100% auto;
 }
 
@@ -166,11 +166,31 @@ h1{
 }
 
 .section.our-team{
-  h5{
+  h4,h5{
     text-align: center;
   }
-  .hexagon{
-    margin: 0 auto;
+  .team-image{
+    padding: 20px;
+    img{
+      visibility:hidden;
+    }
+    .hex{
+      width: 100%;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      &.andres{
+        background-image: url(images/andres-hex.png);
+        &:hover{ background-image: url(images/andres-hex-original.png) }
+      }
+      &.bram{
+        background-image: url(images/bram-hex.png);
+        &:hover{ background-image: url(images/bram-hex-original.png) }
+      }
+      &.luc{
+        background-image: url(images/luc-hex.png);
+        &:hover{ background-image: url(images/luc-hex-original.png) }
+      }
+    }
   }
 }
 
