@@ -33,35 +33,28 @@ template(name='home')
   .section.s2(data-destination="core")
     a(name="core")
     .row
-      .medium-4.columns
-        .hex.green
-          span 1
-          svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 200 200', width='150px', height='150px', version='1.1')
-            polygon(style='fill: none; stroke: #47b39d; stroke-width: 2px;', points='148,183.138 52,183.138 4,100 52,16.8616 148,16.8616 196,100 148,183.138', transform='rotate(30,100,100)')
-              image(src="a_team.jpg")
-        h3.centered.green Curious
-        p
-          | Orikami stimulates curiousity. We don't stop where the world ends. We reach further and ask more questions. That's how we uncover the most fascinating and rewarding stories. Our data scientists push the envelop. Curiousity is the key.
-      .medium-4.columns
-        .hex.orange
-          span 2
-          svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 200 200', width='150px', height='150px', version='1.1')
-            polygon(style='fill: none; stroke: #ffc662; stroke-width: 2px;', points='148,183.138 52,183.138 4,100 52,16.8616 148,16.8616 196,100 148,183.138', transform='rotate(30,100,100)')
-        h3.centered.orange Analytic
-        p
-          | Data always has its secrets. Fully equipped with the most modern tools our extremely mathematically trained data scientists are up to reveal.  That's how these brilliant analytical talents are able to enrich, couple and analyze data. The end result: pure wisdom.
-      .medium-4.columns
-        .hex.red
-          span 3
-          svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 200 200', width='150px', height='150px', version='1.1')
-            polygon(style='fill: none; stroke: #ed7865; stroke-width: 2px;', points='148,183.138 52,183.138 4,100 52,16.8616 148,16.8616 196,100 148,183.138', transform='rotate(30,100,100)')
-        h3.centered.red Together
-        p
-          | At Orikami we collaborate. We partner up. Together with our partners we form innovation teams. The teams usually consist of domain experts, data scientists and business developers. Nobody is perfect, but a team can be.
+      .medium-6.columns
+        //- img(src="images/curisity.png")
+      .medium-6.columns
+        h3.green Curiousity
+        p Orikami stimulates curiousity. We don't stop where the world ends. We reach further and ask more questions.
+        p That's how we uncover the most fascinating and rewarding stories. Our data scientists push the envelop. Curiousity is the key.
 
-      //-  <div class="bottom full-width">
-      //-   <button class="button round go-button">About Orikami</button>
-      //- </div>
+    .row
+      .medium-6.columns
+        h3.orange Analytic
+        p Data always has its secrets. Fully equipped with the most modern tools our extremely mathematically trained data scientists are up to reveal.
+        p That's how these brilliant analytical talents are able to enrich, couple and analyze data. The end result: pure wisdom.
+      .medium-6.columns
+        //- img(src="images/together.png")
+
+    .row
+      .medium-6.columns
+        //- img(src="images/curisity.png")
+      .medium-6.columns
+        h3.red Together
+        p At Orikami we collaborate. We partner up. Together with our partners we form innovation teams. The teams usually consist of domain experts, data scientists and business developers.
+        p Nobody is perfect, but a team can be.
 
   .section.parallax.s3(data-destination="products")
     a(name="products")
@@ -73,16 +66,13 @@ template(name='home')
   .section.s4
     .row
       .small-12.columns
-        p
-          | Orikami is a product innovation boutique. Together with our partners we innovate by creating excellent data products. We investigate and build the most ellegant algorithms, the most predictive models and the smartest sensors.
-          | Orikami is a product innovation boutique. Together with our partners we innovate by creating excellent data products. We investigate and build the most ellegant algorithms, the most predictive models and the smartest sensors.
-          | Orikami is a product innovation boutique. Together with our partners we innovate by creating excellent data products. We investigate and build the most ellegant algorithms, the most predictive models and the smartest sensors.
+        h3 Orikami is a product innovation boutique. Together with our partners we innovate by creating excellent data products. We investigate and build the most ellegant algorithms, the most predictive models and the smartest sensors.
 
   .section.parallax.s5(data-destination="data-science")
     a(name="data-science")
     .row
       .small-12.columns
-        h2 A selection of excellent data science
+        h2 Excellence in data science
 
   .section.s6
     .row
@@ -96,10 +86,14 @@ template(name='home')
         //-   | #{tweet}
 
       .small-6.columns
-        p
-          | Orikami is a product innovation boutique. Together with our partners we innovate by creating excellent data products. We investigate and build the most ellegant algorithms, the most predictive models and the smartest sensors.
-          | Orikami is a product innovation boutique. Together with our partners we innovate by creating excellent data products. We investigate and build the most ellegant algorithms, the most predictive models and the smartest sensors.
-          | Orikami is a product innovation boutique. Together with our partners we innovate by creating excellent data products. We investigate and build the most ellegant algorithms, the most predictive models and the smartest sensors.
+        h3 Orikami is not your run-of-the-mill data science company. We are not statisticians. we are computational neuroscientist. We are artificial intelligence scientists. We are real data scientists.
+
+  .section.parallax.showcase
+
+  .section
+    .row
+      .small-12.columns
+        object.bayes-eq(type="image/svg+xml" data="images/nbc.svg")
 
   .section.parallax.s7
     .row
@@ -110,20 +104,20 @@ template(name='home')
     .row
       .medium-4.columns
         .team-image
-          .hex.andres
-            img(src="images/andres-hex.png")
+          .hex.andres: img(src="images/andres-hex.png")
+          .hex.andres.back: img(src="images/andres-hex-original.png")
         h4 Andres Lamont
         h5 Data Scientist / Developer
       .medium-4.columns
         .team-image
-          .hex.bram
-            img(src="images/bram-hex.png")
+          .hex.bram: img(src="images/bram-hex.png")
+          .hex.bram.back: img(src="images/bram-hex-original.png")
         h4 Bram den Teuling
         h5 Data Scientist / Inspirator
       .medium-4.columns
         .team-image
-          .hex.luc
-            img(src="images/luc-hex.png")
+          .hex.luc: img(src="images/luc-hex.png")
+          .hex.luc.back: img(src="images/luc-hex-original.png")
         h4 Luc Vandewall
         h5 Business Developer / Realisator
 
