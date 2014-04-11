@@ -33,6 +33,9 @@ template(name='home')
   .section.s2(data-destination="core")
     a(name="core")
     .row
+      .medium-12.columns
+        h3 Orikami is not your run-of-the-mill data science company. We are not statisticians. we are computational neuroscientist. We are artificial intelligence scientists. We are real data scientists.
+    .row
       .medium-6.columns
         //- img(src="images/curisity.png")
       .medium-6.columns
@@ -77,23 +80,30 @@ template(name='home')
   .section.s6
     .row
       .small-12.columns
-        object.bayes-eq(type="image/svg+xml" data="images/nbc.svg")
-    .row
-      .small-6.columns
-        //- //- input#sentimentInput(type="text" name="sentiment_input")
-        //- p #{sentiment} #{sentiment_raw}
-        //- .panel
-        //-   | #{tweet}
-
-      .small-6.columns
         h3 Orikami is not your run-of-the-mill data science company. We are not statisticians. we are computational neuroscientist. We are artificial intelligence scientists. We are real data scientists.
-
-  .section.parallax.showcase
-
-  .section
     .row
-      .small-12.columns
-        object.bayes-eq(type="image/svg+xml" data="images/nbc.svg")
+      .medium-8.columns.small-10.columns.small-centered
+        object.fill.venn(type="image/svg+xml" data="images/venn.svg")
+    .row
+      .medium-4.columns
+        h4 Hacking Skills
+        p.review Data is a commodity traded electronically, therefore, in order to be in this market you need to speak hacker. Far from 'black hat' activities, data hackers must be able to manipulate text files at the command-line, thinking algorithmically, and be interested in learning new tools.
+      .medium-4.columns
+        h4 Math & Statistics
+        p.review Once you have acquired and cleaned the data, the next step is to actually extract insight from it. You need to apply appropriate math and statistics methods, which requires at least a baseline familiarity with these tools.
+      .medium-4.columns
+        h4 Domain Expertise
+        p.review Science is about discovery and building knowledge, which requires some motivating questions about the world and hypotheses that can be brought to data and tested with statistical methods. Questions first, then data.
+
+
+
+
+  //- .section.parallax.showcase
+
+  //- .section
+  //-   .row
+  //-     .small-12.columns
+  //-       object.bayes-eq(type="image/svg+xml" data="images/nbc.svg")
 
   .section.parallax.s7
     .row

@@ -189,7 +189,7 @@ h1{
       background-size: 100%;
       background-repeat: no-repeat;
       backface-visibility: hidden;
-      transition: transform 350ms ease-in-out;
+      transition: transform 500ms ease-in-out;
     }
     &:hover{
       .hex{
@@ -382,4 +382,18 @@ span.help-block{
     }
     span.help-block{display: block;}
   }
+}
+
+object.fill{
+  width: 100%;
+  display: block;
+}
+
+.venn{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.review{
+  color: red;
 }
