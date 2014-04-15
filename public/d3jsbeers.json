@@ -1,0 +1,702 @@
+[
+    {
+        "name": "Blond//Kasteel Hoppy", 
+        "similar": [
+            "Blond//Kasteel Hoppy", 
+            "Blond//Hert Vijlener Bosbier", 
+            "Blond//Kasteel Blond", 
+            "Blond//Postel Blond", 
+            "Blond//Gouverneur Speciale 140", 
+            "Dubbel//Leute Bokbier", 
+            "Bockbier//Bavaria Hooghe Bock", 
+            "Fruitbier//Bacchus Kriekenbier"
+        ], 
+        "style": "Blond"
+    }, 
+    {
+        "name": "Blond//Hert Vijlener Bosbier", 
+        "similar": [
+            "Blond//Hert Vijlener Bosbier", 
+            "Blond//Kasteel Blond", 
+            "Blond//Gouverneur Speciale 140", 
+            "Blond//Postel Blond", 
+            "Blond//Kasteel Hoppy", 
+            "Tripel//Vicaris Tripel", 
+            "Bockbier//Bavaria Hooghe Bock", 
+            "Sterke Blonde//Ommegang Keizer Karel"
+        ], 
+        "style": "Blond"
+    }, 
+    {
+        "name": "Blond//Kasteel Blond", 
+        "similar": [
+            "Blond//Kasteel Blond", 
+            "Blond//Hert Vijlener Bosbier", 
+            "Blond//Kasteel Hoppy", 
+            "Blond//Gouverneur Speciale 140", 
+            "Blond//Postel Blond", 
+            "Sterke Blonde//Tourn\u00e9e G\u00e9n\u00e9rale Tripel Hop", 
+            "Tripel//Vicaris Tripel", 
+            "Bockbier//Graaf van Heumen Herfstbok"
+        ], 
+        "style": "Blond"
+    }, 
+    {
+        "name": "Blond//Gouverneur Speciale 140", 
+        "similar": [
+            "Blond//Gouverneur Speciale 140", 
+            "Blond//Hert Vijlener Bosbier", 
+            "Blond//Kasteel Blond", 
+            "Blond//Postel Blond", 
+            "Blond//Kasteel Hoppy", 
+            "Pilsener//Amstel 1870", 
+            "Belgische IPA//Vriendschap Hopblond", 
+            "Dubbel//Het Kapittel Watou Pater"
+        ], 
+        "style": "Blond"
+    }, 
+    {
+        "name": "Blond//Postel Blond", 
+        "similar": [
+            "Blond//Postel Blond", 
+            "Blond//Hert Vijlener Bosbier", 
+            "Blond//Gouverneur Speciale 140", 
+            "Blond//Kasteel Blond", 
+            "Blond//Kasteel Hoppy", 
+            "Bockbier//Steenbrugge Abdij Bock", 
+            "Witbier//Hoegaarden Wit", 
+            "Sterke Blonde//La Guillotine"
+        ], 
+        "style": "Blond"
+    }, 
+    {
+        "name": "Tripel//Moeder Overste", 
+        "similar": [
+            "Tripel//Moeder Overste", 
+            "Tripel//De Liter van Pallieter", 
+            "Tripel//Witkap Pater Tripel", 
+            "Tripel//Dulle Teve", 
+            "Tripel//Vicaris Tripel", 
+            "Belgische IPA//Hopus", 
+            "Belgische IPA//Raging Bitch", 
+            "Blond//Kasteel Blond"
+        ], 
+        "style": "Tripel"
+    }, 
+    {
+        "name": "Tripel//Witkap Pater Tripel", 
+        "similar": [
+            "Tripel//Witkap Pater Tripel", 
+            "Tripel//De Liter van Pallieter", 
+            "Tripel//Vicaris Tripel", 
+            "Tripel//Moeder Overste", 
+            "Tripel//Dulle Teve", 
+            "Sterke Blonde//Tourn\u00e9e G\u00e9n\u00e9rale Tripel Hop", 
+            "American IPA//Emelisse Smoked Rye IPA", 
+            "Sterke Blonde//Ommegang Keizer Karel"
+        ], 
+        "style": "Tripel"
+    }, 
+    {
+        "name": "Tripel//Dulle Teve", 
+        "similar": [
+            "Tripel//Dulle Teve", 
+            "Tripel//De Liter van Pallieter", 
+            "Tripel//Witkap Pater Tripel", 
+            "Tripel//Moeder Overste", 
+            "Tripel//Vicaris Tripel", 
+            "Belgische IPA//Raging Bitch", 
+            "American IPA//ReAle Extra", 
+            "Bockbier//Bavaria Hooghe Bock"
+        ], 
+        "style": "Tripel"
+    }, 
+    {
+        "name": "Tripel//De Liter van Pallieter", 
+        "similar": [
+            "Tripel//De Liter van Pallieter", 
+            "Tripel//Moeder Overste", 
+            "Tripel//Dulle Teve", 
+            "Tripel//Witkap Pater Tripel", 
+            "Tripel//Vicaris Tripel", 
+            "Pilsener//Dim Sum Beer", 
+            "Sterke Blonde//La Guillotine", 
+            "American IPA//Anchor Liberty Ale"
+        ], 
+        "style": "Tripel"
+    }, 
+    {
+        "name": "Tripel//Vicaris Tripel", 
+        "similar": [
+            "Tripel//Vicaris Tripel", 
+            "Tripel//Witkap Pater Tripel", 
+            "Tripel//De Liter van Pallieter", 
+            "Tripel//Moeder Overste", 
+            "Tripel//Dulle Teve", 
+            "Witbier//Troublette", 
+            "Fruitbier//Bacchus Kriekenbier", 
+            "Blond//Kasteel Blond"
+        ], 
+        "style": "Tripel"
+    }, 
+    {
+        "name": "Dubbel//Het Kapittel Watou Pater", 
+        "similar": [
+            "Dubbel//Het Kapittel Watou Pater", 
+            "Dubbel//Vicaris Generaal", 
+            "Dubbel//Leute Bokbier", 
+            "Dubbel//Val-Dieu Brune", 
+            "Dubbel//Achel Bruin Extra", 
+            "Bockbier//Bavaria Hooghe Bock", 
+            "Blond//Gouverneur Speciale 140", 
+            "Bockbier//Broomrider"
+        ], 
+        "style": "Dubbel"
+    }, 
+    {
+        "name": "Dubbel//Leute Bokbier", 
+        "similar": [
+            "Dubbel//Leute Bokbier", 
+            "Dubbel//Val-Dieu Brune", 
+            "Dubbel//Het Kapittel Watou Pater", 
+            "Dubbel//Vicaris Generaal", 
+            "Dubbel//Achel Bruin Extra", 
+            "Blond//Kasteel Hoppy", 
+            "Fruitbier//Bink Bloesem", 
+            "Bockbier//Bavaria Hooghe Bock"
+        ], 
+        "style": "Dubbel"
+    }, 
+    {
+        "name": "Dubbel//Vicaris Generaal", 
+        "similar": [
+            "Dubbel//Vicaris Generaal", 
+            "Dubbel//Het Kapittel Watou Pater", 
+            "Dubbel//Achel Bruin Extra", 
+            "Dubbel//Val-Dieu Brune", 
+            "Dubbel//Leute Bokbier", 
+            "Sterke Blonde//Pilaarbijter Blond", 
+            "Sterke Blonde//Tourn\u00e9e G\u00e9n\u00e9rale Tripel Hop", 
+            "Tripel//Vicaris Tripel"
+        ], 
+        "style": "Dubbel"
+    }, 
+    {
+        "name": "Dubbel//Val-Dieu Brune", 
+        "similar": [
+            "Dubbel//Val-Dieu Brune", 
+            "Dubbel//Leute Bokbier", 
+            "Dubbel//Vicaris Generaal", 
+            "Dubbel//Het Kapittel Watou Pater", 
+            "Dubbel//Achel Bruin Extra", 
+            "Fruitbier//Bink Bloesem", 
+            "Bockbier//Graaf van Heumen Herfstbok", 
+            "Belgische IPA//Raging Bitch"
+        ], 
+        "style": "Dubbel"
+    }, 
+    {
+        "name": "Dubbel//Achel Bruin Extra", 
+        "similar": [
+            "Dubbel//Achel Bruin Extra", 
+            "Dubbel//Vicaris Generaal", 
+            "Dubbel//Leute Bokbier", 
+            "Dubbel//Val-Dieu Brune", 
+            "Dubbel//Het Kapittel Watou Pater", 
+            "Bockbier//Graaf van Heumen Herfstbok", 
+            "Bockbier//Bavaria Hooghe Bock", 
+            "Tripel//Witkap Pater Tripel"
+        ], 
+        "style": "Dubbel"
+    }, 
+    {
+        "name": "Pilsener//Peroni Nastro Azzurro", 
+        "similar": [
+            "Pilsener//Peroni Nastro Azzurro", 
+            "Pilsener//Gulpener Pilsner", 
+            "Pilsener//Gulpener Ur-Pilsener", 
+            "Pilsener//Dim Sum Beer", 
+            "Pilsener//Amstel 1870", 
+            "Fruitbier//Bink Bloesem", 
+            "Dubbel//Val-Dieu Brune", 
+            "Tripel//Dulle Teve"
+        ], 
+        "style": "Pilsener"
+    }, 
+    {
+        "name": "Pilsener//Gulpener Ur-Pilsener", 
+        "similar": [
+            "Pilsener//Gulpener Ur-Pilsener", 
+            "Pilsener//Dim Sum Beer", 
+            "Pilsener//Peroni Nastro Azzurro", 
+            "Pilsener//Gulpener Pilsner", 
+            "Pilsener//Amstel 1870", 
+            "Tripel//Moeder Overste", 
+            "Witbier//Troublette", 
+            "Sterke Blonde//La Guillotine"
+        ], 
+        "style": "Pilsener"
+    }, 
+    {
+        "name": "Pilsener//Dim Sum Beer", 
+        "similar": [
+            "Pilsener//Dim Sum Beer", 
+            "Pilsener//Gulpener Ur-Pilsener", 
+            "Pilsener//Peroni Nastro Azzurro", 
+            "Pilsener//Gulpener Pilsner", 
+            "Pilsener//Amstel 1870", 
+            "Tripel//De Liter van Pallieter", 
+            "Tripel//Dulle Teve", 
+            "Blond//Hert Vijlener Bosbier"
+        ], 
+        "style": "Pilsener"
+    }, 
+    {
+        "name": "Pilsener//Gulpener Pilsner", 
+        "similar": [
+            "Pilsener//Gulpener Pilsner", 
+            "Pilsener//Peroni Nastro Azzurro", 
+            "Pilsener//Gulpener Ur-Pilsener", 
+            "Pilsener//Dim Sum Beer", 
+            "Pilsener//Amstel 1870", 
+            "Sterke Blonde//Ommegang Keizer Karel", 
+            "Dubbel//Val-Dieu Brune", 
+            "Fruitbier//Bink Bloesem"
+        ], 
+        "style": "Pilsener"
+    }, 
+    {
+        "name": "Pilsener//Amstel 1870", 
+        "similar": [
+            "Pilsener//Amstel 1870", 
+            "Pilsener//Gulpener Ur-Pilsener", 
+            "Pilsener//Dim Sum Beer", 
+            "Pilsener//Peroni Nastro Azzurro", 
+            "Belgische IPA//Vriendschap Hopblond", 
+            "Pilsener//Gulpener Pilsner", 
+            "Blond//Gouverneur Speciale 140", 
+            "Sterke Blonde//La Guillotine"
+        ], 
+        "style": "Pilsener"
+    }, 
+    {
+        "name": "American IPA//Emelisse Smoked Rye IPA", 
+        "similar": [
+            "American IPA//Emelisse Smoked Rye IPA", 
+            "American IPA//Mikkeller Hop Series Citra", 
+            "American IPA//ReAle Extra", 
+            "American IPA//Anchor Liberty Ale", 
+            "American IPA//Mikkeller Hop Series Super Galena", 
+            "Bockbier//Graaf van Heumen Herfstbok", 
+            "Bockbier//Bavaria Hooghe Bock", 
+            "Bockbier//Steenbrugge Abdij Bock"
+        ], 
+        "style": "American IPA"
+    }, 
+    {
+        "name": "American IPA//Mikkeller Hop Series Super Galena", 
+        "similar": [
+            "American IPA//Mikkeller Hop Series Super Galena", 
+            "American IPA//Mikkeller Hop Series Citra", 
+            "American IPA//Anchor Liberty Ale", 
+            "American IPA//Emelisse Smoked Rye IPA", 
+            "American IPA//ReAle Extra", 
+            "Tripel//Witkap Pater Tripel", 
+            "Bockbier//Broomrider", 
+            "Sterke Blonde//Tourn\u00e9e G\u00e9n\u00e9rale Tripel Hop"
+        ], 
+        "style": "American IPA"
+    }, 
+    {
+        "name": "American IPA//ReAle Extra", 
+        "similar": [
+            "American IPA//ReAle Extra", 
+            "American IPA//Emelisse Smoked Rye IPA", 
+            "American IPA//Anchor Liberty Ale", 
+            "American IPA//Mikkeller Hop Series Citra", 
+            "American IPA//Mikkeller Hop Series Super Galena", 
+            "Tripel//Dulle Teve", 
+            "Tripel//Witkap Pater Tripel", 
+            "Blond//Kasteel Hoppy"
+        ], 
+        "style": "American IPA"
+    }, 
+    {
+        "name": "American IPA//Anchor Liberty Ale", 
+        "similar": [
+            "American IPA//Anchor Liberty Ale", 
+            "American IPA//Emelisse Smoked Rye IPA", 
+            "American IPA//Mikkeller Hop Series Super Galena", 
+            "American IPA//ReAle Extra", 
+            "American IPA//Mikkeller Hop Series Citra", 
+            "Sterke Blonde//Tourn\u00e9e G\u00e9n\u00e9rale Tripel Hop", 
+            "Bockbier//Broomrider", 
+            "Sterke Blonde//La Guillotine"
+        ], 
+        "style": "American IPA"
+    }, 
+    {
+        "name": "American IPA//Mikkeller Hop Series Citra", 
+        "similar": [
+            "American IPA//Mikkeller Hop Series Citra", 
+            "American IPA//Mikkeller Hop Series Super Galena", 
+            "American IPA//Emelisse Smoked Rye IPA", 
+            "American IPA//Anchor Liberty Ale", 
+            "American IPA//ReAle Extra", 
+            "Witbier//Troublette", 
+            "Pilsener//Gulpener Ur-Pilsener", 
+            "Bockbier//Broomrider"
+        ], 
+        "style": "American IPA"
+    }, 
+    {
+        "name": "Bockbier//Steenbrugge Abdij Bock", 
+        "similar": [
+            "Bockbier//Steenbrugge Abdij Bock", 
+            "Bockbier//Bavaria Hooghe Bock", 
+            "Bockbier//Silly Bock", 
+            "Bockbier//Broomrider", 
+            "Bockbier//Graaf van Heumen Herfstbok", 
+            "American IPA//Emelisse Smoked Rye IPA", 
+            "Dubbel//Val-Dieu Brune", 
+            "Blond//Postel Blond"
+        ], 
+        "style": "Bockbier"
+    }, 
+    {
+        "name": "Bockbier//Bavaria Hooghe Bock", 
+        "similar": [
+            "Bockbier//Bavaria Hooghe Bock", 
+            "Bockbier//Broomrider", 
+            "Bockbier//Silly Bock", 
+            "Bockbier//Graaf van Heumen Herfstbok", 
+            "Bockbier//Steenbrugge Abdij Bock", 
+            "Fruitbier//Bink Bloesem", 
+            "Fruitbier//Bacchus Kriekenbier", 
+            "Tripel//Dulle Teve"
+        ], 
+        "style": "Bockbier"
+    }, 
+    {
+        "name": "Bockbier//Broomrider", 
+        "similar": [
+            "Bockbier//Broomrider", 
+            "Bockbier//Bavaria Hooghe Bock", 
+            "Bockbier//Silly Bock", 
+            "Bockbier//Graaf van Heumen Herfstbok", 
+            "Bockbier//Steenbrugge Abdij Bock", 
+            "Belgische IPA//John Martin's IPA", 
+            "American IPA//Anchor Liberty Ale", 
+            "Fruitbier//Bink Bloesem"
+        ], 
+        "style": "Bockbier"
+    }, 
+    {
+        "name": "Bockbier//Silly Bock", 
+        "similar": [
+            "Bockbier//Silly Bock", 
+            "Bockbier//Broomrider", 
+            "Bockbier//Bavaria Hooghe Bock", 
+            "Bockbier//Graaf van Heumen Herfstbok", 
+            "Bockbier//Steenbrugge Abdij Bock", 
+            "American IPA//Anchor Liberty Ale", 
+            "Fruitbier//Bink Bloesem", 
+            "Fruitbier//Bacchus Kriekenbier"
+        ], 
+        "style": "Bockbier"
+    }, 
+    {
+        "name": "Bockbier//Graaf van Heumen Herfstbok", 
+        "similar": [
+            "Bockbier//Graaf van Heumen Herfstbok", 
+            "Bockbier//Bavaria Hooghe Bock", 
+            "Bockbier//Broomrider", 
+            "Bockbier//Silly Bock", 
+            "Bockbier//Steenbrugge Abdij Bock", 
+            "Dubbel//Achel Bruin Extra", 
+            "Fruitbier//Bink Bloesem", 
+            "Blond//Kasteel Blond"
+        ], 
+        "style": "Bockbier"
+    }, 
+    {
+        "name": "Sterke Blonde//Tourn\u00e9e G\u00e9n\u00e9rale Tripel Hop", 
+        "similar": [
+            "Sterke Blonde//Tourn\u00e9e G\u00e9n\u00e9rale Tripel Hop", 
+            "Sterke Blonde//Duvel", 
+            "Sterke Blonde//La Guillotine", 
+            "Sterke Blonde//Pilaarbijter Blond", 
+            "Sterke Blonde//Ommegang Keizer Karel", 
+            "Blond//Kasteel Blond", 
+            "American IPA//Anchor Liberty Ale", 
+            "Dubbel//Vicaris Generaal"
+        ], 
+        "style": "Sterke Blonde"
+    }, 
+    {
+        "name": "Sterke Blonde//Pilaarbijter Blond", 
+        "similar": [
+            "Sterke Blonde//Pilaarbijter Blond", 
+            "Sterke Blonde//Ommegang Keizer Karel", 
+            "Sterke Blonde//Duvel", 
+            "Sterke Blonde//La Guillotine", 
+            "Sterke Blonde//Tourn\u00e9e G\u00e9n\u00e9rale Tripel Hop", 
+            "Dubbel//Vicaris Generaal", 
+            "Belgische IPA//Raging Bitch", 
+            "Witbier//Hoegaarden Wit"
+        ], 
+        "style": "Sterke Blonde"
+    }, 
+    {
+        "name": "Sterke Blonde//La Guillotine", 
+        "similar": [
+            "Sterke Blonde//La Guillotine", 
+            "Sterke Blonde//Duvel", 
+            "Sterke Blonde//Ommegang Keizer Karel", 
+            "Sterke Blonde//Tourn\u00e9e G\u00e9n\u00e9rale Tripel Hop", 
+            "Sterke Blonde//Pilaarbijter Blond", 
+            "Tripel//De Liter van Pallieter", 
+            "American IPA//Anchor Liberty Ale", 
+            "Pilsener//Amstel 1870"
+        ], 
+        "style": "Sterke Blonde"
+    }, 
+    {
+        "name": "Sterke Blonde//Duvel", 
+        "similar": [
+            "Sterke Blonde//Duvel", 
+            "Sterke Blonde//Ommegang Keizer Karel", 
+            "Sterke Blonde//Pilaarbijter Blond", 
+            "Sterke Blonde//Tourn\u00e9e G\u00e9n\u00e9rale Tripel Hop", 
+            "Sterke Blonde//La Guillotine", 
+            "Pilsener//Amstel 1870", 
+            "Tripel//De Liter van Pallieter", 
+            "Tripel//Moeder Overste"
+        ], 
+        "style": "Sterke Blonde"
+    }, 
+    {
+        "name": "Sterke Blonde//Ommegang Keizer Karel", 
+        "similar": [
+            "Sterke Blonde//Ommegang Keizer Karel", 
+            "Sterke Blonde//Pilaarbijter Blond", 
+            "Sterke Blonde//Duvel", 
+            "Sterke Blonde//La Guillotine", 
+            "Sterke Blonde//Tourn\u00e9e G\u00e9n\u00e9rale Tripel Hop", 
+            "Tripel//Witkap Pater Tripel", 
+            "Tripel//De Liter van Pallieter", 
+            "American IPA//Anchor Liberty Ale"
+        ], 
+        "style": "Sterke Blonde"
+    }, 
+    {
+        "name": "Fruitbier//Mongozo Mango", 
+        "similar": [
+            "Fruitbier//Mongozo Mango", 
+            "Fruitbier//Hoegaarden Ros\u00e9e", 
+            "Fruitbier//Leffe Ruby", 
+            "Fruitbier//Bink Bloesem", 
+            "Fruitbier//Bacchus Kriekenbier", 
+            "Dubbel//Val-Dieu Brune", 
+            "Dubbel//Achel Bruin Extra", 
+            "Belgische IPA//Surf Ale"
+        ], 
+        "style": "Fruitbier"
+    }, 
+    {
+        "name": "Fruitbier//Bacchus Kriekenbier", 
+        "similar": [
+            "Fruitbier//Bacchus Kriekenbier", 
+            "Fruitbier//Bink Bloesem", 
+            "Fruitbier//Mongozo Mango", 
+            "Fruitbier//Leffe Ruby", 
+            "Fruitbier//Hoegaarden Ros\u00e9e", 
+            "Tripel//Vicaris Tripel", 
+            "Bockbier//Bavaria Hooghe Bock", 
+            "Blond//Kasteel Blond"
+        ], 
+        "style": "Fruitbier"
+    }, 
+    {
+        "name": "Fruitbier//Hoegaarden Ros\u00e9e", 
+        "similar": [
+            "Fruitbier//Hoegaarden Ros\u00e9e", 
+            "Fruitbier//Mongozo Mango", 
+            "Fruitbier//Leffe Ruby", 
+            "Fruitbier//Bacchus Kriekenbier", 
+            "Fruitbier//Bink Bloesem", 
+            "Tripel//Dulle Teve", 
+            "Dubbel//Val-Dieu Brune", 
+            "Dubbel//Achel Bruin Extra"
+        ], 
+        "style": "Fruitbier"
+    }, 
+    {
+        "name": "Fruitbier//Bink Bloesem", 
+        "similar": [
+            "Fruitbier//Bink Bloesem", 
+            "Fruitbier//Mongozo Mango", 
+            "Fruitbier//Bacchus Kriekenbier", 
+            "Fruitbier//Leffe Ruby", 
+            "Fruitbier//Hoegaarden Ros\u00e9e", 
+            "Bockbier//Bavaria Hooghe Bock", 
+            "Bockbier//Graaf van Heumen Herfstbok", 
+            "Dubbel//Val-Dieu Brune"
+        ], 
+        "style": "Fruitbier"
+    }, 
+    {
+        "name": "Fruitbier//Leffe Ruby", 
+        "similar": [
+            "Fruitbier//Leffe Ruby", 
+            "Fruitbier//Mongozo Mango", 
+            "Fruitbier//Bink Bloesem", 
+            "Fruitbier//Bacchus Kriekenbier", 
+            "Fruitbier//Hoegaarden Ros\u00e9e", 
+            "Dubbel//Achel Bruin Extra", 
+            "Tripel//Witkap Pater Tripel", 
+            "Tripel//Dulle Teve"
+        ], 
+        "style": "Fruitbier"
+    }, 
+    {
+        "name": "Witbier//Witheer", 
+        "similar": [
+            "Witbier//Witheer", 
+            "Witbier//Troublette", 
+            "Witbier//La Trappe Witte Trappist", 
+            "Witbier//Schiller's Wit", 
+            "Witbier//Hoegaarden Wit", 
+            "Belgische IPA//Vriendschap Hopblond", 
+            "Belgische IPA//Hopus", 
+            "Tripel//Vicaris Tripel"
+        ], 
+        "style": "Witbier"
+    }, 
+    {
+        "name": "Witbier//Troublette", 
+        "similar": [
+            "Witbier//Troublette", 
+            "Witbier//Schiller's Wit", 
+            "Witbier//La Trappe Witte Trappist", 
+            "Witbier//Witheer", 
+            "Witbier//Hoegaarden Wit", 
+            "Tripel//Vicaris Tripel", 
+            "Belgische IPA//Hopus", 
+            "Pilsener//Dim Sum Beer"
+        ], 
+        "style": "Witbier"
+    }, 
+    {
+        "name": "Witbier//Hoegaarden Wit", 
+        "similar": [
+            "Witbier//Hoegaarden Wit", 
+            "Witbier//Troublette", 
+            "Witbier//La Trappe Witte Trappist", 
+            "Witbier//Schiller's Wit", 
+            "Witbier//Witheer", 
+            "Sterke Blonde//Pilaarbijter Blond", 
+            "American IPA//ReAle Extra", 
+            "Blond//Postel Blond"
+        ], 
+        "style": "Witbier"
+    }, 
+    {
+        "name": "Witbier//Schiller's Wit", 
+        "similar": [
+            "Witbier//Schiller's Wit", 
+            "Witbier//La Trappe Witte Trappist", 
+            "Witbier//Troublette", 
+            "Witbier//Witheer", 
+            "Witbier//Hoegaarden Wit", 
+            "Sterke Blonde//Pilaarbijter Blond", 
+            "Pilsener//Gulpener Ur-Pilsener", 
+            "American IPA//Emelisse Smoked Rye IPA"
+        ], 
+        "style": "Witbier"
+    }, 
+    {
+        "name": "Witbier//La Trappe Witte Trappist", 
+        "similar": [
+            "Witbier//La Trappe Witte Trappist", 
+            "Witbier//Schiller's Wit", 
+            "Witbier//Troublette", 
+            "Witbier//Witheer", 
+            "Witbier//Hoegaarden Wit", 
+            "Tripel//Witkap Pater Tripel", 
+            "American IPA//Emelisse Smoked Rye IPA", 
+            "Sterke Blonde//La Guillotine"
+        ], 
+        "style": "Witbier"
+    }, 
+    {
+        "name": "Belgische IPA//Hopus", 
+        "similar": [
+            "Belgische IPA//Hopus", 
+            "Belgische IPA//Vriendschap Hopblond", 
+            "Belgische IPA//John Martin's IPA", 
+            "Belgische IPA//Raging Bitch", 
+            "Belgische IPA//Surf Ale", 
+            "Tripel//Moeder Overste", 
+            "Witbier//Troublette", 
+            "Blond//Gouverneur Speciale 140"
+        ], 
+        "style": "Belgische IPA"
+    }, 
+    {
+        "name": "Belgische IPA//Raging Bitch", 
+        "similar": [
+            "Belgische IPA//Raging Bitch", 
+            "Belgische IPA//Vriendschap Hopblond", 
+            "Belgische IPA//John Martin's IPA", 
+            "Belgische IPA//Hopus", 
+            "Belgische IPA//Surf Ale", 
+            "Tripel//Dulle Teve", 
+            "Tripel//Moeder Overste", 
+            "Bockbier//Bavaria Hooghe Bock"
+        ], 
+        "style": "Belgische IPA"
+    }, 
+    {
+        "name": "Belgische IPA//Vriendschap Hopblond", 
+        "similar": [
+            "Belgische IPA//Vriendschap Hopblond", 
+            "Belgische IPA//John Martin's IPA", 
+            "Belgische IPA//Hopus", 
+            "Belgische IPA//Raging Bitch", 
+            "Belgische IPA//Surf Ale", 
+            "Pilsener//Amstel 1870", 
+            "Blond//Gouverneur Speciale 140", 
+            "Tripel//Moeder Overste"
+        ], 
+        "style": "Belgische IPA"
+    }, 
+    {
+        "name": "Belgische IPA//Surf Ale", 
+        "similar": [
+            "Belgische IPA//Surf Ale", 
+            "Belgische IPA//Vriendschap Hopblond", 
+            "Belgische IPA//John Martin's IPA", 
+            "Belgische IPA//Raging Bitch", 
+            "Belgische IPA//Hopus", 
+            "American IPA//Anchor Liberty Ale", 
+            "Dubbel//Vicaris Generaal", 
+            "Blond//Hert Vijlener Bosbier"
+        ], 
+        "style": "Belgische IPA"
+    }, 
+    {
+        "name": "Belgische IPA//John Martin's IPA", 
+        "similar": [
+            "Belgische IPA//John Martin's IPA", 
+            "Belgische IPA//Vriendschap Hopblond", 
+            "Belgische IPA//Raging Bitch", 
+            "Belgische IPA//Hopus", 
+            "Belgische IPA//Surf Ale", 
+            "Bockbier//Broomrider", 
+            "Fruitbier//Bink Bloesem", 
+            "Fruitbier//Bacchus Kriekenbier"
+        ], 
+        "style": "Belgische IPA"
+    }
+]
