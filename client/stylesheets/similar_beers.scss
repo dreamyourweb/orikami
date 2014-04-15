@@ -58,9 +58,6 @@
 .link.Witbier{ stroke: #bcbd22;}
 .link.Belgische-IPA{ stroke: #17becf;}
 
-.node:hover{
-  font-size: 20px;
-}
 .node{
   transition: font-size 100ms linear;
 }
@@ -89,18 +86,45 @@ path.arc {
   stroke-width: 2px;
 }
 
-.node.target {
-  fill: #d62728 !important;
-}
+// .node.target {
+//   fill: #d62728 !important;
+// }
 
 .link.source {
   stroke: #000;
 }
 
-.node.source {
-  fill: #2ca02c;
-}
+// .node.source {
+//   fill: #2ca02c;
+// }
 
 .link.target {
   stroke: #000;
+}
+
+.node.source, .node.target{
+  text{fill: black !important;}
+}
+
+.node:hover{
+  font-size: 20px;
+}
+
+.node-tooltip{
+  position: absolute;
+}
+
+.d3-tip {
+  line-height: 1;
+  p{
+    font-size: 0.75rem;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+  max-width: 300px;
 }

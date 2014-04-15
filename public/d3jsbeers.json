@@ -1,702 +1,752 @@
 [
     {
-        "name": "Blond//Kasteel Hoppy", 
+        "name": "Blond//Loterbol Blond", 
         "similar": [
-            "Blond//Kasteel Hoppy", 
-            "Blond//Hert Vijlener Bosbier", 
-            "Blond//Kasteel Blond", 
-            "Blond//Postel Blond", 
-            "Blond//Gouverneur Speciale 140", 
-            "Dubbel//Leute Bokbier", 
-            "Bockbier//Bavaria Hooghe Bock", 
-            "Fruitbier//Bacchus Kriekenbier"
-        ], 
-        "style": "Blond"
-    }, 
-    {
-        "name": "Blond//Hert Vijlener Bosbier", 
-        "similar": [
-            "Blond//Hert Vijlener Bosbier", 
-            "Blond//Kasteel Blond", 
-            "Blond//Gouverneur Speciale 140", 
-            "Blond//Postel Blond", 
-            "Blond//Kasteel Hoppy", 
-            "Tripel//Vicaris Tripel", 
-            "Bockbier//Bavaria Hooghe Bock", 
-            "Sterke Blonde//Ommegang Keizer Karel"
-        ], 
-        "style": "Blond"
-    }, 
-    {
-        "name": "Blond//Kasteel Blond", 
-        "similar": [
-            "Blond//Kasteel Blond", 
-            "Blond//Hert Vijlener Bosbier", 
-            "Blond//Kasteel Hoppy", 
-            "Blond//Gouverneur Speciale 140", 
-            "Blond//Postel Blond", 
-            "Sterke Blonde//Tourn\u00e9e G\u00e9n\u00e9rale Tripel Hop", 
-            "Tripel//Vicaris Tripel", 
-            "Bockbier//Graaf van Heumen Herfstbok"
-        ], 
-        "style": "Blond"
-    }, 
-    {
-        "name": "Blond//Gouverneur Speciale 140", 
-        "similar": [
-            "Blond//Gouverneur Speciale 140", 
-            "Blond//Hert Vijlener Bosbier", 
-            "Blond//Kasteel Blond", 
-            "Blond//Postel Blond", 
-            "Blond//Kasteel Hoppy", 
-            "Pilsener//Amstel 1870", 
+            "Blond//Loterbol Blond", 
+            "Blond//Affligem Blond", 
+            "Blond//Amstel Blond", 
+            "Blond//Leffe Blond", 
+            "Blond//Brunehaut Bio Blonde", 
             "Belgische IPA//Vriendschap Hopblond", 
-            "Dubbel//Het Kapittel Watou Pater"
+            "Witbier//Ramses Moby Dick", 
+            "Tripel//Novice Black Tripel"
         ], 
-        "style": "Blond"
+        "style": "Blond", 
+        "taste": "Heel zoet en het smaak een beetje naar cake. Daarnaast is er smaak van donker fruit (rozijnen en bosvruchten), gist, en een vleugje karamel en chocolade. Daarnaast een citrus bittere nasmaak dat doet denken aan een tripel. De afdronk is ook vrij droog."
     }, 
     {
-        "name": "Blond//Postel Blond", 
+        "name": "Blond//Amstel Blond", 
         "similar": [
-            "Blond//Postel Blond", 
-            "Blond//Hert Vijlener Bosbier", 
-            "Blond//Gouverneur Speciale 140", 
-            "Blond//Kasteel Blond", 
-            "Blond//Kasteel Hoppy", 
-            "Bockbier//Steenbrugge Abdij Bock", 
-            "Witbier//Hoegaarden Wit", 
-            "Sterke Blonde//La Guillotine"
+            "Blond//Amstel Blond", 
+            "Blond//Affligem Blond", 
+            "Blond//Loterbol Blond", 
+            "Blond//Leffe Blond", 
+            "Blond//Brunehaut Bio Blonde", 
+            "Pilsener//Alfa Super Strong 9.2", 
+            "Pilsener//Heineken Pilsener", 
+            "Pilsener//Maes Pilsener"
         ], 
-        "style": "Blond"
+        "style": "Blond", 
+        "taste": "Moutig en graanachtig met zoete aromas. Afdronk is mild bitter."
     }, 
     {
-        "name": "Tripel//Moeder Overste", 
+        "name": "Blond//Affligem Blond", 
         "similar": [
-            "Tripel//Moeder Overste", 
-            "Tripel//De Liter van Pallieter", 
-            "Tripel//Witkap Pater Tripel", 
-            "Tripel//Dulle Teve", 
-            "Tripel//Vicaris Tripel", 
-            "Belgische IPA//Hopus", 
-            "Belgische IPA//Raging Bitch", 
-            "Blond//Kasteel Blond"
+            "Blond//Affligem Blond", 
+            "Blond//Loterbol Blond", 
+            "Blond//Amstel Blond", 
+            "Blond//Leffe Blond", 
+            "Blond//Brunehaut Bio Blonde", 
+            "Belgische IPA//Hopus Primeur 2014", 
+            "Witbier//Ramses Moby Dick", 
+            "Sterke Blonde//Duvel Groen"
         ], 
-        "style": "Tripel"
+        "style": "Blond", 
+        "taste": "Gebalanceerde mix tussen zoet en zuur. Tevens redelijk droog en smakend naar citroen. Scherpe en droge afdronk."
     }, 
     {
-        "name": "Tripel//Witkap Pater Tripel", 
+        "name": "Blond//Brunehaut Bio Blonde", 
         "similar": [
-            "Tripel//Witkap Pater Tripel", 
-            "Tripel//De Liter van Pallieter", 
-            "Tripel//Vicaris Tripel", 
-            "Tripel//Moeder Overste", 
-            "Tripel//Dulle Teve", 
-            "Sterke Blonde//Tourn\u00e9e G\u00e9n\u00e9rale Tripel Hop", 
-            "American IPA//Emelisse Smoked Rye IPA", 
-            "Sterke Blonde//Ommegang Keizer Karel"
+            "Blond//Brunehaut Bio Blonde", 
+            "Blond//Leffe Blond", 
+            "Blond//Affligem Blond", 
+            "Blond//Loterbol Blond", 
+            "Blond//Amstel Blond", 
+            "Pilsener//Gulpener Pilsner", 
+            "Sterke Blonde//Stoeipoes", 
+            "Pilsener//Peroni Nastro Azzurro"
         ], 
-        "style": "Tripel"
+        "style": "Blond", 
+        "taste": "Heel licht bier; zeer lichte tonen van graan en lichte bitterheid."
     }, 
     {
-        "name": "Tripel//Dulle Teve", 
+        "name": "Blond//Leffe Blond", 
         "similar": [
-            "Tripel//Dulle Teve", 
-            "Tripel//De Liter van Pallieter", 
-            "Tripel//Witkap Pater Tripel", 
-            "Tripel//Moeder Overste", 
-            "Tripel//Vicaris Tripel", 
-            "Belgische IPA//Raging Bitch", 
-            "American IPA//ReAle Extra", 
-            "Bockbier//Bavaria Hooghe Bock"
+            "Blond//Leffe Blond", 
+            "Blond//Affligem Blond", 
+            "Blond//Loterbol Blond", 
+            "Blond//Brunehaut Bio Blonde", 
+            "Blond//Amstel Blond", 
+            "Bockbier//Eem Bok", 
+            "Witbier//Celis White", 
+            "Dubbel//Witkap Pater Dubbel"
         ], 
-        "style": "Tripel"
+        "style": "Blond", 
+        "taste": "Redelijk complex bier qua smaak. Fruitig (kersen en druiven), in combinatie met een gist-esterachtig karakter. Daarnaast redelijk droog en beetje zuur in de afdronk. "
     }, 
     {
-        "name": "Tripel//De Liter van Pallieter", 
+        "name": "Tripel//Pater Lieven Tripel", 
         "similar": [
-            "Tripel//De Liter van Pallieter", 
-            "Tripel//Moeder Overste", 
-            "Tripel//Dulle Teve", 
-            "Tripel//Witkap Pater Tripel", 
-            "Tripel//Vicaris Tripel", 
-            "Pilsener//Dim Sum Beer", 
-            "Sterke Blonde//La Guillotine", 
-            "American IPA//Anchor Liberty Ale"
-        ], 
-        "style": "Tripel"
-    }, 
-    {
-        "name": "Tripel//Vicaris Tripel", 
-        "similar": [
-            "Tripel//Vicaris Tripel", 
-            "Tripel//Witkap Pater Tripel", 
-            "Tripel//De Liter van Pallieter", 
-            "Tripel//Moeder Overste", 
-            "Tripel//Dulle Teve", 
+            "Tripel//Pater Lieven Tripel", 
+            "Tripel//Guldenberg", 
+            "Tripel//Novice Black Tripel", 
+            "Tripel//Achel 8 Blond", 
+            "Tripel//Vicaris Tripel-Gueuze", 
             "Witbier//Troublette", 
-            "Fruitbier//Bacchus Kriekenbier", 
-            "Blond//Kasteel Blond"
+            "Dubbel//Val-Dieu Brune", 
+            "Fruitbier//Lindemans Cassis"
         ], 
-        "style": "Tripel"
+        "style": "Tripel", 
+        "taste": "Zoetwrange bessensmaak in het begin gevolgd door een lichte, droge afdronk."
     }, 
     {
-        "name": "Dubbel//Het Kapittel Watou Pater", 
+        "name": "Tripel//Guldenberg", 
         "similar": [
-            "Dubbel//Het Kapittel Watou Pater", 
-            "Dubbel//Vicaris Generaal", 
-            "Dubbel//Leute Bokbier", 
-            "Dubbel//Val-Dieu Brune", 
-            "Dubbel//Achel Bruin Extra", 
-            "Bockbier//Bavaria Hooghe Bock", 
-            "Blond//Gouverneur Speciale 140", 
-            "Bockbier//Broomrider"
+            "Tripel//Guldenberg", 
+            "Tripel//Pater Lieven Tripel", 
+            "Tripel//Achel 8 Blond", 
+            "Tripel//Novice Black Tripel", 
+            "Tripel//Vicaris Tripel-Gueuze", 
+            "Sterke Blonde//Duvel Groen", 
+            "Belgische IPA//Hopus Primeur 2014", 
+            "Pilsener//Alfa Super Strong 9.2"
         ], 
-        "style": "Dubbel"
+        "style": "Tripel", 
+        "taste": "Zoet bier met karamelmouten; aan het eind wat alcoholische opwarming."
     }, 
     {
-        "name": "Dubbel//Leute Bokbier", 
+        "name": "Tripel//Vicaris Tripel-Gueuze", 
         "similar": [
-            "Dubbel//Leute Bokbier", 
+            "Tripel//Vicaris Tripel-Gueuze", 
+            "Tripel//Pater Lieven Tripel", 
+            "Tripel//Novice Black Tripel", 
+            "Tripel//Guldenberg", 
+            "Tripel//Achel 8 Blond", 
+            "Bockbier//Barb\u00e3r Bok", 
             "Dubbel//Val-Dieu Brune", 
-            "Dubbel//Het Kapittel Watou Pater", 
-            "Dubbel//Vicaris Generaal", 
-            "Dubbel//Achel Bruin Extra", 
-            "Blond//Kasteel Hoppy", 
-            "Fruitbier//Bink Bloesem", 
-            "Bockbier//Bavaria Hooghe Bock"
+            "Belgische IPA//Hopus"
         ], 
-        "style": "Dubbel"
+        "style": "Tripel", 
+        "taste": "Hopus heeft een zachte aanzet en een uitbundig hoppalet (5 soorten), waardoor het bier een bittere nasmaak geeft. Het bier heeft ook iets fruitig en moutigs."
     }, 
     {
-        "name": "Dubbel//Vicaris Generaal", 
+        "name": "Tripel//Novice Black Tripel", 
         "similar": [
-            "Dubbel//Vicaris Generaal", 
-            "Dubbel//Het Kapittel Watou Pater", 
-            "Dubbel//Achel Bruin Extra", 
+            "Tripel//Novice Black Tripel", 
+            "Tripel//Pater Lieven Tripel", 
+            "Tripel//Guldenberg", 
+            "Tripel//Vicaris Tripel-Gueuze", 
+            "Tripel//Achel 8 Blond", 
+            "Bockbier//Eem Bok", 
             "Dubbel//Val-Dieu Brune", 
-            "Dubbel//Leute Bokbier", 
-            "Sterke Blonde//Pilaarbijter Blond", 
-            "Sterke Blonde//Tourn\u00e9e G\u00e9n\u00e9rale Tripel Hop", 
-            "Tripel//Vicaris Tripel"
+            "Belgische IPA//Hopus Primeur 2014"
         ], 
-        "style": "Dubbel"
+        "style": "Tripel", 
+        "taste": "Moutig en gistige smaak met hinten van witte peper. Licht zoet en fruitig. De afdronk bevat een citrus hopsmaak."
+    }, 
+    {
+        "name": "Tripel//Achel 8 Blond", 
+        "similar": [
+            "Tripel//Achel 8 Blond", 
+            "Tripel//Guldenberg", 
+            "Tripel//Pater Lieven Tripel", 
+            "Tripel//Vicaris Tripel-Gueuze", 
+            "Tripel//Novice Black Tripel", 
+            "Sterke Blonde//Duvel Groen", 
+            "Sterke Blonde//Keizer Karel Goud Blond", 
+            "Blond//Affligem Blond"
+        ], 
+        "style": "Tripel", 
+        "taste": "Moutig en licht fruitig. Tevens een halfdroge, hoppige afdronk. Al met al een goed uitgebalanceerd bier. "
+    }, 
+    {
+        "name": "Dubbel//Budels Capucijn", 
+        "similar": [
+            "Dubbel//Budels Capucijn", 
+            "Dubbel//Donker Genoegen", 
+            "Dubbel//Petrus Dubbel bruin", 
+            "Dubbel//Val-Dieu Brune", 
+            "Dubbel//Witkap Pater Dubbel", 
+            "Bockbier//Windbuul", 
+            "Bockbier//Hertog Jan Bockbier", 
+            "Bockbier//IJbok"
+        ], 
+        "style": "Dubbel", 
+        "taste": "Een volle geroosterde moutsmaak met een beetje koffie wat donker fruit op de achtergrond. Tevens proef je wat hop en wat gist. De afdronk is mooi droog en bitterzoet."
+    }, 
+    {
+        "name": "Dubbel//Petrus Dubbel bruin", 
+        "similar": [
+            "Dubbel//Petrus Dubbel bruin", 
+            "Dubbel//Donker Genoegen", 
+            "Dubbel//Budels Capucijn", 
+            "Dubbel//Witkap Pater Dubbel", 
+            "Dubbel//Val-Dieu Brune", 
+            "Bockbier//Windbuul", 
+            "Bockbier//Barb\u00e3r Bok", 
+            "Bockbier//IJbok"
+        ], 
+        "style": "Dubbel", 
+        "taste": "Een volle geroosterde moutsmaak met een beetje koffie wat donker fruit op de achtergrond. Tevens proef je wat hop en wat gist. De afdronk is mooi droog en bitterzoet."
     }, 
     {
         "name": "Dubbel//Val-Dieu Brune", 
         "similar": [
             "Dubbel//Val-Dieu Brune", 
-            "Dubbel//Leute Bokbier", 
-            "Dubbel//Vicaris Generaal", 
-            "Dubbel//Het Kapittel Watou Pater", 
-            "Dubbel//Achel Bruin Extra", 
-            "Fruitbier//Bink Bloesem", 
-            "Bockbier//Graaf van Heumen Herfstbok", 
-            "Belgische IPA//Raging Bitch"
+            "Dubbel//Donker Genoegen", 
+            "Dubbel//Witkap Pater Dubbel", 
+            "Dubbel//Petrus Dubbel bruin", 
+            "Dubbel//Budels Capucijn", 
+            "Bockbier//Barb\u00e3r Bok", 
+            "Bockbier//IJbok", 
+            "Bockbier//Windbuul"
         ], 
-        "style": "Dubbel"
+        "style": "Dubbel", 
+        "taste": "Redelijk zoete smaak van mouten en donker fruit (pruim). Wat aardse smaken en een lichte bitterheid. Tevens wat kruidnagel, zoethout, koriander en laurier op de achtergrond. \r\n"
     }, 
     {
-        "name": "Dubbel//Achel Bruin Extra", 
+        "name": "Dubbel//Witkap Pater Dubbel", 
         "similar": [
-            "Dubbel//Achel Bruin Extra", 
-            "Dubbel//Vicaris Generaal", 
-            "Dubbel//Leute Bokbier", 
+            "Dubbel//Witkap Pater Dubbel", 
+            "Dubbel//Donker Genoegen", 
+            "Dubbel//Petrus Dubbel bruin", 
             "Dubbel//Val-Dieu Brune", 
-            "Dubbel//Het Kapittel Watou Pater", 
-            "Bockbier//Graaf van Heumen Herfstbok", 
-            "Bockbier//Bavaria Hooghe Bock", 
-            "Tripel//Witkap Pater Tripel"
+            "Dubbel//Budels Capucijn", 
+            "Blond//Leffe Blond", 
+            "Bockbier//Barb\u00e3r Bok", 
+            "Bockbier//Windbuul"
         ], 
-        "style": "Dubbel"
+        "style": "Dubbel", 
+        "taste": "Redelijk zoete smaak van mouten en donker fruit (pruim). Wat aardse smaken en een lichte bitterheid. Tevens wat kruidnagel, zoethout, koriander en laurier op de achtergrond. \r\n"
     }, 
     {
-        "name": "Pilsener//Peroni Nastro Azzurro", 
+        "name": "Dubbel//Donker Genoegen", 
         "similar": [
-            "Pilsener//Peroni Nastro Azzurro", 
-            "Pilsener//Gulpener Pilsner", 
-            "Pilsener//Gulpener Ur-Pilsener", 
-            "Pilsener//Dim Sum Beer", 
-            "Pilsener//Amstel 1870", 
-            "Fruitbier//Bink Bloesem", 
+            "Dubbel//Donker Genoegen", 
+            "Dubbel//Petrus Dubbel bruin", 
+            "Dubbel//Budels Capucijn", 
+            "Dubbel//Witkap Pater Dubbel", 
             "Dubbel//Val-Dieu Brune", 
-            "Tripel//Dulle Teve"
+            "Bockbier//Windbuul", 
+            "Bockbier//IJbok", 
+            "Bockbier//Hertog Jan Bockbier"
         ], 
-        "style": "Pilsener"
+        "style": "Dubbel", 
+        "taste": "Vrij zoete bock met smaken van gebrande mout, karamel en een typisch Hertog Jan gistsmaak. Bitter aan het eind. "
     }, 
     {
-        "name": "Pilsener//Gulpener Ur-Pilsener", 
+        "name": "Pilsener//Alfa Super Strong 9.2", 
         "similar": [
-            "Pilsener//Gulpener Ur-Pilsener", 
-            "Pilsener//Dim Sum Beer", 
+            "Pilsener//Alfa Super Strong 9.2", 
             "Pilsener//Peroni Nastro Azzurro", 
+            "Pilsener//Heineken Pilsener", 
+            "Pilsener//Maes Pilsener", 
             "Pilsener//Gulpener Pilsner", 
-            "Pilsener//Amstel 1870", 
-            "Tripel//Moeder Overste", 
-            "Witbier//Troublette", 
-            "Sterke Blonde//La Guillotine"
+            "Sterke Blonde//Stoeipoes", 
+            "Sterke Blonde//Moinette Blonde", 
+            "Bockbier//Hertog Jan Bockbier"
         ], 
-        "style": "Pilsener"
+        "style": "Pilsener", 
+        "taste": "Vrij zoete bock met smaken van gebrande mout, karamel en een typisch Hertog Jan gistsmaak. Bitter aan het eind. "
     }, 
     {
-        "name": "Pilsener//Dim Sum Beer", 
+        "name": "Pilsener//Maes Pilsener", 
         "similar": [
-            "Pilsener//Dim Sum Beer", 
-            "Pilsener//Gulpener Ur-Pilsener", 
+            "Pilsener//Maes Pilsener", 
+            "Pilsener//Heineken Pilsener", 
+            "Pilsener//Alfa Super Strong 9.2", 
+            "Pilsener//Gulpener Pilsner", 
+            "Pilsener//Peroni Nastro Azzurro", 
+            "Witbier//Ramses Moby Dick", 
+            "Blond//Amstel Blond", 
+            "Blond//Loterbol Blond"
+        ], 
+        "style": "Pilsener", 
+        "taste": "Smaak is een beetje aards en gistig. Tevens een beetje bitter, droog en rijk aan koolzuur. "
+    }, 
+    {
+        "name": "Pilsener//Heineken Pilsener", 
+        "similar": [
+            "Pilsener//Heineken Pilsener", 
+            "Pilsener//Maes Pilsener", 
+            "Pilsener//Alfa Super Strong 9.2", 
             "Pilsener//Peroni Nastro Azzurro", 
             "Pilsener//Gulpener Pilsner", 
-            "Pilsener//Amstel 1870", 
-            "Tripel//De Liter van Pallieter", 
-            "Tripel//Dulle Teve", 
-            "Blond//Hert Vijlener Bosbier"
+            "Witbier//Ramses Moby Dick", 
+            "Blond//Amstel Blond", 
+            "Witbier//Troublette"
         ], 
-        "style": "Pilsener"
+        "style": "Pilsener", 
+        "taste": "Kruidig in het begin met koriander en citroen en een subtiele hint van sinaasappelschil. Het bier is ook licht zuur. Lichte nasmaak van vers brood."
     }, 
     {
         "name": "Pilsener//Gulpener Pilsner", 
         "similar": [
             "Pilsener//Gulpener Pilsner", 
             "Pilsener//Peroni Nastro Azzurro", 
-            "Pilsener//Gulpener Ur-Pilsener", 
-            "Pilsener//Dim Sum Beer", 
-            "Pilsener//Amstel 1870", 
-            "Sterke Blonde//Ommegang Keizer Karel", 
-            "Dubbel//Val-Dieu Brune", 
-            "Fruitbier//Bink Bloesem"
+            "Pilsener//Heineken Pilsener", 
+            "Pilsener//Alfa Super Strong 9.2", 
+            "Pilsener//Maes Pilsener", 
+            "Blond//Brunehaut Bio Blonde", 
+            "Blond//Amstel Blond", 
+            "American IPA//Mikkeller Hop Series Mt. Hood"
         ], 
-        "style": "Pilsener"
+        "style": "Pilsener", 
+        "taste": "Koperen, licht karamellige mout met een hint van geroosterd brood. Een subtiele hopsmaak met citrus en ananas met een kruidige bitterheid."
     }, 
     {
-        "name": "Pilsener//Amstel 1870", 
+        "name": "Pilsener//Peroni Nastro Azzurro", 
         "similar": [
-            "Pilsener//Amstel 1870", 
-            "Pilsener//Gulpener Ur-Pilsener", 
-            "Pilsener//Dim Sum Beer", 
             "Pilsener//Peroni Nastro Azzurro", 
-            "Belgische IPA//Vriendschap Hopblond", 
+            "Pilsener//Alfa Super Strong 9.2", 
             "Pilsener//Gulpener Pilsner", 
-            "Blond//Gouverneur Speciale 140", 
-            "Sterke Blonde//La Guillotine"
+            "Pilsener//Heineken Pilsener", 
+            "Pilsener//Maes Pilsener", 
+            "Blond//Amstel Blond", 
+            "Blond//Brunehaut Bio Blonde", 
+            "American IPA//ReAle Extra"
         ], 
-        "style": "Pilsener"
+        "style": "Pilsener", 
+        "taste": "Subtiele smaken van grapefruit, sinaasappel, mandarijn en dennen die zijn tonen van karamel en honing die afkomstig zijn van de mouten. Dit bier is aanvankelijk zeer droog en hoppig-bitter in de mond, maar na een paar seconden komen de fruittonen naar voren. De afdronk bevat verschillende harsachtige peperige aantekeningen."
     }, 
     {
-        "name": "American IPA//Emelisse Smoked Rye IPA", 
+        "name": "American IPA//Mikkeller Hop Series Palisade", 
         "similar": [
-            "American IPA//Emelisse Smoked Rye IPA", 
-            "American IPA//Mikkeller Hop Series Citra", 
+            "American IPA//Mikkeller Hop Series Palisade", 
+            "American IPA//Mikkeller Hop Series Mt. Hood", 
+            "American IPA//Mikkeller Hop Series Warrior", 
+            "American IPA//Mikkeller Hop Series Amarillo", 
             "American IPA//ReAle Extra", 
-            "American IPA//Anchor Liberty Ale", 
-            "American IPA//Mikkeller Hop Series Super Galena", 
-            "Bockbier//Graaf van Heumen Herfstbok", 
-            "Bockbier//Bavaria Hooghe Bock", 
-            "Bockbier//Steenbrugge Abdij Bock"
+            "Witbier//Troublette", 
+            "Tripel//Vicaris Tripel-Gueuze", 
+            "Dubbel//Budels Capucijn"
         ], 
-        "style": "American IPA"
-    }, 
-    {
-        "name": "American IPA//Mikkeller Hop Series Super Galena", 
-        "similar": [
-            "American IPA//Mikkeller Hop Series Super Galena", 
-            "American IPA//Mikkeller Hop Series Citra", 
-            "American IPA//Anchor Liberty Ale", 
-            "American IPA//Emelisse Smoked Rye IPA", 
-            "American IPA//ReAle Extra", 
-            "Tripel//Witkap Pater Tripel", 
-            "Bockbier//Broomrider", 
-            "Sterke Blonde//Tourn\u00e9e G\u00e9n\u00e9rale Tripel Hop"
-        ], 
-        "style": "American IPA"
+        "style": "American IPA", 
+        "taste": "Volle zoete smaak, met nuances van donker fruit en karamel. Een licht bittere nadronk. "
     }, 
     {
         "name": "American IPA//ReAle Extra", 
         "similar": [
             "American IPA//ReAle Extra", 
-            "American IPA//Emelisse Smoked Rye IPA", 
-            "American IPA//Anchor Liberty Ale", 
-            "American IPA//Mikkeller Hop Series Citra", 
-            "American IPA//Mikkeller Hop Series Super Galena", 
-            "Tripel//Dulle Teve", 
-            "Tripel//Witkap Pater Tripel", 
-            "Blond//Kasteel Hoppy"
+            "American IPA//Mikkeller Hop Series Warrior", 
+            "American IPA//Mikkeller Hop Series Mt. Hood", 
+            "American IPA//Mikkeller Hop Series Palisade", 
+            "American IPA//Mikkeller Hop Series Amarillo", 
+            "Bockbier//Eem Bok", 
+            "Tripel//Novice Black Tripel", 
+            "Sterke Blonde//Moinette Blonde"
         ], 
-        "style": "American IPA"
+        "style": "American IPA", 
+        "taste": "In het begin een moutige en citroenachtige smaak. Daarna komen wat karamelmouten naar voren en is het zeer mooi gistachtig. Licht bittere afwerking. "
     }, 
     {
-        "name": "American IPA//Anchor Liberty Ale", 
+        "name": "American IPA//Mikkeller Hop Series Amarillo", 
         "similar": [
-            "American IPA//Anchor Liberty Ale", 
-            "American IPA//Emelisse Smoked Rye IPA", 
-            "American IPA//Mikkeller Hop Series Super Galena", 
+            "American IPA//Mikkeller Hop Series Amarillo", 
+            "American IPA//Mikkeller Hop Series Mt. Hood", 
+            "American IPA//Mikkeller Hop Series Palisade", 
+            "American IPA//Mikkeller Hop Series Warrior", 
             "American IPA//ReAle Extra", 
-            "American IPA//Mikkeller Hop Series Citra", 
-            "Sterke Blonde//Tourn\u00e9e G\u00e9n\u00e9rale Tripel Hop", 
-            "Bockbier//Broomrider", 
-            "Sterke Blonde//La Guillotine"
+            "Dubbel//Petrus Dubbel bruin", 
+            "Belgische IPA//Jopen Barrevoet IPA", 
+            "Belgische IPA//Vriendschap Hopblond"
         ], 
-        "style": "American IPA"
+        "style": "American IPA", 
+        "taste": "Smaak is licht fruitig, hop en iets bitter. Complexe nasmaak."
     }, 
     {
-        "name": "American IPA//Mikkeller Hop Series Citra", 
+        "name": "American IPA//Mikkeller Hop Series Warrior", 
         "similar": [
-            "American IPA//Mikkeller Hop Series Citra", 
-            "American IPA//Mikkeller Hop Series Super Galena", 
-            "American IPA//Emelisse Smoked Rye IPA", 
-            "American IPA//Anchor Liberty Ale", 
+            "American IPA//Mikkeller Hop Series Warrior", 
+            "American IPA//Mikkeller Hop Series Mt. Hood", 
+            "American IPA//Mikkeller Hop Series Palisade", 
+            "American IPA//Mikkeller Hop Series Amarillo", 
             "American IPA//ReAle Extra", 
+            "Tripel//Pater Lieven Tripel", 
+            "Belgische IPA//Hopus Primeur 2014", 
+            "Tripel//Novice Black Tripel"
+        ], 
+        "style": "American IPA", 
+        "taste": "Heel zoet en het smaak een beetje naar cake. Daarnaast is er smaak van donker fruit (rozijnen en bosvruchten), gist, en een vleugje karamel en chocolade. Daarnaast een citrus bittere nasmaak dat doet denken aan een tripel. De afdronk is ook vrij droog."
+    }, 
+    {
+        "name": "American IPA//Mikkeller Hop Series Mt. Hood", 
+        "similar": [
+            "American IPA//Mikkeller Hop Series Mt. Hood", 
+            "American IPA//Mikkeller Hop Series Palisade", 
+            "American IPA//Mikkeller Hop Series Warrior", 
+            "American IPA//Mikkeller Hop Series Amarillo", 
+            "American IPA//ReAle Extra", 
+            "Belgische IPA//Hopus Primeur 2014", 
             "Witbier//Troublette", 
-            "Pilsener//Gulpener Ur-Pilsener", 
-            "Bockbier//Broomrider"
+            "Pilsener//Heineken Pilsener"
         ], 
-        "style": "American IPA"
+        "style": "American IPA", 
+        "taste": "Frisse moutsmaak met een fruitige hopsmaak en licht bitter van karakter."
     }, 
     {
-        "name": "Bockbier//Steenbrugge Abdij Bock", 
+        "name": "Bockbier//IJbok", 
         "similar": [
-            "Bockbier//Steenbrugge Abdij Bock", 
-            "Bockbier//Bavaria Hooghe Bock", 
-            "Bockbier//Silly Bock", 
-            "Bockbier//Broomrider", 
-            "Bockbier//Graaf van Heumen Herfstbok", 
-            "American IPA//Emelisse Smoked Rye IPA", 
+            "Bockbier//IJbok", 
+            "Bockbier//Windbuul", 
+            "Bockbier//Eem Bok", 
+            "Bockbier//Hertog Jan Bockbier", 
+            "Bockbier//Barb\u00e3r Bok", 
+            "Dubbel//Donker Genoegen", 
+            "Dubbel//Petrus Dubbel bruin", 
+            "Dubbel//Val-Dieu Brune"
+        ], 
+        "style": "Bockbier", 
+        "taste": "De smaak is licht zoet met een lichte bitterheid en een vleugje zuur. Tevens een milde fruitsmaak (pruimen en gedroogde kersen) en lichte smaak van geroosterde noten. Prettig hinten van rook, hout, en koffie in de afdronk."
+    }, 
+    {
+        "name": "Bockbier//Barb\u00e3r Bok", 
+        "similar": [
+            "Bockbier//Barb\u00e3r Bok", 
+            "Bockbier//Hertog Jan Bockbier", 
+            "Bockbier//Windbuul", 
+            "Bockbier//Eem Bok", 
+            "Bockbier//IJbok", 
+            "Dubbel//Petrus Dubbel bruin", 
             "Dubbel//Val-Dieu Brune", 
-            "Blond//Postel Blond"
+            "Dubbel//Witkap Pater Dubbel"
         ], 
-        "style": "Bockbier"
+        "style": "Bockbier", 
+        "taste": "Redelijk complex bier qua smaak. Fruitig (kersen en druiven), in combinatie met een gist-esterachtig karakter. Daarnaast redelijk droog en beetje zuur in de afdronk. "
     }, 
     {
-        "name": "Bockbier//Bavaria Hooghe Bock", 
+        "name": "Bockbier//Eem Bok", 
         "similar": [
-            "Bockbier//Bavaria Hooghe Bock", 
-            "Bockbier//Broomrider", 
-            "Bockbier//Silly Bock", 
-            "Bockbier//Graaf van Heumen Herfstbok", 
-            "Bockbier//Steenbrugge Abdij Bock", 
-            "Fruitbier//Bink Bloesem", 
-            "Fruitbier//Bacchus Kriekenbier", 
-            "Tripel//Dulle Teve"
+            "Bockbier//Eem Bok", 
+            "Bockbier//IJbok", 
+            "Bockbier//Hertog Jan Bockbier", 
+            "Bockbier//Barb\u00e3r Bok", 
+            "Bockbier//Windbuul", 
+            "Blond//Leffe Blond", 
+            "Tripel//Novice Black Tripel", 
+            "Sterke Blonde//Moinette Blonde"
         ], 
-        "style": "Bockbier"
+        "style": "Bockbier", 
+        "taste": "In het begin een moutige en citroenachtige smaak. Daarna komen wat karamelmouten naar voren en is het zeer mooi gistachtig. Licht bittere afwerking. "
     }, 
     {
-        "name": "Bockbier//Broomrider", 
+        "name": "Bockbier//Hertog Jan Bockbier", 
         "similar": [
-            "Bockbier//Broomrider", 
-            "Bockbier//Bavaria Hooghe Bock", 
-            "Bockbier//Silly Bock", 
-            "Bockbier//Graaf van Heumen Herfstbok", 
-            "Bockbier//Steenbrugge Abdij Bock", 
-            "Belgische IPA//John Martin's IPA", 
-            "American IPA//Anchor Liberty Ale", 
-            "Fruitbier//Bink Bloesem"
+            "Bockbier//Hertog Jan Bockbier", 
+            "Bockbier//Barb\u00e3r Bok", 
+            "Bockbier//Windbuul", 
+            "Bockbier//IJbok", 
+            "Bockbier//Eem Bok", 
+            "Dubbel//Budels Capucijn", 
+            "Pilsener//Alfa Super Strong 9.2", 
+            "Dubbel//Donker Genoegen"
         ], 
-        "style": "Bockbier"
+        "style": "Bockbier", 
+        "taste": "Redelijk zoet bier met een sterke moutsmaak en smaak van donker fruit. Tevens een beetje zuur en beetje gistsmaak."
     }, 
     {
-        "name": "Bockbier//Silly Bock", 
+        "name": "Bockbier//Windbuul", 
         "similar": [
-            "Bockbier//Silly Bock", 
-            "Bockbier//Broomrider", 
-            "Bockbier//Bavaria Hooghe Bock", 
-            "Bockbier//Graaf van Heumen Herfstbok", 
-            "Bockbier//Steenbrugge Abdij Bock", 
-            "American IPA//Anchor Liberty Ale", 
-            "Fruitbier//Bink Bloesem", 
-            "Fruitbier//Bacchus Kriekenbier"
+            "Bockbier//Windbuul", 
+            "Bockbier//IJbok", 
+            "Bockbier//Hertog Jan Bockbier", 
+            "Bockbier//Barb\u00e3r Bok", 
+            "Bockbier//Eem Bok", 
+            "Dubbel//Petrus Dubbel bruin", 
+            "Dubbel//Donker Genoegen", 
+            "Dubbel//Budels Capucijn"
         ], 
-        "style": "Bockbier"
+        "style": "Bockbier", 
+        "taste": "Volle zoete smaak, met nuances van donker fruit en karamel. Een licht bittere nadronk. "
     }, 
     {
-        "name": "Bockbier//Graaf van Heumen Herfstbok", 
+        "name": "Sterke Blonde//Moinette Blonde", 
         "similar": [
-            "Bockbier//Graaf van Heumen Herfstbok", 
-            "Bockbier//Bavaria Hooghe Bock", 
-            "Bockbier//Broomrider", 
-            "Bockbier//Silly Bock", 
-            "Bockbier//Steenbrugge Abdij Bock", 
-            "Dubbel//Achel Bruin Extra", 
-            "Fruitbier//Bink Bloesem", 
-            "Blond//Kasteel Blond"
+            "Sterke Blonde//Moinette Blonde", 
+            "Sterke Blonde//Keizer Karel Goud Blond", 
+            "Sterke Blonde//Stoeipoes", 
+            "Sterke Blonde//Duvel Groen", 
+            "Sterke Blonde//St-Feuillien Grand Cru", 
+            "Bockbier//Eem Bok", 
+            "Blond//Leffe Blond", 
+            "Pilsener//Alfa Super Strong 9.2"
         ], 
-        "style": "Bockbier"
+        "style": "Sterke Blonde", 
+        "taste": "Zoet bier met karamelmouten; aan het eind wat alcoholische opwarming."
     }, 
     {
-        "name": "Sterke Blonde//Tourn\u00e9e G\u00e9n\u00e9rale Tripel Hop", 
+        "name": "Sterke Blonde//Keizer Karel Goud Blond", 
         "similar": [
-            "Sterke Blonde//Tourn\u00e9e G\u00e9n\u00e9rale Tripel Hop", 
-            "Sterke Blonde//Duvel", 
-            "Sterke Blonde//La Guillotine", 
-            "Sterke Blonde//Pilaarbijter Blond", 
-            "Sterke Blonde//Ommegang Keizer Karel", 
-            "Blond//Kasteel Blond", 
-            "American IPA//Anchor Liberty Ale", 
-            "Dubbel//Vicaris Generaal"
+            "Sterke Blonde//Keizer Karel Goud Blond", 
+            "Sterke Blonde//Stoeipoes", 
+            "Sterke Blonde//Duvel Groen", 
+            "Sterke Blonde//Moinette Blonde", 
+            "Sterke Blonde//St-Feuillien Grand Cru", 
+            "Witbier//Ramses Moby Dick", 
+            "Tripel//Achel 8 Blond", 
+            "Tripel//Novice Black Tripel"
         ], 
-        "style": "Sterke Blonde"
+        "style": "Sterke Blonde", 
+        "taste": "Heel zoet en het smaak een beetje naar cake. Daarnaast is er smaak van donker fruit (rozijnen en bosvruchten), gist, en een vleugje karamel en chocolade. Daarnaast een citrus bittere nasmaak dat doet denken aan een tripel. De afdronk is ook vrij droog."
     }, 
     {
-        "name": "Sterke Blonde//Pilaarbijter Blond", 
+        "name": "Sterke Blonde//Duvel Groen", 
         "similar": [
-            "Sterke Blonde//Pilaarbijter Blond", 
-            "Sterke Blonde//Ommegang Keizer Karel", 
-            "Sterke Blonde//Duvel", 
-            "Sterke Blonde//La Guillotine", 
-            "Sterke Blonde//Tourn\u00e9e G\u00e9n\u00e9rale Tripel Hop", 
-            "Dubbel//Vicaris Generaal", 
-            "Belgische IPA//Raging Bitch", 
-            "Witbier//Hoegaarden Wit"
+            "Sterke Blonde//Duvel Groen", 
+            "Sterke Blonde//Keizer Karel Goud Blond", 
+            "Sterke Blonde//St-Feuillien Grand Cru", 
+            "Sterke Blonde//Stoeipoes", 
+            "Sterke Blonde//Moinette Blonde", 
+            "Tripel//Achel 8 Blond", 
+            "Tripel//Guldenberg", 
+            "Tripel//Novice Black Tripel"
         ], 
-        "style": "Sterke Blonde"
+        "style": "Sterke Blonde", 
+        "taste": "Heel zoet en het smaak een beetje naar cake. Daarnaast is er smaak van donker fruit (rozijnen en bosvruchten), gist, en een vleugje karamel en chocolade. Daarnaast een citrus bittere nasmaak dat doet denken aan een tripel. De afdronk is ook vrij droog."
     }, 
     {
-        "name": "Sterke Blonde//La Guillotine", 
+        "name": "Sterke Blonde//St-Feuillien Grand Cru", 
         "similar": [
-            "Sterke Blonde//La Guillotine", 
-            "Sterke Blonde//Duvel", 
-            "Sterke Blonde//Ommegang Keizer Karel", 
-            "Sterke Blonde//Tourn\u00e9e G\u00e9n\u00e9rale Tripel Hop", 
-            "Sterke Blonde//Pilaarbijter Blond", 
-            "Tripel//De Liter van Pallieter", 
-            "American IPA//Anchor Liberty Ale", 
-            "Pilsener//Amstel 1870"
+            "Sterke Blonde//St-Feuillien Grand Cru", 
+            "Sterke Blonde//Keizer Karel Goud Blond", 
+            "Sterke Blonde//Duvel Groen", 
+            "Sterke Blonde//Stoeipoes", 
+            "Sterke Blonde//Moinette Blonde", 
+            "Tripel//Novice Black Tripel", 
+            "Belgische IPA//Hopus", 
+            "Belgische IPA//Hopus Primeur 2014"
         ], 
-        "style": "Sterke Blonde"
+        "style": "Sterke Blonde", 
+        "taste": "Moutig en gistige smaak met hinten van witte peper. Licht zoet en fruitig. De afdronk bevat een citrus hopsmaak."
     }, 
     {
-        "name": "Sterke Blonde//Duvel", 
+        "name": "Sterke Blonde//Stoeipoes", 
         "similar": [
-            "Sterke Blonde//Duvel", 
-            "Sterke Blonde//Ommegang Keizer Karel", 
-            "Sterke Blonde//Pilaarbijter Blond", 
-            "Sterke Blonde//Tourn\u00e9e G\u00e9n\u00e9rale Tripel Hop", 
-            "Sterke Blonde//La Guillotine", 
-            "Pilsener//Amstel 1870", 
-            "Tripel//De Liter van Pallieter", 
-            "Tripel//Moeder Overste"
+            "Sterke Blonde//Stoeipoes", 
+            "Sterke Blonde//Keizer Karel Goud Blond", 
+            "Sterke Blonde//Moinette Blonde", 
+            "Sterke Blonde//Duvel Groen", 
+            "Sterke Blonde//St-Feuillien Grand Cru", 
+            "Pilsener//Alfa Super Strong 9.2", 
+            "Bockbier//Barb\u00e3r Bok", 
+            "Belgische IPA//Hopus"
         ], 
-        "style": "Sterke Blonde"
+        "style": "Sterke Blonde", 
+        "taste": "Hopus heeft een zachte aanzet en een uitbundig hoppalet (5 soorten), waardoor het bier een bittere nasmaak geeft. Het bier heeft ook iets fruitig en moutigs."
     }, 
     {
-        "name": "Sterke Blonde//Ommegang Keizer Karel", 
+        "name": "Fruitbier//Gulpener Korenwolf Ros\u00e9", 
         "similar": [
-            "Sterke Blonde//Ommegang Keizer Karel", 
-            "Sterke Blonde//Pilaarbijter Blond", 
-            "Sterke Blonde//Duvel", 
-            "Sterke Blonde//La Guillotine", 
-            "Sterke Blonde//Tourn\u00e9e G\u00e9n\u00e9rale Tripel Hop", 
-            "Tripel//Witkap Pater Tripel", 
-            "Tripel//De Liter van Pallieter", 
-            "American IPA//Anchor Liberty Ale"
+            "Fruitbier//Gulpener Korenwolf Ros\u00e9", 
+            "Fruitbier//Mongozo Mango", 
+            "Fruitbier//Lindemans Cassis", 
+            "Fruitbier//Mongozo Coconut", 
+            "Fruitbier//Desperados", 
+            "Tripel//Novice Black Tripel", 
+            "Belgische IPA//Hopus", 
+            "Bockbier//Eem Bok"
         ], 
-        "style": "Sterke Blonde"
+        "style": "Fruitbier", 
+        "taste": "In het begin geroosterde mout en licht zoet. Daarna wordt het bier vrij snel bitter en dan komt er ook wat chocolade naar voren. De afdronk bevat een licht metalachtige smaak."
+    }, 
+    {
+        "name": "Fruitbier//Desperados", 
+        "similar": [
+            "Fruitbier//Desperados", 
+            "Fruitbier//Mongozo Mango", 
+            "Fruitbier//Gulpener Korenwolf Ros\u00e9", 
+            "Fruitbier//Lindemans Cassis", 
+            "Fruitbier//Mongozo Coconut", 
+            "Dubbel//Val-Dieu Brune", 
+            "Tripel//Vicaris Tripel-Gueuze", 
+            "Blond//Amstel Blond"
+        ], 
+        "style": "Fruitbier", 
+        "taste": "Smaakt zoals de Amstel Pilsener maar dan iets lichter qua bitterheid. Heeft tevens iets vanille-achtigs op de achtergrond. Zeer fris bier. "
+    }, 
+    {
+        "name": "Fruitbier//Lindemans Cassis", 
+        "similar": [
+            "Fruitbier//Lindemans Cassis", 
+            "Fruitbier//Mongozo Mango", 
+            "Fruitbier//Gulpener Korenwolf Ros\u00e9", 
+            "Fruitbier//Mongozo Coconut", 
+            "Fruitbier//Desperados", 
+            "Tripel//Pater Lieven Tripel", 
+            "Sterke Blonde//Keizer Karel Goud Blond", 
+            "Blond//Leffe Blond"
+        ], 
+        "style": "Fruitbier", 
+        "taste": "Licht zoet en licht zuur in begin. Daarna wordt het een stuk zoeter met een kruidige smaak in combinatie met een citrus/banaanachtige smaak. In de afdronk komt een lichte bitterheid om de hoek kijken. "
+    }, 
+    {
+        "name": "Fruitbier//Mongozo Coconut", 
+        "similar": [
+            "Fruitbier//Mongozo Coconut", 
+            "Fruitbier//Mongozo Mango", 
+            "Fruitbier//Lindemans Cassis", 
+            "Fruitbier//Gulpener Korenwolf Ros\u00e9", 
+            "Fruitbier//Desperados", 
+            "Dubbel//Budels Capucijn", 
+            "Dubbel//Donker Genoegen", 
+            "American IPA//Mikkeller Hop Series Warrior"
+        ], 
+        "style": "Fruitbier", 
+        "taste": "Koperen, licht karamellige mout met een hint van geroosterd brood. Bloemige, bijna honingachtige hop met citrus en een (relatief) subtiele bitterheid."
     }, 
     {
         "name": "Fruitbier//Mongozo Mango", 
         "similar": [
             "Fruitbier//Mongozo Mango", 
-            "Fruitbier//Hoegaarden Ros\u00e9e", 
-            "Fruitbier//Leffe Ruby", 
-            "Fruitbier//Bink Bloesem", 
-            "Fruitbier//Bacchus Kriekenbier", 
+            "Fruitbier//Gulpener Korenwolf Ros\u00e9", 
+            "Fruitbier//Lindemans Cassis", 
+            "Fruitbier//Mongozo Coconut", 
+            "Fruitbier//Desperados", 
             "Dubbel//Val-Dieu Brune", 
-            "Dubbel//Achel Bruin Extra", 
-            "Belgische IPA//Surf Ale"
+            "Dubbel//Witkap Pater Dubbel", 
+            "Tripel//Pater Lieven Tripel"
         ], 
-        "style": "Fruitbier"
+        "style": "Fruitbier", 
+        "taste": "Kruidig in begin gevolgde door lichte smaak van fruit (citroen en vanille). Afdronk is licht droog, lang en licht fruitig."
     }, 
     {
-        "name": "Fruitbier//Bacchus Kriekenbier", 
+        "name": "Witbier//Ramses Moby Dick", 
         "similar": [
-            "Fruitbier//Bacchus Kriekenbier", 
-            "Fruitbier//Bink Bloesem", 
-            "Fruitbier//Mongozo Mango", 
-            "Fruitbier//Leffe Ruby", 
-            "Fruitbier//Hoegaarden Ros\u00e9e", 
-            "Tripel//Vicaris Tripel", 
-            "Bockbier//Bavaria Hooghe Bock", 
-            "Blond//Kasteel Blond"
-        ], 
-        "style": "Fruitbier"
-    }, 
-    {
-        "name": "Fruitbier//Hoegaarden Ros\u00e9e", 
-        "similar": [
-            "Fruitbier//Hoegaarden Ros\u00e9e", 
-            "Fruitbier//Mongozo Mango", 
-            "Fruitbier//Leffe Ruby", 
-            "Fruitbier//Bacchus Kriekenbier", 
-            "Fruitbier//Bink Bloesem", 
-            "Tripel//Dulle Teve", 
-            "Dubbel//Val-Dieu Brune", 
-            "Dubbel//Achel Bruin Extra"
-        ], 
-        "style": "Fruitbier"
-    }, 
-    {
-        "name": "Fruitbier//Bink Bloesem", 
-        "similar": [
-            "Fruitbier//Bink Bloesem", 
-            "Fruitbier//Mongozo Mango", 
-            "Fruitbier//Bacchus Kriekenbier", 
-            "Fruitbier//Leffe Ruby", 
-            "Fruitbier//Hoegaarden Ros\u00e9e", 
-            "Bockbier//Bavaria Hooghe Bock", 
-            "Bockbier//Graaf van Heumen Herfstbok", 
-            "Dubbel//Val-Dieu Brune"
-        ], 
-        "style": "Fruitbier"
-    }, 
-    {
-        "name": "Fruitbier//Leffe Ruby", 
-        "similar": [
-            "Fruitbier//Leffe Ruby", 
-            "Fruitbier//Mongozo Mango", 
-            "Fruitbier//Bink Bloesem", 
-            "Fruitbier//Bacchus Kriekenbier", 
-            "Fruitbier//Hoegaarden Ros\u00e9e", 
-            "Dubbel//Achel Bruin Extra", 
-            "Tripel//Witkap Pater Tripel", 
-            "Tripel//Dulle Teve"
-        ], 
-        "style": "Fruitbier"
-    }, 
-    {
-        "name": "Witbier//Witheer", 
-        "similar": [
-            "Witbier//Witheer", 
+            "Witbier//Ramses Moby Dick", 
+            "Witbier//IJwit", 
+            "Witbier//Celis White", 
+            "Witbier//Steenbrugge Wit", 
             "Witbier//Troublette", 
-            "Witbier//La Trappe Witte Trappist", 
-            "Witbier//Schiller's Wit", 
-            "Witbier//Hoegaarden Wit", 
-            "Belgische IPA//Vriendschap Hopblond", 
-            "Belgische IPA//Hopus", 
-            "Tripel//Vicaris Tripel"
+            "Pilsener//Heineken Pilsener", 
+            "Pilsener//Maes Pilsener", 
+            "Sterke Blonde//Keizer Karel Goud Blond"
         ], 
-        "style": "Witbier"
+        "style": "Witbier", 
+        "taste": "Zoetige, kruidige smaak met een aangenaam droge, bittere afdronk."
+    }, 
+    {
+        "name": "Witbier//Celis White", 
+        "similar": [
+            "Witbier//Celis White", 
+            "Witbier//IJwit", 
+            "Witbier//Ramses Moby Dick", 
+            "Witbier//Troublette", 
+            "Witbier//Steenbrugge Wit", 
+            "Blond//Leffe Blond", 
+            "Tripel//Pater Lieven Tripel", 
+            "Belgische IPA//Hopus Primeur 2014"
+        ], 
+        "style": "Witbier", 
+        "taste": "Moutig en gistige smaak met hinten van witte peper. Licht zoet en fruitig. De afdronk bevat een citrus hopsmaak."
     }, 
     {
         "name": "Witbier//Troublette", 
         "similar": [
             "Witbier//Troublette", 
-            "Witbier//Schiller's Wit", 
-            "Witbier//La Trappe Witte Trappist", 
-            "Witbier//Witheer", 
-            "Witbier//Hoegaarden Wit", 
-            "Tripel//Vicaris Tripel", 
+            "Witbier//Celis White", 
+            "Witbier//IJwit", 
+            "Witbier//Steenbrugge Wit", 
+            "Witbier//Ramses Moby Dick", 
+            "Tripel//Pater Lieven Tripel", 
             "Belgische IPA//Hopus", 
-            "Pilsener//Dim Sum Beer"
+            "Pilsener//Heineken Pilsener"
         ], 
-        "style": "Witbier"
+        "style": "Witbier", 
+        "taste": "Frisse moutsmaak met een fruitige hopsmaak en licht bitter van karakter."
     }, 
     {
-        "name": "Witbier//Hoegaarden Wit", 
+        "name": "Witbier//Steenbrugge Wit", 
         "similar": [
-            "Witbier//Hoegaarden Wit", 
+            "Witbier//Steenbrugge Wit", 
+            "Witbier//IJwit", 
+            "Witbier//Ramses Moby Dick", 
+            "Witbier//Celis White", 
             "Witbier//Troublette", 
-            "Witbier//La Trappe Witte Trappist", 
-            "Witbier//Schiller's Wit", 
-            "Witbier//Witheer", 
-            "Sterke Blonde//Pilaarbijter Blond", 
-            "American IPA//ReAle Extra", 
-            "Blond//Postel Blond"
+            "Pilsener//Heineken Pilsener", 
+            "Blond//Leffe Blond", 
+            "American IPA//Mikkeller Hop Series Mt. Hood"
         ], 
-        "style": "Witbier"
+        "style": "Witbier", 
+        "taste": "Koperen, licht karamellige mout met een hint van geroosterd brood. Een subtiele hopsmaak met citrus en ananas met een kruidige bitterheid."
     }, 
     {
-        "name": "Witbier//Schiller's Wit", 
+        "name": "Witbier//IJwit", 
         "similar": [
-            "Witbier//Schiller's Wit", 
-            "Witbier//La Trappe Witte Trappist", 
+            "Witbier//IJwit", 
+            "Witbier//Celis White", 
+            "Witbier//Ramses Moby Dick", 
+            "Witbier//Steenbrugge Wit", 
             "Witbier//Troublette", 
-            "Witbier//Witheer", 
-            "Witbier//Hoegaarden Wit", 
-            "Sterke Blonde//Pilaarbijter Blond", 
-            "Pilsener//Gulpener Ur-Pilsener", 
-            "American IPA//Emelisse Smoked Rye IPA"
+            "Pilsener//Maes Pilsener", 
+            "Dubbel//Budels Capucijn", 
+            "Pilsener//Heineken Pilsener"
         ], 
-        "style": "Witbier"
+        "style": "Witbier", 
+        "taste": "Frisse moutsmaak met een fruitige hopsmaak en licht bitter van karakter."
     }, 
     {
-        "name": "Witbier//La Trappe Witte Trappist", 
+        "name": "Belgische IPA//Hopus Primeur 2014", 
         "similar": [
-            "Witbier//La Trappe Witte Trappist", 
-            "Witbier//Schiller's Wit", 
-            "Witbier//Troublette", 
-            "Witbier//Witheer", 
-            "Witbier//Hoegaarden Wit", 
-            "Tripel//Witkap Pater Tripel", 
-            "American IPA//Emelisse Smoked Rye IPA", 
-            "Sterke Blonde//La Guillotine"
+            "Belgische IPA//Hopus Primeur 2014", 
+            "Belgische IPA//Vriendschap Hopblond", 
+            "Belgische IPA//Jopen Barrevoet IPA", 
+            "Belgische IPA//Noblesse Extra Ordinaire", 
+            "Belgische IPA//Hopus", 
+            "Blond//Affligem Blond", 
+            "American IPA//Mikkeller Hop Series Mt. Hood", 
+            "Tripel//Novice Black Tripel"
         ], 
-        "style": "Witbier"
+        "style": "Belgische IPA", 
+        "taste": "Heel zoet en het smaak een beetje naar cake. Daarnaast is er smaak van donker fruit (rozijnen en bosvruchten), gist, en een vleugje karamel en chocolade. Daarnaast een citrus bittere nasmaak dat doet denken aan een tripel. De afdronk is ook vrij droog."
     }, 
     {
         "name": "Belgische IPA//Hopus", 
         "similar": [
             "Belgische IPA//Hopus", 
             "Belgische IPA//Vriendschap Hopblond", 
-            "Belgische IPA//John Martin's IPA", 
-            "Belgische IPA//Raging Bitch", 
-            "Belgische IPA//Surf Ale", 
-            "Tripel//Moeder Overste", 
-            "Witbier//Troublette", 
-            "Blond//Gouverneur Speciale 140"
+            "Belgische IPA//Noblesse Extra Ordinaire", 
+            "Belgische IPA//Jopen Barrevoet IPA", 
+            "Belgische IPA//Hopus Primeur 2014", 
+            "Tripel//Novice Black Tripel", 
+            "Sterke Blonde//St-Feuillien Grand Cru", 
+            "Witbier//Troublette"
         ], 
-        "style": "Belgische IPA"
+        "style": "Belgische IPA", 
+        "taste": "Kruidig in het begin met koriander en citroen en een subtiele hint van sinaasappelschil. Het bier is ook licht zuur. Lichte nasmaak van vers brood."
     }, 
     {
-        "name": "Belgische IPA//Raging Bitch", 
+        "name": "Belgische IPA//Noblesse Extra Ordinaire", 
         "similar": [
-            "Belgische IPA//Raging Bitch", 
+            "Belgische IPA//Noblesse Extra Ordinaire", 
             "Belgische IPA//Vriendschap Hopblond", 
-            "Belgische IPA//John Martin's IPA", 
             "Belgische IPA//Hopus", 
-            "Belgische IPA//Surf Ale", 
-            "Tripel//Dulle Teve", 
-            "Tripel//Moeder Overste", 
-            "Bockbier//Bavaria Hooghe Bock"
+            "Belgische IPA//Jopen Barrevoet IPA", 
+            "Belgische IPA//Hopus Primeur 2014", 
+            "Sterke Blonde//Moinette Blonde", 
+            "Blond//Leffe Blond", 
+            "Sterke Blonde//St-Feuillien Grand Cru"
         ], 
-        "style": "Belgische IPA"
+        "style": "Belgische IPA", 
+        "taste": "Zacht van smaak, licht zoet en toch kruidig/prikkelig op de tong. De gist heeft iets weg van citrusvruchten. Tevens redelijk hopbitter en een lange afdronk. "
     }, 
     {
         "name": "Belgische IPA//Vriendschap Hopblond", 
         "similar": [
             "Belgische IPA//Vriendschap Hopblond", 
-            "Belgische IPA//John Martin's IPA", 
             "Belgische IPA//Hopus", 
-            "Belgische IPA//Raging Bitch", 
-            "Belgische IPA//Surf Ale", 
-            "Pilsener//Amstel 1870", 
-            "Blond//Gouverneur Speciale 140", 
-            "Tripel//Moeder Overste"
+            "Belgische IPA//Jopen Barrevoet IPA", 
+            "Belgische IPA//Noblesse Extra Ordinaire", 
+            "Belgische IPA//Hopus Primeur 2014", 
+            "Blond//Loterbol Blond", 
+            "American IPA//Mikkeller Hop Series Amarillo", 
+            "Tripel//Pater Lieven Tripel"
         ], 
-        "style": "Belgische IPA"
+        "style": "Belgische IPA", 
+        "taste": "Kruidig in begin gevolgde door lichte smaak van fruit (citroen en vanille). Afdronk is licht droog, lang en licht fruitig."
     }, 
     {
-        "name": "Belgische IPA//Surf Ale", 
+        "name": "Belgische IPA//Jopen Barrevoet IPA", 
         "similar": [
-            "Belgische IPA//Surf Ale", 
+            "Belgische IPA//Jopen Barrevoet IPA", 
             "Belgische IPA//Vriendschap Hopblond", 
-            "Belgische IPA//John Martin's IPA", 
-            "Belgische IPA//Raging Bitch", 
+            "Belgische IPA//Hopus Primeur 2014", 
+            "Belgische IPA//Noblesse Extra Ordinaire", 
             "Belgische IPA//Hopus", 
-            "American IPA//Anchor Liberty Ale", 
-            "Dubbel//Vicaris Generaal", 
-            "Blond//Hert Vijlener Bosbier"
+            "American IPA//Mikkeller Hop Series Amarillo", 
+            "Witbier//Ramses Moby Dick", 
+            "Blond//Loterbol Blond"
         ], 
-        "style": "Belgische IPA"
-    }, 
-    {
-        "name": "Belgische IPA//John Martin's IPA", 
-        "similar": [
-            "Belgische IPA//John Martin's IPA", 
-            "Belgische IPA//Vriendschap Hopblond", 
-            "Belgische IPA//Raging Bitch", 
-            "Belgische IPA//Hopus", 
-            "Belgische IPA//Surf Ale", 
-            "Bockbier//Broomrider", 
-            "Fruitbier//Bink Bloesem", 
-            "Fruitbier//Bacchus Kriekenbier"
-        ], 
-        "style": "Belgische IPA"
+        "style": "Belgische IPA", 
+        "taste": "Smaak is een beetje aards en gistig. Tevens een beetje bitter, droog en rijk aan koolzuur. "
     }
 ]

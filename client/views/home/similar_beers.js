@@ -9,6 +9,7 @@ var w = 1024,
 
   var svg;
 
+var tip = d3.tip().attr('class', 'd3-tip').html(function(d) { return "<p><strong>Style:</strong> " + d.style + "</p><p><strong>Taste:</strong> " + d.taste + "</p>"; });
 
 Template.similarBeers.rendered = function(){
 
@@ -36,6 +37,8 @@ Template.similarBeers.rendered = function(){
     .append("svg:g")
       .attr("transform", "translate(" + rx + "," + ry + ")");
 
+  svg.call(tip);
+
   svg.append("svg:path")
       .attr("class", "arc")
       .attr("d", d3.svg.arc().outerRadius(ry - 120).innerRadius(0).startAngle(0).endAngle(2 * Math.PI))
@@ -51,8 +54,7 @@ Template.similarBeers.rendered = function(){
       }
     };
     links = new_links;
-
-        splines = bundle(links);
+    splines = bundle(links);
 
     var path = svg.selectAll("path.link")
         .data(links)
@@ -128,6 +130,13 @@ function mouseup() {
 }
 
 function mouseover(d) {
+  tip.direction(function(d) {
+    if(d.x > 45 && d.x <= 135) return 'e';
+    if(d.x > 135 && d.x <= 225) return 's';
+    if(d.x > 225 && d.x <= 315) return 'w';
+    if(d.x > 315 || d.x <= 45) return 'n';
+  })
+  tip.show(d);
   svg.selectAll("path.link.target-" + d.key)
       .classed("target", true)
       .each(updateNodes("source", true));
@@ -138,6 +147,7 @@ function mouseover(d) {
 }
 
 function mouseout(d) {
+  tip.hide();
   svg.selectAll("path.link.source-" + d.key)
       .classed("source", false)
       .each(updateNodes("target", false));
@@ -150,7 +160,7 @@ function mouseout(d) {
 function updateNodes(name, value) {
   return function(d) {
     if (value) this.parentNode.appendChild(this);
-    // svg.select("#node-" + d[name].key).classed(name, value);
+    svg.select("#node-" + d[name].key).classed(name, value);
   };
 }
 
@@ -177,7 +187,10 @@ var packages = {
           node.parent = find(name.substring(0, i = name.lastIndexOf("//")));
           node.parent.children.push(node);
           node.key = name.substring(i + 2).replace(/\W/g,"-");
-          node.pretty_key = name.substring(i + 2)
+          node.pretty_key = name.substring(i + 2);
+          if (data){
+            node.taste = data['taste'] || "";
+          }
         }
       }
       return node;
