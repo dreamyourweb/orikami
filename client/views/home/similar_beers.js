@@ -9,7 +9,16 @@ var w = 1024,
 
   var svg;
 
-var tip = d3.tip().attr('class', 'd3-tip').html(function(d) { return "<p><strong>Style:</strong> " + d.style + "</p><p><strong>Taste:</strong> " + d.taste + "</p>"; });
+var tip = d3.tip().attr('class', 'd3-tip').html(function(d) {
+  return "<div class='row'>" +
+            "<div class='small-3 columns'>" +
+              "<img src='" + d.img + "'></img>" +
+            "</div>" +
+            "<div class='small-9 columns'>" +
+              "<p><strong>Style:</strong>" + d.style + "</p><p><strong>Taste:</strong> " + d.taste + "</p>" +
+            "</div>" +
+          "</div>"
+});
 
 Template.similarBeers.rendered = function(){
 
@@ -44,8 +53,7 @@ Template.similarBeers.rendered = function(){
       .attr("d", d3.svg.arc().outerRadius(ry - 120).innerRadius(0).startAngle(0).endAngle(2 * Math.PI))
       .on("mousedown", mousedown);
 
-  d3.json("d3jsbeers.json", function(classes) {
-    var nodes = cluster.nodes(packages.root(classes));
+    var nodes = cluster.nodes(packages.root(SimilarBeers));
     var links = packages.imports(nodes);
     var new_links = [];
     for (var i = links.length - 1; i >= 0; i--) {
@@ -83,7 +91,6 @@ Template.similarBeers.rendered = function(){
       line.tension(this.value / 100);
       path.attr("d", function(d, i) { return line(splines[i]); });
     });
-  });
 
   d3.select(window)
     .on("mousemove", mousemove)
@@ -225,3 +232,9 @@ var packages = {
   }
 
 }
+
+Template.similarBeers.helpers({
+  beer_images: function(){
+    return _.map(SimilarBeers, function(beer){ return beer['img'] })
+  }
+});

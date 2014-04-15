@@ -1,4 +1,4 @@
-[
+SimilarBeers=[
     {
         "img": "https://s3-eu-west-1.amazonaws.com//bierapp/beers/thumb_5321dfdbf6b0748c03000006.jpg", 
         "name": "Blond//Vicaris Quinto", 

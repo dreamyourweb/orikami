@@ -127,4 +127,8 @@ path.arc {
   color: #fff;
   border-radius: 2px;
   max-width: 300px;
+  .columns {padding :0}
+  .columns:first-child{
+    padding-right: 12px;
+  }
 }
