@@ -12,27 +12,24 @@ Template.brain.events({
     event.preventDefault();
     switch(state){
       case 1:
-        grid();
-        break;
-      case 2:
         $("#BrainContainer .logo-container").addClass('animated fadeOut');
         $("#text1").addClass('animated fadeInUp');
         loadBrain()
         break;
-      case 3:
+      case 2:
         $("#text1").addClass('animated fadeOutUp');
         $("#text2").addClass('animated fadeInUp');
         wireFrameBrain()
         break;
-      case 4:
+      case 3:
         $("#text2").addClass('animated fadeOutUp');
         $("#text3").addClass('animated fadeInUp');
         explode()
         break;
-      case 5:
+      case 4:
         brainBox();
         break;
-      case 6:
+      case 5:
         closeBrainBox();
     }
     state += 1;
@@ -64,7 +61,8 @@ function initScene() {
   particles = n*m;
 
   geometry = new THREE.Geometry();
-  velocities = [];
+  geometry.velocities = [];
+  geometry.accelerations = [];
 
   var color = new THREE.Color();
 
@@ -75,14 +73,18 @@ function initScene() {
 
     vertex.x = Math.random() * 2000 - 1000;
     vertex.y = Math.random() * 2000 - 1000;
-    vertex.z = Math.random() * 2000 - 1000;
+    vertex.z = Math.random() * 100 - 50;
 
-    velocity.x = Math.random() * 5 - 2.5;
-    velocity.y = Math.random() * 5 - 2.5;
-    velocity.z = Math.random() * 5 - 2.5;
+    r2 = new THREE.Vector3().copy(vertex).lengthSq();
+    console.log(r2);
+    velocity.copy(vertex).normalize().applyAxisAngle(new THREE.Vector3(0,0,1), Math.PI/2);
+
+    velocity.x = velocity.x / r2 * 50000;
+    velocity.y = velocity.y / r2 * 50000;
+    velocity.z = velocity.z / r2 * 50000;
 
     geometry.vertices.push( vertex );
-    velocities.push(velocity)
+    geometry.velocities.push(velocity);
 
   }
 
@@ -135,30 +137,30 @@ function render() {
     case 1:
       updatePositionVelocities();
       break;
+    // case 3:
+    //   TWEEN.update();
+    //   geometry.verticesNeedUpdate = true;
+    //   break;
     case 2:
-      TWEEN.update();
-      geometry.verticesNeedUpdate = true;
-      break;
-    case 3:
       TWEEN.update();
       geometry.verticesNeedUpdate = true;
       particleSystem.rotation.y += dt * 0.5;
       geometry.elementsNeedUpdate = true;
       geometry.computeFaceNormals();
       break;
-    case 4:
+    case 3:
       TWEEN.update();
       particleSystem.rotation.y += dt * 0.5;
       brain.rotation.y = particleSystem.rotation.y;
       brainMaterial.needsUpdate = true;
       break;
-    case 5:
+    case 4:
       TWEEN.update();
       geometry.verticesNeedUpdate = true;
       particleSystem.rotation.y += dt * 0.5;
       brain.rotation.y = particleSystem.rotation.y;
       break;
-    case 6:
+    case 5:
       TWEEN.update();
       particleSystem.rotation.y += dt * 0.5;
       brain.rotation.y = particleSystem.rotation.y;
@@ -199,16 +201,29 @@ function grid() {
 function updatePositionVelocities(){
 
   for (var i = 0; i < particles; i++) {
-    geometry.vertices[i].x += velocities[i].x;
-    geometry.vertices[i].y += velocities[i].y;
-    geometry.vertices[i].z += velocities[i].z;
 
-    if(geometry.vertices[i].x > 1000){geometry.vertices[i].x = -1000}
-    if(geometry.vertices[i].x < -1000){geometry.vertices[i].x = 1000}
-    if(geometry.vertices[i].y > 1000){geometry.vertices[i].y = -1000}
-    if(geometry.vertices[i].y < -1000){geometry.vertices[i].y = 1000}
-    if(geometry.vertices[i].z > 1000){geometry.vertices[i].z = -1000}
-    if(geometry.vertices[i].z < -1000){geometry.vertices[i].z = 1000}
+    // uv = new THREE.Vector3().copy(geometry.velocities[i]).normalize().negate();
+    // r2 = new THREE.Vector3().copy(geometry.velocities[i]).lengthSq();
+    // // r2 = geometry.velocities[i].copy()
+    // geometry.velocities[i].add( uv.divideScalar(r2).multiplyScalar(10) );
+
+    r2 = new THREE.Vector3().copy(geometry.vertices[i]).lengthSq();
+    u = new THREE.Vector3().copy(geometry.vertices[i]).normalize();
+
+    geometry.velocities[i].x += -100*u.x/r2;
+    geometry.velocities[i].y += -100*u.y/r2;
+    // geometry.velocities[i].z += -1/Math.pow(geometry.vertices[i].z,2);
+
+    geometry.vertices[i].x += geometry.velocities[i].x;
+    geometry.vertices[i].y += geometry.velocities[i].y;
+    // geometry.vertices[i].z += geometry.velocities[i].z;
+
+    // if(geometry.vertices[i].x > 1000){geometry.vertices[i].x = -1000}
+    // if(geometry.vertices[i].x < -1000){geometry.vertices[i].x = 1000}
+    // if(geometry.vertices[i].y > 1000){geometry.vertices[i].y = -1000}
+    // if(geometry.vertices[i].y < -1000){geometry.vertices[i].y = 1000}
+    // if(geometry.vertices[i].z > 1000){geometry.vertices[i].z = -1000}
+    // if(geometry.vertices[i].z < -1000){geometry.vertices[i].z = 1000}
 
   }
 
