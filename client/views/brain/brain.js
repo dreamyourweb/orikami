@@ -90,7 +90,7 @@ function initScene() {
 
   geometry.computeBoundingSphere();
 
-  var material = new THREE.ParticleSystemMaterial( { size: 5, color: "#29abe2" } );
+  var material = new THREE.ParticleSystemMaterial( { size: 8, color: "#29abe2" } );
 
   particleSystem = new THREE.ParticleSystem( geometry, material );
   scene.add( particleSystem );

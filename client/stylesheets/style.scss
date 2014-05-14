@@ -16,11 +16,11 @@ html, body{
 
 @font-face {
     font-family: 'Santor';
-    src: url('fonts/santor-webfont.eot');
-    src: url('fonts/santor-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/santor-webfont.woff') format('woff'),
-         url('fonts/santor-webfont.ttf') format('truetype'),
-         url('fonts/santor-webfont.svg#santorregular') format('svg');
+    src: url('/fonts/santor-webfont.eot');
+    src: url('/fonts/santor-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/santor-webfont.woff') format('woff'),
+         url('/fonts/santor-webfont.ttf') format('truetype'),
+         url('/fonts/santor-webfont.svg#santorregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -132,21 +132,21 @@ h1{
   background: #D3EBF5;
 }
 .s3{
-  background: url(images/boat_water.jpg);
+  background: url(/images/boat_water.jpg);
   background-size: 100% auto;
 }
 .s4{
 
 }
 .s5{
-  background: url(images/origami_hand.jpg);
+  background: url(/images/origami_hand.jpg);
   background-size: 100% auto;
 }
 .s6{
 
 }
 .s7{
-  background: url(images/orikami_team.jpg);
+  background: url(/images/orikami_team.jpg);
   background-size: 100% auto;
   background-color: #49c2e6;
 }
