@@ -24,13 +24,16 @@ Template.brain.events({
       case 3:
         $("#text2").addClass('animated fadeOutUp');
         $("#text3").addClass('animated fadeInUp');
-        explode()
-        break;
-      case 4:
-        brainBox();
+        explode();
+        Meteor.setTimeout(function(){
+          grid();
+          state += 1;
+        }, 1000);
         break;
       case 5:
-        closeBrainBox();
+        break;
+      // case 5:
+      //   closeBrainBox();
     }
     state += 1;
   }
@@ -40,6 +43,7 @@ var container, stats;
 var camera, scene, renderer, particles, geometry, n, m, state = 1, velocities, brain, brain_json, brainMaterial, brainBox, brainBoxMaterial;
 var mouseX = 0, mouseY = 0;
 var time, last_time;
+var sprite;
 
 function initScene() {
 
@@ -55,6 +59,8 @@ function initScene() {
   pointLight.position.z = 1000;
   pointLight.position.x = 500;
   scene.add(pointLight);
+
+  sprite = THREE.ImageUtils.loadTexture( "images/sprite.png" );
 
   n = 65;
   m = 65;
@@ -76,7 +82,6 @@ function initScene() {
     vertex.z = Math.random() * 100 - 50;
 
     r2 = new THREE.Vector3().copy(vertex).lengthSq();
-    console.log(r2);
     velocity.copy(vertex).normalize().applyAxisAngle(new THREE.Vector3(0,0,1), Math.PI/2);
 
     velocity.x = velocity.x / r2 * 50000;
@@ -90,12 +95,12 @@ function initScene() {
 
   geometry.computeBoundingSphere();
 
-  var material = new THREE.ParticleSystemMaterial( { size: 8, color: "#29abe2" } );
+  var material = new THREE.ParticleSystemMaterial( { size: 12, color: "#29abe2", map: sprite, blending: THREE.AdditiveBlending, depthTest: false, transparent : true} );
 
   particleSystem = new THREE.ParticleSystem( geometry, material );
   scene.add( particleSystem );
 
-  renderer = new THREE.WebGLRenderer( { antialias: false } );
+  renderer = new THREE.WebGLRenderer( { antialias: false, clearAlpha: 1} );
   renderer.setSize( window.innerWidth, window.innerHeight );
 
   container.appendChild( renderer.domElement );
@@ -162,9 +167,10 @@ function render() {
       break;
     case 5:
       TWEEN.update();
-      particleSystem.rotation.y += dt * 0.5;
-      brain.rotation.y = particleSystem.rotation.y;
-      brainBox.rotation.y = brain.rotation.y;
+      geometry.verticesNeedUpdate = true;
+      // particleSystem.rotation.y = 0;
+      // brain.rotation.y += dt * 0.5;
+      // brainBox.rotation.y = brain.rotation.y;
   }
 
   renderer.render( scene, camera );
@@ -184,7 +190,6 @@ function grid() {
       .easing( TWEEN.Easing.Quadratic.InOut).start();
 
       index++;
-
     }
   }
 
@@ -193,6 +198,9 @@ function grid() {
   // box = new THREE.Mesh(boxGeo, boxMat);
   // box.position.z = 500;
   // scene.add(box);
+  next_angle = (Math.floor(particleSystem.rotation.y / (Math.PI*2)) + 1)  * Math.PI * 2;
+  new TWEEN.Tween(particleSystem.rotation).to({y: next_angle},2000).easing( TWEEN.Easing.Quadratic.InOut).start();
+  new TWEEN.Tween(brain.rotation).to({y: next_angle},2000).easing( TWEEN.Easing.Quadratic.InOut).start();
 
   geometry.verticesNeedUpdate = true;
 
@@ -267,13 +275,13 @@ function wireFrameBrain(){
     brain_geometry.faces.push( new THREE.Face3( brain_json.faces[i*6], brain_json.faces[i*6+2], brain_json.faces[i*6+4],new THREE.Vector3(0,0,1), new THREE.Color(0x29abe2)));
   }
 
-  brainMaterial = new THREE.MeshBasicMaterial( {color: new THREE.Color(0x29abe2), wireframe: true, opacity: 0, transparent: true});
+  brainMaterial = new THREE.MeshBasicMaterial( {color: new THREE.Color(0x29abe2), wireframe: true, opacity: 0, transparent: true, blending: THREE.AdditiveBlending, depthTest: false});
 
   brain = new THREE.Mesh(brain_geometry, brainMaterial);
   scene.add(brain);
   window.scene = scene;
 
-  new TWEEN.Tween(brainMaterial).to({opacity: 0.4},2000).easing( TWEEN.Easing.Quadratic.InOut).start();
+  new TWEEN.Tween(brainMaterial).to({opacity: 0.3},2000).easing( TWEEN.Easing.Quadratic.InOut).start();
 
 }
 
