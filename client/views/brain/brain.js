@@ -169,7 +169,7 @@ function render() {
       TWEEN.update();
       geometry.verticesNeedUpdate = true;
       // particleSystem.rotation.y = 0;
-      // brain.rotation.y += dt * 0.5;
+      brain.rotation.y += dt * 0.5;
       // brainBox.rotation.y = brain.rotation.y;
   }
 
@@ -200,7 +200,7 @@ function grid() {
   // scene.add(box);
   next_angle = (Math.floor(particleSystem.rotation.y / (Math.PI*2)) + 1)  * Math.PI * 2;
   new TWEEN.Tween(particleSystem.rotation).to({y: next_angle},2000).easing( TWEEN.Easing.Quadratic.InOut).start();
-  new TWEEN.Tween(brain.rotation).to({y: next_angle},2000).easing( TWEEN.Easing.Quadratic.InOut).start();
+  // new TWEEN.Tween(brain.rotation).to({y: next_angle},2000).easing( TWEEN.Easing.Quadratic.InOut).start();
 
   geometry.verticesNeedUpdate = true;
 
