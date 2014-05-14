@@ -1,6 +1,5 @@
 {
   "packages": {
-    "three.js": {},
     "jquery-scrollTo": {},
     "iron-router": {},
     "foundation5-sass": {},
@@ -9,6 +8,8 @@
     "npm": {},
     "leaflet": {},
     "autoform": {},
-    "notifications": {}
+    "notifications": {},
+    "animate-css": {},
+    "font-awesome": {}
   }
 }

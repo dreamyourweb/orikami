@@ -6,7 +6,6 @@
 standard-app-packages
 autopublish
 insecure
-three.js
 iron-router
 foundation5-sass
 jquery-scrollTo
@@ -20,3 +19,7 @@ email
 notifications
 d3
 http
+three
+tween
+animate-css
+font-awesome

@@ -2,7 +2,6 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "three.js": {},
       "jquery-scrollTo": {},
       "iron-router": {},
       "foundation5-sass": {},
@@ -11,14 +10,11 @@
       "npm": {},
       "leaflet": {},
       "autoform": {},
-      "notifications": {}
+      "notifications": {},
+      "animate-css": {},
+      "font-awesome": {}
     },
     "packages": {
-      "three.js": {
-        "git": "https://github.com/nozpheratu/three-meteor",
-        "tag": "v0.0.1",
-        "commit": "a437d4e0314b055b19cfc60fa9e1ddfac844a0d9"
-      },
       "jquery-scrollTo": {
         "git": "https://github.com/nate-strauser/meteor-jquery.scrollTo.git",
         "tag": "v1.4.6",
@@ -26,8 +22,8 @@
       },
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
-        "tag": "v0.7.0",
-        "commit": "05f34bc48c4cad9fdaa366c1ddcabe6980232ece"
+        "tag": "v0.7.1",
+        "commit": "d1ffb3f06ea4c112132b030f2eb1a70b81675ecb"
       },
       "foundation5-sass": {
         "git": "https://github.com/lgollut/meteor-foundation5-sass.git",
@@ -36,8 +32,8 @@
       },
       "jade": {
         "git": "https://github.com/mquandalle/meteor-jade.git",
-        "tag": "v0.2.1",
-        "commit": "969fc3dd0adbb15304e3e13c3e27260398d89503"
+        "tag": "v0.2.2",
+        "commit": "0391abab7d592b17ff74d9b9beaa721051970729"
       },
       "stellar": {
         "git": "https://github.com/noorderstorm/meteor-stellar.git",
@@ -56,28 +52,38 @@
       },
       "autoform": {
         "git": "https://github.com/aldeed/meteor-autoform.git",
-        "tag": "v0.5.1",
-        "commit": "7f2c33b0adafc4a8cc57e882b9391dd6ff2a82a7"
+        "tag": "v0.8.1",
+        "commit": "385051a5e4bbea3b2a54965800f5f530987ef432"
       },
       "notifications": {
         "git": "https://github.com/gfk-ba/meteor-notifications.git",
         "tag": "v0.4.8",
         "commit": "ed16633ce4996522907a41138b3ebc6134e15063"
       },
+      "animate-css": {
+        "git": "https://github.com/nate-strauser/meteor-animate-css.git",
+        "tag": "v3.1.1",
+        "commit": "59ce70b99dff5bc3d1227b789eefa43a761db158"
+      },
+      "font-awesome": {
+        "git": "https://github.com/nate-strauser/meteor-font-awesome.git",
+        "tag": "v4.0.3",
+        "commit": "61e9361384347547ae144f8228faa4deffda23db"
+      },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
-        "tag": "v0.2.2",
-        "commit": "8bc53798fe5965669ae67c72f91829fcfdceabfd"
+        "tag": "v0.2.4",
+        "commit": "b40e9b0612329288d75cf52ad14a7da64bb8618f"
       },
       "scss": {
         "git": "https://github.com/fourseven/meteor-scss.git",
-        "tag": "v0.8.4",
-        "commit": "11af0da643944d241fe7d173af76162c4b670dee"
+        "tag": "v0.8.7",
+        "commit": "d085b7272eacc20866abff61b25c915a22ddbcf4"
       },
       "simple-schema": {
         "git": "https://github.com/aldeed/meteor-simple-schema.git",
-        "tag": "v0.2.45",
-        "commit": "27a5a943a70a7376c90f18d2e2a4a122c6fc73fb"
+        "tag": "v0.5.0",
+        "commit": "c90127c383ad829747502bf7f6dfb6aabae094b8"
       },
       "collection2": {
         "git": "https://github.com/aldeed/meteor-collection2.git",
@@ -86,8 +92,8 @@
       },
       "moment": {
         "git": "https://github.com/acreeger/meteor-moment.git",
-        "tag": "v2.5.1",
-        "commit": "8c9bc5d3fc96705057737cb9743d555417f6e551"
+        "tag": "v2.6.0",
+        "commit": "26156df681750fd6e6ed77043eef32b6653ebbdf"
       }
     }
   }

@@ -1,0 +1,24 @@
+template(name='brain')
+  #BrainContainer
+    .logo-container
+      object#logo(type="image/svg+xml" data="images/logo.svg")
+    .content-container
+      .text#text1
+        | Our 
+        span.orikami-blue brains 
+        | help us make sense of the world around us
+      .text#text2 
+        | We 
+        span.orikami-blue learn 
+        | to interpret the world and make decisions
+      .text#text3
+        span.orikami-blue Orikami 
+        | believes products also need brains…
+
+    .navigation-container.animated.fadeInUp
+      .row
+        .small-12.columns
+          ul.inline-list
+            li: button.round.next-brain
+              i.fa.fa-long-arrow-right
+            li: button.round.next-brain skip
