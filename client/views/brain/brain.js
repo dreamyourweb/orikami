@@ -35,6 +35,11 @@ Template.brain.events({
         $("#text4").addClass('animated fadeInUp');
         circle();
         break;
+      case 6:
+        $("#text4").addClass('animated fadeOutUp');
+        $("#text5").addClass('animated fadeInUp');
+        men();
+        break;
       // case 5:
       //   closeBrainBox();
     }
@@ -172,7 +177,13 @@ function render() {
     case 6:
       TWEEN.update();
       brain.rotation.y += dt * 0.5;
+      particleSystem.rotation.z += dt * 0.5;
       geometry.verticesNeedUpdate = true;
+    case 7:
+      TWEEN.update();
+      particleSystem.position.z += dt * 10;
+      geometry.verticesNeedUpdate = true;
+
   }
 
   renderer.render( scene, camera );
@@ -329,15 +340,46 @@ function circle(){
 
     new TWEEN.Tween( geometry.vertices[i] ).to( {
       x: vector.x,
-      y: vector.y + 50,
-      z: vector.z}, 2000 )
-    .easing( TWEEN.Easing.Quadratic.InOut).start();
+      y: vector.y,
+      z: vector.z}, 1000)
+    .easing( TWEEN.Easing.Quadratic.Out).delay(i/3).start();
 
     phi += dphi;
     r += dr;
 
   }
 
+}
+
+function men(){
+  new TWEEN.Tween(particleSystem.rotation).to({z: Math.PI},1000).easing( TWEEN.Easing.Quadratic.InOut).start();
+  head = THREE.TransformSVGPath("M256,106.6c20.6,0.1,37.3-16.6,37.3-37.3c0-20.6-16.7-37.3-37.3-37.3c-20.6,0-37.3,16.7-37.3,37.3  C218.7,89.9,235.4,106.6,256,106.6z").makeGeometry();
+  body = THREE.TransformSVGPath("M293.4,115H256h-37.4c-28.2,0-46.6,24.8-46.6,48.4V277c0,22,31,22,31,0V172h6v285.6c0,30.4,42,29.4,43,0V293h7h1v164.7   c1.7,31.2,43,28.2,43-0.1V172h5v105c0,22,32,22,32,0V163.4C340,139.9,321.5,115,293.4,115z").makeGeometry();
+
+  points_head = THREE.GeometryUtils.randomPointsInGeometry(head, 200);
+  points_body = THREE.GeometryUtils.randomPointsInGeometry(body, 1166);
+
+  points_head2 = THREE.GeometryUtils.randomPointsInGeometry(head, 200);
+  points_body2 = THREE.GeometryUtils.randomPointsInGeometry(body, 1165);
+
+  points_head3 = THREE.GeometryUtils.randomPointsInGeometry(head, 200);
+  points_body3 = THREE.GeometryUtils.randomPointsInGeometry(body, 1165);
+
+  for (var i = 0; i < points_head2.length; i++){points_head2[i].x += 300;}
+  for (var i = 0; i < points_body2.length; i++){points_body2[i].x += 300;}
+
+  for (var i = 0; i < points_head3.length; i++){points_head3[i].x -= 300;}
+  for (var i = 0; i < points_body3.length; i++){points_body3[i].x -= 300;}
+
+  points = points_head.concat(points_body, points_head2, points_body2, points_head3, points_body3);
+
+  for (var i = 0; i < particles; i++) {
+    new TWEEN.Tween( geometry.vertices[i] ).to( {
+      x: (points[i].x - 256) / 2,
+      y: (points[i].y - 256) / 2,
+      z: points[i].z}, 1000)
+    .easing( TWEEN.Easing.Quadratic.InOut).start();
+  }
 }
 
 
