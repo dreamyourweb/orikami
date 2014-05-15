@@ -40,6 +40,11 @@ Template.brain.events({
         $("#text5").addClass('animated fadeInUp');
         men();
         break;
+      case 7:
+        $("#text5").addClass('animated fadeOutUp');
+        $("#text6").addClass('animated fadeInUp');
+        data();
+        break;
       // case 5:
       //   closeBrainBox();
     }
@@ -48,10 +53,11 @@ Template.brain.events({
 })
 
 var container, stats;
-var camera, scene, renderer, particles, geometry, n, m, state = 1, velocities, brain, brain_json, brainMaterial, brainBox, brainBoxMaterial;
+var camera, scene, renderer, particles, geometry, n, m, state = 1, velocities, brain, brain_json, brainMaterial, brainBox, brainBoxMaterial, sparklines;
 var mouseX = 0, mouseY = 0;
 var time, last_time;
 var sprite;
+var last_sparkline_position;
 
 function initScene() {
 
@@ -61,7 +67,7 @@ function initScene() {
 
   scene = new THREE.Scene();
 
-  // scene.fog = new THREE.Fog( 0x000000, 0, 10000);
+  scene.fog = new THREE.FogExp2( 0x000000, 0.00025);
   scene.add( new THREE.AmbientLight( 0x444444 ) );
   pointLight = new THREE.PointLight( 0xffffff, 1 );
   pointLight.position.z = 1000;
@@ -179,10 +185,16 @@ function render() {
       brain.rotation.y += dt * 0.5;
       particleSystem.rotation.z += dt * 0.5;
       geometry.verticesNeedUpdate = true;
+      break;
     case 7:
       TWEEN.update();
       particleSystem.position.z += dt * 10;
       geometry.verticesNeedUpdate = true;
+      break;
+    case 8:
+      TWEEN.update();
+      sparklines.position.z += dt * 3000;
+      addData();
 
   }
 
@@ -379,6 +391,46 @@ function men(){
       y: (points[i].y - 256) / 2,
       z: points[i].z}, 1000)
     .easing( TWEEN.Easing.Quadratic.InOut).start();
+  }
+}
+
+function data(){
+  line_material = new THREE.LineBasicMaterial({color: new THREE.Color(0x29abe2), blending: THREE.AdditiveBlending, transparent:true });
+  new TWEEN.Tween(particleSystem.position).to({z: 2000},1000).easing( TWEEN.Easing.Quadratic.InOut).start();
+  sparklines = new THREE.Object3D();
+
+  for (var i = 0; i < 100; i++){
+
+    line_geometry = new THREE.Geometry();
+
+    x = 0;
+    for (var j = -2000; j < 2000; j+=2){
+      x += Math.random()-0.5;
+      line_geometry.vertices.push( new THREE.Vector3( j, x * 8, 0 ) );
+    }
+
+    line = new THREE.Line( line_geometry,line_material );
+    line.position.z = -i*50;
+    sparklines.add( line );
+
+  }
+
+  last_sparkline_position = -5000;
+  sparklines.position.y = -200;
+  sparklines.position.z = -5000;
+  scene.add(sparklines);
+
+}
+
+function addData(){
+  z = sparklines.position.z;
+  for (var i = 0; i < sparklines.children.length; i++){
+    console.log(sparklines.children[i].position.z + z);
+    if (sparklines.children[i].position.z + z > 1000){
+      last_sparkline_position -= 50;
+      sparklines.children[i].position.z = last_sparkline_position;
+      break;
+    }
   }
 }
 
