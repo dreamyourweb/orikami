@@ -193,7 +193,7 @@ function render() {
       break;
     case 8:
       TWEEN.update();
-      sparklines.position.z += dt * 3000;
+      sparklines.position.z += dt * 1000;
       addData();
 
   }
@@ -410,12 +410,12 @@ function data(){
     }
 
     line = new THREE.Line( line_geometry,line_material );
-    line.position.z = -i*50;
+    line.position.z = -i*100;
     sparklines.add( line );
 
   }
 
-  last_sparkline_position = -5000;
+  last_sparkline_position = -10000;
   sparklines.position.y = -200;
   sparklines.position.z = -5000;
   scene.add(sparklines);
@@ -427,7 +427,7 @@ function addData(){
   for (var i = 0; i < sparklines.children.length; i++){
     console.log(sparklines.children[i].position.z + z);
     if (sparklines.children[i].position.z + z > 1000){
-      last_sparkline_position -= 50;
+      last_sparkline_position -= 100;
       sparklines.children[i].position.z = last_sparkline_position;
       break;
     }
