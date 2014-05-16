@@ -423,7 +423,7 @@ function data(){
 
   }
 
-  last_sparkline_position = -10000;
+  last_sparkline_position = -5000;
   sparklines.position.y = -200;
   sparklines.position.z = 500;
   scene.add(sparklines);
