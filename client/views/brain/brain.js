@@ -409,7 +409,6 @@ function data(){
   for (var i = 0; i < 50; i++){
 
     line_geometry = new THREE.Geometry();
-    // line = [];
 
     y = 0;
     for (var j = -2000; j < 2000; j+=2){
@@ -417,18 +416,14 @@ function data(){
       line_geometry.vertices.push( new THREE.Vector3( j, y * 8, 0 ) );
     }
 
-    // path = new THREE.Path(line);
-
-    // tube_geometry = new THREE.TubeGeometry(path, 100, 2, 2, false, false);
-
     line = new THREE.Line( line_geometry,line_material );
-    // tube = new THREE.Mesh(tube_geometry);
+
     line.position.z = -i*100;
     sparklines.add( line );
 
   }
 
-  last_sparkline_position = -5000;
+  last_sparkline_position = -10000;
   sparklines.position.y = -200;
   sparklines.position.z = 500;
   scene.add(sparklines);
