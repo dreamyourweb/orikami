@@ -45,6 +45,10 @@ Template.brain.events({
         $("#text6").addClass('animated fadeInUp');
         data();
         break;
+      case 8:
+        $("#text6").addClass('animated fadeOutUp');
+        $("#text7").addClass('animated fadeInUp');
+        break;
       // case 5:
       //   closeBrainBox();
     }
@@ -111,7 +115,7 @@ function initScene() {
   particleSystem = new THREE.ParticleSystem( geometry, material );
   scene.add( particleSystem );
 
-  renderer = new THREE.WebGLRenderer( { antialias: false, clearAlpha: 1} );
+  renderer = new THREE.WebGLRenderer(  );
   renderer.setSize( window.innerWidth, window.innerHeight );
 
   container.appendChild( renderer.domElement );
@@ -145,6 +149,7 @@ function render() {
   time = Date.now() * 0.001;
   dt = time - last_time;
   last_time = time;
+  TWEEN.update();
 
   switch(state){
     case 1:
@@ -155,46 +160,46 @@ function render() {
     //   geometry.verticesNeedUpdate = true;
     //   break;
     case 2:
-      TWEEN.update();
       geometry.verticesNeedUpdate = true;
       particleSystem.rotation.y += dt * 0.5;
       geometry.elementsNeedUpdate = true;
       geometry.computeFaceNormals();
       break;
     case 3:
-      TWEEN.update();
       particleSystem.rotation.y += dt * 0.5;
       brain.rotation.y = particleSystem.rotation.y;
       brainMaterial.needsUpdate = true;
       break;
     case 4:
-      TWEEN.update();
       geometry.verticesNeedUpdate = true;
       particleSystem.rotation.y += dt * 0.5;
       brain.rotation.y = particleSystem.rotation.y;
       break;
     case 5:
-      TWEEN.update();
       geometry.verticesNeedUpdate = true;
       // particleSystem.rotation.y = 0;
       brain.rotation.y += dt * 0.5;
       // brainBox.rotation.y = brain.rotation.y;
       break;
     case 6:
-      TWEEN.update();
       brain.rotation.y += dt * 0.5;
       particleSystem.rotation.z += dt * 0.5;
       geometry.verticesNeedUpdate = true;
       break;
     case 7:
-      TWEEN.update();
       particleSystem.position.z += dt * 10;
       geometry.verticesNeedUpdate = true;
       break;
     case 8:
-      TWEEN.update();
       sparklines.position.z += dt * 3000;
       addData();
+      break;
+    case 9:
+      sparklines.position.z += dt * 3000;
+      break;
+    case 10:
+      scene.remove(sparklines);
+      break;
 
   }
 
@@ -395,29 +400,37 @@ function men(){
 }
 
 function data(){
-  line_material = new THREE.LineBasicMaterial({color: new THREE.Color(0x29abe2), blending: THREE.AdditiveBlending, transparent:true });
-  new TWEEN.Tween(particleSystem.position).to({z: 2000},1000).easing( TWEEN.Easing.Quadratic.InOut).start();
+  line_material = new THREE.LineBasicMaterial({color: new THREE.Color(0x29abe2), blending: THREE.AdditiveBlending, transparent:true, opacity:0 });
+
+  new TWEEN.Tween(line_material).to({opacity: 1},2000).easing( TWEEN.Easing.Linear.None).start();
+  new TWEEN.Tween(particleSystem.position).to({z: 2000},1000).easing( TWEEN.Easing.Quadratic.In).start();
   sparklines = new THREE.Object3D();
 
-  for (var i = 0; i < 100; i++){
+  for (var i = 0; i < 50; i++){
 
     line_geometry = new THREE.Geometry();
+    // line = [];
 
-    x = 0;
+    y = 0;
     for (var j = -2000; j < 2000; j+=2){
-      x += Math.random()-0.5;
-      line_geometry.vertices.push( new THREE.Vector3( j, x * 8, 0 ) );
+      y += Math.random()-0.5;
+      line_geometry.vertices.push( new THREE.Vector3( j, y * 8, 0 ) );
     }
 
+    // path = new THREE.Path(line);
+
+    // tube_geometry = new THREE.TubeGeometry(path, 100, 2, 2, false, false);
+
     line = new THREE.Line( line_geometry,line_material );
-    line.position.z = -i*50;
+    // tube = new THREE.Mesh(tube_geometry);
+    line.position.z = -i*100;
     sparklines.add( line );
 
   }
 
   last_sparkline_position = -5000;
   sparklines.position.y = -200;
-  sparklines.position.z = -5000;
+  sparklines.position.z = 500;
   scene.add(sparklines);
 
 }
@@ -425,9 +438,8 @@ function data(){
 function addData(){
   z = sparklines.position.z;
   for (var i = 0; i < sparklines.children.length; i++){
-    console.log(sparklines.children[i].position.z + z);
     if (sparklines.children[i].position.z + z > 1000){
-      last_sparkline_position -= 50;
+      last_sparkline_position -= 100;
       sparklines.children[i].position.z = last_sparkline_position;
       break;
     }
