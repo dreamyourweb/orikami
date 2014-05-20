@@ -43,15 +43,17 @@ Template.brain.events({
       case 7:
         $("#text5").addClass('animated fadeOutUp');
         $("#text6").addClass('animated fadeInUp');
-        data();
+        showSparklines();
         break;
       case 8:
         $("#text6").addClass('animated fadeOutUp');
         $("#text7").addClass('animated fadeInUp');
+        network();
         break;
       // case 5:
       //   closeBrainBox();
     }
+            $("#BrainContainer .logo-container").addClass('animated fadeOut');
     state += 1;
   }
 })
@@ -61,7 +63,8 @@ var camera, scene, renderer, particles, geometry, n, m, state = 1, velocities, b
 var mouseX = 0, mouseY = 0;
 var time, last_time;
 var sprite;
-var last_sparkline_position;
+var last_sparkline_position, sparkline_material1, sparkline_material2;
+var network, network_lines, network_geometry, network_lines_geometry, network_line_material;
 
 function initScene() {
 
@@ -114,6 +117,8 @@ function initScene() {
 
   particleSystem = new THREE.ParticleSystem( geometry, material );
   scene.add( particleSystem );
+
+  loadSparklines();
 
   renderer = new THREE.WebGLRenderer(  );
   renderer.setSize( window.innerWidth, window.innerHeight );
@@ -196,6 +201,7 @@ function render() {
       break;
     case 9:
       sparklines.position.z += dt * 3000;
+      animateNetwork();
       break;
     case 10:
       scene.remove(sparklines);
@@ -399,42 +405,55 @@ function men(){
   }
 }
 
-function data(){
-  line_material = new THREE.LineBasicMaterial({color: new THREE.Color(0x29abe2), blending: THREE.AdditiveBlending, transparent:true, opacity:0 });
+function loadSparklines(){
+  sparkline_material1 = new THREE.MeshBasicMaterial({color: new THREE.Color(0x29abe2), transparent:true, opacity:0, blending: THREE.AdditiveBlending });
+  sparkline_material2 = new THREE.MeshBasicMaterial({color: new THREE.Color(0x90d4d5), transparent:true, opacity:0, blending: THREE.AdditiveBlending });
 
-  new TWEEN.Tween(line_material).to({opacity: 1},2000).easing( TWEEN.Easing.Linear.None).start();
-  new TWEEN.Tween(particleSystem.position).to({z: 2000},1000).easing( TWEEN.Easing.Quadratic.In).start();
   sparklines = new THREE.Object3D();
 
-  for (var i = 0; i < 50; i++){
+  for (var i = 0; i < 25; i++){
 
-    line_geometry = new THREE.Geometry();
+    points = [];
 
     y = 0;
-    for (var j = -2000; j < 2000; j+=2){
-      y += Math.random()-0.5;
-      line_geometry.vertices.push( new THREE.Vector3( j, y * 8, 0 ) );
+    for (var j = -2000; j < 2000; j+=10){
+      y += (Math.random()-0.5)*2;
+      points.push( new THREE.Vector2( j, y * 8 ) );
+    }
+    points.push( new THREE.Vector2( 2000, -1000 ) );
+    points.push( new THREE.Vector2( -2000, -1000 ) );
+
+    // path = new THREE.Path(points);
+    shape = new THREE.Shape(points);
+
+    if (i%2 == 0){
+      line = new THREE.Mesh( shape.makeGeometry(), sparkline_material1 );
+    }else{
+      line = new THREE.Mesh( shape.makeGeometry(), sparkline_material2 );
     }
 
-    line = new THREE.Line( line_geometry,line_material );
-
-    line.position.z = -i*100;
+    line.position.z = -i*300;
     sparklines.add( line );
 
   }
 
-  last_sparkline_position = -5000;
+  last_sparkline_position = -7500;
   sparklines.position.y = -200;
   sparklines.position.z = 500;
-  scene.add(sparklines);
+}
 
+function showSparklines(){
+  new TWEEN.Tween(sparkline_material1).to({opacity: 0.2},2000).easing( TWEEN.Easing.Linear.None).start();
+  new TWEEN.Tween(sparkline_material2).to({opacity: 0.2},2000).easing( TWEEN.Easing.Linear.None).start();
+  new TWEEN.Tween(particleSystem.position).to({z: 2000},1000).easing( TWEEN.Easing.Quadratic.In).start();
+  scene.add(sparklines);
 }
 
 function addData(){
   z = sparklines.position.z;
   for (var i = 0; i < sparklines.children.length; i++){
     if (sparklines.children[i].position.z + z > 1000){
-      last_sparkline_position -= 100;
+      last_sparkline_position -= 300;
       sparklines.children[i].position.z = last_sparkline_position;
       break;
     }
@@ -442,3 +461,77 @@ function addData(){
 }
 
 
+function network(){
+  network_geometry = new THREE.Geometry();
+  network_geometry.velocities = [];
+  nodes = 250;
+
+  for ( var i = 0; i < nodes; i++) {
+
+    vertex = new THREE.Vector3();
+    velocity = new THREE.Vector3();
+
+    vertex.x = Math.random() * 1500 - 750;
+    vertex.y = Math.random() * 1500 - 750;
+    vertex.z = 0;
+
+    velocity.x = ( Math.random() - 0.5 ) / 2;
+    velocity.y = ( Math.random() - 0.5 ) / 2;
+    velocity.z =  0;
+
+    network_geometry.vertices.push(vertex);
+    network_geometry.velocities.push(velocity);
+  }
+  var material = new THREE.ParticleSystemMaterial( { size: 12, color: "#29abe2", map: sprite, blending: THREE.AdditiveBlending, depthTest: false, transparent : true} );
+  network = new THREE.ParticleSystem(network_geometry, material);
+  // scene.add(network);
+
+  network_lines_geometry = new THREE.Geometry();
+  network_line_material = new THREE.LineBasicMaterial( {vertexColors: THREE.VertexColors, blending: THREE.AdditiveBlending, transparent : true, opacity: 0} );
+  network_lines = new THREE.Line( network_lines_geometry, network_line_material, THREE.LinePieces );
+  // network_lines.position.z = -10000;
+  scene.add( network_lines);
+  // new TWEEN.Tween(network_lines.position).to({z: 0},2000).easing(TWEEN.Easing.Quadratic.Out).delay(500).start();
+  new TWEEN.Tween(network_line_material).to({opacity: 1},2000).easing( TWEEN.Easing.Linear.None ).delay(500).start();
+  new TWEEN.Tween(sparkline_material1).to({opacity: 0},2000).easing( TWEEN.Easing.Linear.None ).start();
+  new TWEEN.Tween(sparkline_material2).to({opacity: 0},2000).easing( TWEEN.Easing.Linear.None ).start();
+}
+
+function animateNetwork(){
+  for ( var i = 0; i < 250; i++) {
+    network_geometry.vertices[i].x += network_geometry.velocities[i].x;
+    network_geometry.vertices[i].y += network_geometry.velocities[i].y;
+    if(network_geometry.vertices[i].x > 750){network_geometry.vertices[i].x = -750}
+    if(network_geometry.vertices[i].x < -750){network_geometry.vertices[i].x = 750}
+    if(network_geometry.vertices[i].y > 750){network_geometry.vertices[i].y = -750}
+    if(network_geometry.vertices[i].y < -750){network_geometry.vertices[i].y = 750}
+    if(network_geometry.vertices[i].z > 750){network_geometry.vertices[i].z = -750}
+    if(network_geometry.vertices[i].z < -750){network_geometry.vertices[i].z = 750}
+  }
+  
+  network_geometry.verticesNeedUpdate = true;
+  network_geometry.computeLineDistances();
+
+  d = 150;
+
+  network_lines.geometry.vertices = [];
+  network_lines.geometry.colors = [];
+
+  for (var i = network.geometry.vertices.length - 1; i >= 0; i--) {
+    for (var j = network.geometry.vertices.length - 1; j >= 0; j--) {
+        distance = network.geometry.vertices[i].distanceTo(network.geometry.vertices[j]);
+        if (distance < d){
+          network_lines.geometry.vertices.push(new THREE.Vector3( network.geometry.vertices[i].x, network.geometry.vertices[i].y, network.geometry.vertices[i].z ));
+          network_lines.geometry.vertices.push(new THREE.Vector3( network.geometry.vertices[j].x, network.geometry.vertices[j].y, network.geometry.vertices[j].z ));
+          color = (new THREE.Color(0x29abe2)).lerp( new THREE.Color(0x000000), distance/d );
+          // color.setHSL(0.549, 0.76, 0.525 + ( 0.475 * (1 - distance/(d)))  );
+          network_lines.geometry.colors.push(color);
+          network_lines.geometry.colors.push(color);
+        }
+      // }
+    };
+  };
+
+  network_lines.geometry.verticesNeedUpdate = true;
+  network_lines.geometry.colorsNeedUpdate = true;
+}
