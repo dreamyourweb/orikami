@@ -10,56 +10,58 @@ Template.brain.rendered = function (){
 Template.brain.events({
   "click .next-brain": function(e){
     e.preventDefault();
-    switch(state){
-      case 1:
-        $("#BrainContainer .logo-container").addClass('animated fadeOut');
-        $("#text1").addClass('animated fadeInUp');
-        loadBrain()
-        break;
-      case 2:
-        $("#text1").addClass('animated fadeOutUp');
-        $("#text2").addClass('animated fadeInUp');
-        wireFrameBrain()
-        break;
-      case 3:
-        $("#text2").addClass('animated fadeOutUp');
-        $("#text3").addClass('animated fadeInUp');
-        explode();
-        Meteor.setTimeout(function(){
-          grid();
-          state += 1;
-        }, 1000);
-        break;
-      case 5:
-        $("#text3").addClass('animated fadeOutUp');
-        $("#text4").addClass('animated fadeInUp');
-        circle();
-        break;
-      case 6:
-        $("#text4").addClass('animated fadeOutUp');
-        $("#text5").addClass('animated fadeInUp');
-        men();
-        break;
-      case 7:
-        $("#text5").addClass('animated fadeOutUp');
-        $("#text6").addClass('animated fadeInUp');
-        showSparklines();
-        break;
-      case 8:
-        $("#text6").addClass('animated fadeOutUp');
-        $("#text7").addClass('animated fadeInUp');
-        network();
-        break;
-      // case 5:
-      //   closeBrainBox();
+    if(TWEEN.getAll().length == 0){
+      state += 1;
+      switch(state){
+        case 1:
+          $("#BrainContainer .logo-container").addClass('animated fadeOut');
+          $("#text1").addClass('animated fadeInUp');
+          loadBrain();
+          break;
+        case 2:
+          $("#text1").addClass('animated fadeOutUp');
+          $("#text2").addClass('animated fadeInUp');
+          wireFrameBrain();
+          break;
+        case 3:
+          $("#text2").addClass('animated fadeOutUp');
+          $("#text3").addClass('animated fadeInUp');
+          explode();
+          Meteor.setTimeout(function(){
+            grid();
+            state += 1;
+          }, 1000);
+          break;
+        case 5:
+          $("#text3").addClass('animated fadeOutUp');
+          $("#text4").addClass('animated fadeInUp');
+          circle();
+          break;
+        case 6:
+          $("#text4").addClass('animated fadeOutUp');
+          $("#text5").addClass('animated fadeInUp');
+          men();
+          break;
+        case 7:
+          $("#text5").addClass('animated fadeOutUp');
+          $("#text6").addClass('animated fadeInUp');
+          showSparklines();
+          break;
+        case 8:
+          $("#text6").addClass('animated fadeOutUp');
+          $("#text7").addClass('animated fadeInUp');
+          network();
+          break;
+        // case 5:
+        //   closeBrainBox();
+      }
     }
-            $("#BrainContainer .logo-container").addClass('animated fadeOut');
-    state += 1;
+    $("#BrainContainer .logo-container").addClass('animated fadeOut');
   }
 })
 
 var container, stats;
-var camera, scene, renderer, particles, geometry, n, m, state = 1, velocities, brain, brain_json, brainMaterial, brainBox, brainBoxMaterial, sparklines;
+var camera, scene, renderer, particles, geometry, n, m, state = 0, velocities, brain, brain_json, brainMaterial, brainBox, brainBoxMaterial, sparklines;
 var mouseX = 0, mouseY = 0;
 var time, last_time;
 var sprite;
@@ -122,6 +124,7 @@ function initScene() {
 
   renderer = new THREE.WebGLRenderer(  );
   renderer.setSize( window.innerWidth, window.innerHeight );
+  window.addEventListener( 'resize', onWindowResize, false );
 
   container.appendChild( renderer.domElement );
 
@@ -157,53 +160,53 @@ function render() {
   TWEEN.update();
 
   switch(state){
-    case 1:
+    case 0:
       updatePositionVelocities();
       break;
     // case 3:
     //   TWEEN.update();
     //   geometry.verticesNeedUpdate = true;
     //   break;
-    case 2:
+    case 1:
       geometry.verticesNeedUpdate = true;
       particleSystem.rotation.y += dt * 0.5;
       geometry.elementsNeedUpdate = true;
       geometry.computeFaceNormals();
       break;
-    case 3:
+    case 2:
       particleSystem.rotation.y += dt * 0.5;
       brain.rotation.y = particleSystem.rotation.y;
       brainMaterial.needsUpdate = true;
       break;
-    case 4:
+    case 3:
       geometry.verticesNeedUpdate = true;
       particleSystem.rotation.y += dt * 0.5;
       brain.rotation.y = particleSystem.rotation.y;
       break;
-    case 5:
+    case 4:
       geometry.verticesNeedUpdate = true;
       // particleSystem.rotation.y = 0;
       brain.rotation.y += dt * 0.5;
       // brainBox.rotation.y = brain.rotation.y;
       break;
-    case 6:
+    case 5:
       brain.rotation.y += dt * 0.5;
       particleSystem.rotation.z += dt * 0.5;
       geometry.verticesNeedUpdate = true;
       break;
-    case 7:
+    case 6:
       particleSystem.position.z += dt * 10;
       geometry.verticesNeedUpdate = true;
       break;
-    case 8:
+    case 7:
       sparklines.position.z += dt * 3000;
       addData();
       break;
-    case 9:
+    case 8:
       sparklines.position.z += dt * 3000;
       animateNetwork();
       break;
-    case 10:
+    case 9:
       scene.remove(sparklines);
       break;
 
@@ -323,7 +326,7 @@ function wireFrameBrain(){
   scene.add(brain);
   window.scene = scene;
 
-  new TWEEN.Tween(brainMaterial).to({opacity: 0.3},2000).easing( TWEEN.Easing.Quadratic.InOut).start();
+  new TWEEN.Tween(brainMaterial).to({opacity: 0.4},1000).easing( TWEEN.Easing.Quadratic.InOut).start();
 
 }
 
@@ -349,7 +352,8 @@ function circle(){
   dr = 5 / ( particles / 10 );
   phi = 0;
 
-  new TWEEN.Tween(brainMaterial).to({opacity: 0},2000).easing( TWEEN.Easing.Quadratic.InOut).start();
+  new TWEEN.Tween(brainMaterial).to({opacity: 0},1000).easing( TWEEN.Easing.Quadratic.InOut).start();
+  new TWEEN.Tween(brain.scale).to({x:0,y:0,z:0},2000).easing( TWEEN.Easing.Quadratic.InOut).start();
 
   for (var i = 0; i < particles; i++) {
 
