@@ -52,11 +52,17 @@ Template.brain.events({
           $("#text7").addClass('animated fadeInUp');
           network();
           break;
-        // case 5:
-        //   closeBrainBox();
+        case 9:
+          $("#text7").addClass('animated fadeOutUp');
+          $("#text8").addClass('animated fadeInUp');
+          break;
       }
     }
     $("#BrainContainer .logo-container").addClass('animated fadeOut');
+  },
+
+  'click [data-arrival]': function(event){
+    $.scrollTo($("[data-destination=" + $(event.currentTarget).data("arrival") + "]"), 500);
   }
 })
 
@@ -66,7 +72,7 @@ var mouseX = 0, mouseY = 0;
 var time, last_time;
 var sprite;
 var last_sparkline_position, sparkline_material1, sparkline_material2;
-var network, network_lines, network_geometry, network_lines_geometry, network_line_material;
+var network_lines, network_lines_geometry, network_line_material;
 
 function initScene() {
 
@@ -466,8 +472,8 @@ function addData(){
 
 
 function network(){
-  network_geometry = new THREE.Geometry();
-  network_geometry.velocities = [];
+  // network_geometry = new THREE.Geometry();
+  // network_geometry.velocities = [];
   nodes = 250;
 
   for ( var i = 0; i < nodes; i++) {
@@ -477,17 +483,27 @@ function network(){
 
     vertex.x = Math.random() * 1500 - 750;
     vertex.y = Math.random() * 1500 - 750;
-    vertex.z = 0;
+    vertex.z = 2000;
 
     velocity.x = ( Math.random() - 0.5 ) / 2;
     velocity.y = ( Math.random() - 0.5 ) / 2;
     velocity.z =  0;
 
-    network_geometry.vertices.push(vertex);
-    network_geometry.velocities.push(velocity);
+    geometry.vertices[i] = vertex;
+    new TWEEN.Tween(geometry.vertices[i]).to({x: Math.random() * 1500 - 750, y:Math.random() * 1500 - 750, z:0},1000).easing( TWEEN.Easing.Quadratic.InOut).start();
+    geometry.velocities[i] = velocity;
   }
-  var material = new THREE.ParticleSystemMaterial( { size: 12, color: "#29abe2", map: sprite, blending: THREE.AdditiveBlending, depthTest: false, transparent : true} );
-  network = new THREE.ParticleSystem(network_geometry, material);
+
+  for ( var i = nodes; i < geometry.vertices.length; i++) {
+    vertex = new THREE.Vector3();
+    vertex.x = Math.random() * 1500 - 750;
+    vertex.y = Math.random() * 1500 - 750;
+    vertex.z = 2000;
+    geometry.vertices[i] = vertex;
+  }
+  geometry.verticesNeedUpdate = true;
+  // var material = new THREE.ParticleSystemMaterial( { size: 12, color: "#29abe2", map: sprite, blending: THREE.AdditiveBlending, depthTest: false, transparent : true} );
+  // network = new THREE.ParticleSystem(network_geometry, material);
   // scene.add(network);
 
   network_lines_geometry = new THREE.Geometry();
@@ -499,34 +515,34 @@ function network(){
   new TWEEN.Tween(network_line_material).to({opacity: 1},2000).easing( TWEEN.Easing.Linear.None ).delay(500).start();
   new TWEEN.Tween(sparkline_material1).to({opacity: 0},2000).easing( TWEEN.Easing.Linear.None ).start();
   new TWEEN.Tween(sparkline_material2).to({opacity: 0},2000).easing( TWEEN.Easing.Linear.None ).start();
+  particleSystem.rotation.z = 0;
+  particleSystem.position.z = 0;
 }
 
 function animateNetwork(){
   for ( var i = 0; i < 250; i++) {
-    network_geometry.vertices[i].x += network_geometry.velocities[i].x;
-    network_geometry.vertices[i].y += network_geometry.velocities[i].y;
-    if(network_geometry.vertices[i].x > 750){network_geometry.vertices[i].x = -750}
-    if(network_geometry.vertices[i].x < -750){network_geometry.vertices[i].x = 750}
-    if(network_geometry.vertices[i].y > 750){network_geometry.vertices[i].y = -750}
-    if(network_geometry.vertices[i].y < -750){network_geometry.vertices[i].y = 750}
-    if(network_geometry.vertices[i].z > 750){network_geometry.vertices[i].z = -750}
-    if(network_geometry.vertices[i].z < -750){network_geometry.vertices[i].z = 750}
+    geometry.vertices[i].x += geometry.velocities[i].x;
+    geometry.vertices[i].y += geometry.velocities[i].y;
+    if(geometry.vertices[i].x > 750){geometry.vertices[i].x = -750}
+    if(geometry.vertices[i].x < -750){geometry.vertices[i].x = 750}
+    if(geometry.vertices[i].y > 750){geometry.vertices[i].y = -750}
+    if(geometry.vertices[i].y < -750){geometry.vertices[i].y = 750}
   }
-  
-  network_geometry.verticesNeedUpdate = true;
-  network_geometry.computeLineDistances();
+
+  geometry.verticesNeedUpdate = true;
+  geometry.computeLineDistances();
 
   d = 150;
 
   network_lines.geometry.vertices = [];
   network_lines.geometry.colors = [];
 
-  for (var i = network.geometry.vertices.length - 1; i >= 0; i--) {
-    for (var j = network.geometry.vertices.length - 1; j >= 0; j--) {
-        distance = network.geometry.vertices[i].distanceTo(network.geometry.vertices[j]);
+  for ( var i = 0; i < 250; i++) {
+    for ( var j = 0; j < 250; j++) {
+        distance = particleSystem.geometry.vertices[i].distanceTo(particleSystem.geometry.vertices[j]);
         if (distance < d){
-          network_lines.geometry.vertices.push(new THREE.Vector3( network.geometry.vertices[i].x, network.geometry.vertices[i].y, network.geometry.vertices[i].z ));
-          network_lines.geometry.vertices.push(new THREE.Vector3( network.geometry.vertices[j].x, network.geometry.vertices[j].y, network.geometry.vertices[j].z ));
+          network_lines.geometry.vertices.push(new THREE.Vector3( particleSystem.geometry.vertices[i].x, particleSystem.geometry.vertices[i].y, particleSystem.geometry.vertices[i].z ));
+          network_lines.geometry.vertices.push(new THREE.Vector3( particleSystem.geometry.vertices[j].x, particleSystem.geometry.vertices[j].y, particleSystem.geometry.vertices[j].z ));
           color = (new THREE.Color(0x29abe2)).lerp( new THREE.Color(0x000000), distance/d );
           // color.setHSL(0.549, 0.76, 0.525 + ( 0.475 * (1 - distance/(d)))  );
           network_lines.geometry.colors.push(color);

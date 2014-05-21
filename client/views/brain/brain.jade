@@ -26,8 +26,12 @@ template(name='brain')
         span.orikami-blue data
       .text#text7
         | and combine it into 
-        //- span.orikami-blue cognitive 
-        | algorithms.
+        span.orikami-blue algorithms.
+      .text#text8
+        | These curious 
+        span.orikami-blue explorers 
+        | help you discover your data…
+
 
     .navigation-container.animated.fadeInUp
       .row
@@ -35,4 +39,10 @@ template(name='brain')
           ul.inline-list
             li: button.round.next-brain
               i.fa.fa-long-arrow-right
-            li: button.round.next-brain skip
+            li: button.round(data-arrival="beer") Skip
+
+  .section.s4(data-destination="beer")
+    .row
+      .small-12.columns
+        h3 Orikami is a product innovation boutique. Together with our partners we innovate by creating excellent data products. We investigate and build the most ellegant algorithms, the most predictive models and the smartest sensors.
+        +similarBeers
