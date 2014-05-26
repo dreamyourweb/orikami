@@ -79,11 +79,11 @@ Template.brain.events({
     if (state > 2 && state < 10){
       $("#BrainContainer .logo-container").addClass('animated fadeOut');
     }
-  },
-
-  'click [data-arrival]': function(event){
-    $.scrollTo($("[data-destination=" + $(event.currentTarget).data("arrival") + "]"), 500);
   }
+
+  // 'click [data-arrival]': function(event){
+  //   $.scrollTo($("[data-destination=" + $(event.currentTarget).data("arrival") + "]"), 500);
+  // }
 
 })
 

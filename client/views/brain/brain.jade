@@ -45,18 +45,18 @@ template(name='brain')
           else
             +brainNav
 
-  .section.s4(data-destination="beer")
-    .row
-      .small-12.columns
-        h3 Orikami is a product innovation boutique. Together with our partners we innovate by creating excellent data products. We investigate and build the most elegant algorithms, the most predictive models and the smartest sensors.
-        +similarBeers
+  //- .section.s4(data-destination="beer")
+  //-   .row
+  //-     .small-12.columns
+  //-       h3 Orikami is a product innovation boutique. Together with our partners we innovate by creating excellent data products. We investigate and build the most elegant algorithms, the most predictive models and the smartest sensors.
+  //-       +similarBeers
 
 template(name="brainNav")
   ul.inline-list.animated.fadeInUp
     li: button.round.next-brain
       i.fa.fa-long-arrow-right
-    li: button.round(data-arrival="beer") Skip
+    li: button.round(data-arrival="core") Skip
 
 template(name="brainNavEnd")
   ul.inline-list.animated.fadeInUp
-    li: button.round(data-arrival="beer") Continue
+    li: button.round(data-arrival="core") Continue

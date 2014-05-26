@@ -17,18 +17,20 @@ template(name='home')
           dd(data-arrival="contact")
             a(href="#contact") Contact
 
-  .wireframe-wrapper.section.s1
-    .row
-      .small-12.columns
-        #uvp
-          h1 Explore the seas of data
-          h2 Orikami believes there is more to be learned from data
-    .row
-      .small-12.columns
-        object#logo(type="image/svg+xml" data="images/logo_boat.svg")
+  +brain
 
-    .bottom.full-width
-      button.button.round.go-button Read more
+  //- .wireframe-wrapper.section.s1
+  //-   .row
+  //-     .small-12.columns
+  //-       #uvp
+  //-         h1 Explore the seas of data
+  //-         h2 Orikami believes there is more to be learned from data
+  //-   .row
+  //-     .small-12.columns
+  //-       object#logo(type="image/svg+xml" data="images/logo_boat.svg")
+
+  //-   .bottom.full-width
+  //-     button.button.round.go-button Read more
 
   .section.s2(data-destination="core")
     a(name="core")
