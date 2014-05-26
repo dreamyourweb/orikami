@@ -2,6 +2,9 @@
   width: 100%;
   height: 100%;
   .logo-container{
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -ms-animation-duration: 2s;
     width: 500px;
     height: 500px;
     position: absolute;

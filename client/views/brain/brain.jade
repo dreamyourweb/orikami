@@ -8,41 +8,55 @@ template(name='brain')
         span.orikami-blue love 
         | the brain
       .text#text2
-        span.orikami-blue Orikami 
-        | believes products also need brains…
+        | We believe things also need a 
+        span.orikami-blue brain... 
       .text#text3
-        | to 
+        | ...to 
         span.orikami-blue understand 
-        | its surroundings
+        | its surroundings...
       .text#text4
-        | and make 
+        | ...and make 
         span.orikami-blue life 
-        | easier.
+        | easier
       .text#text5
-        | Our team of young 
-        span.orikami-blue scientists
+        | Our team of 
+        span.orikami-blue curious 
+        | scientists...
       .text#text6
-        | are able to integrate 
-        span.orikami-blue data
+        | ...integrate 
+        span.orikami-blue data...
       .text#text7
-        | and combine it into 
-        span.orikami-blue algorithms.
+        | into cognitive 
+        span.orikami-blue algorithms...
       .text#text8
-        | These curious 
-        span.orikami-blue explorers 
-        | help you discover your data…
+        | …and 
+        span.orikami-blue fold 
+        | it into products
+      .text#text9
+        | believes in a 
+        span.orikami-blue smarter 
+        | world
 
-
-    .navigation-container.animated.fadeInUp
+    .navigation-container
       .row
         .small-12.columns
-          ul.inline-list
-            li: button.round.next-brain
-              i.fa.fa-long-arrow-right
-            li: button.round(data-arrival="beer") Skip
+          if animationEnd
+            +brainNavEnd
+          else
+            +brainNav
 
   .section.s4(data-destination="beer")
     .row
       .small-12.columns
-        h3 Orikami is a product innovation boutique. Together with our partners we innovate by creating excellent data products. We investigate and build the most ellegant algorithms, the most predictive models and the smartest sensors.
+        h3 Orikami is a product innovation boutique. Together with our partners we innovate by creating excellent data products. We investigate and build the most elegant algorithms, the most predictive models and the smartest sensors.
         +similarBeers
+
+template(name="brainNav")
+  ul.inline-list.animated.fadeInUp
+    li: button.round.next-brain
+      i.fa.fa-long-arrow-right
+    li: button.round(data-arrival="beer") Skip
+
+template(name="brainNavEnd")
+  ul.inline-list.animated.fadeInUp
+    li: button.round(data-arrival="beer") Continue

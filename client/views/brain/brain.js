@@ -5,7 +5,14 @@ Template.brain.rendered = function (){
     brain_json = JSON.parse(r.content);
     animate();
   });
+  Session.set("orikamiBrainEnd", false);
 }
+
+Template.brain.helpers({
+  animationEnd: function(){
+    return Session.get("orikamiBrainEnd");
+  }
+})
 
 Template.brain.events({
   "click .next-brain": function(e){
@@ -55,15 +62,29 @@ Template.brain.events({
         case 9:
           $("#text7").addClass('animated fadeOutUp');
           $("#text8").addClass('animated fadeInUp');
+          explodeNetwork();
+          plane();
+          break;
+        case 10:
+          $("#text8").addClass('animated fadeOutUp');
+          $("#text9").addClass('animated fadeInUp');
+          $("#BrainContainer .logo-container").removeClass('fadeOut');
+          $("#BrainContainer .logo-container").addClass('fadeIn');
+          new TWEEN.Tween(planeMaterial).to({opacity: 0},1000).easing(TWEEN.Easing.Linear.None).start().onComplete(function(){
+            Session.set("orikamiBrainEnd", true);
+          });
           break;
       }
     }
-    $("#BrainContainer .logo-container").addClass('animated fadeOut');
+    if (state > 2 && state < 10){
+      $("#BrainContainer .logo-container").addClass('animated fadeOut');
+    }
   },
 
   'click [data-arrival]': function(event){
     $.scrollTo($("[data-destination=" + $(event.currentTarget).data("arrival") + "]"), 500);
   }
+
 })
 
 var container, stats;
@@ -73,6 +94,7 @@ var time, last_time;
 var sprite;
 var last_sparkline_position, sparkline_material1, sparkline_material2;
 var network_lines, network_lines_geometry, network_line_material;
+var plane, planeMaterial;
 
 function initScene() {
 
@@ -83,11 +105,16 @@ function initScene() {
   scene = new THREE.Scene();
 
   scene.fog = new THREE.FogExp2( 0x000000, 0.00025);
-  scene.add( new THREE.AmbientLight( 0x444444 ) );
+  // scene.add( new THREE.AmbientLight( 0x444444 ) );
   pointLight = new THREE.PointLight( 0xffffff, 1 );
+  pointLight2 = new THREE.PointLight( 0xffffff, 1 );
   pointLight.position.z = 1000;
   pointLight.position.x = 500;
+  pointLight2.position.z = 500;
+  pointLight2.position.x = -800;
+  pointLight2.position.y = 300;
   scene.add(pointLight);
+  scene.add(pointLight2);
 
   sprite = THREE.ImageUtils.loadTexture( "images/sprite.png" );
 
@@ -213,7 +240,11 @@ function render() {
       animateNetwork();
       break;
     case 9:
-      scene.remove(sparklines);
+      plane.geometry.verticesNeedUpdate = true;
+      plane.geometry.computeFaceNormals();
+      // plane.geometry.computeVertexNormals();
+      plane.geometry.normalsNeedUpdate = true;
+      geometry.verticesNeedUpdate = true;
       break;
 
   }
@@ -554,4 +585,54 @@ function animateNetwork(){
 
   network_lines.geometry.verticesNeedUpdate = true;
   network_lines.geometry.colorsNeedUpdate = true;
+}
+
+function explodeNetwork(){
+  new TWEEN.Tween(network_line_material).to({opacity: 0},2000).easing( TWEEN.Easing.Linear.None).start().onComplete(function(){scene.remove(network_lines)}).onUpdate(function(){animateNetwork();});
+  for ( var i = 0; i < particles; i++) {
+
+    new TWEEN.Tween( geometry.vertices[i] ).to( {
+      x: Math.random() * 1000 - 500,
+      y: Math.random() * 1000 - 500,
+      z: 2000}, 2000 )
+    .easing( TWEEN.Easing.Exponential.Out).start();
+
+  }
+}
+
+function plane(){
+  planeMaterial = new THREE.MeshLambertMaterial( {vertexColors: THREE.FaceColors, side: THREE.DoubleSide, shading: THREE.FlatShading, transparent:true, opacity:1});
+
+  plane_geometry = new THREE.Geometry();
+  plane_geometry.vertices.push(new THREE.Vector3(-250 + 100, 0, -250));
+  plane_geometry.vertices.push(new THREE.Vector3( 125 + 100, 0,    0));
+  plane_geometry.vertices.push(new THREE.Vector3( 250 + 100, 0,  250));
+  plane_geometry.vertices.push(new THREE.Vector3(   0 + 100, 0,  125));
+  plane_geometry.vertices.push(new THREE.Vector3(-125 + 100, 0, -125));
+  plane_geometry.faces.push( new THREE.Face3(0, 1, 4, new THREE.Vector3(0,1,0), new THREE.Color(0x29abe2) ) );
+  plane_geometry.faces.push( new THREE.Face3(1, 2, 4, new THREE.Vector3(0,1,0), new THREE.Color(0x90d4d5) ) );
+  plane_geometry.faces.push( new THREE.Face3(2, 3, 4, new THREE.Vector3(0,1,0), new THREE.Color(0x90d4d5) ) );
+  plane_geometry.faces.push( new THREE.Face3(3, 0, 4, new THREE.Vector3(0,1,0), new THREE.Color(0x29abe2) ) );
+
+  plane = new THREE.Mesh(plane_geometry, planeMaterial);
+  plane.position.y = -50;
+  plane.rotation.y = Math.PI;
+  // plane_geometry.elementsNeedUpdate();
+  // plane_geometry.computeVertexNormals();
+  // plane_geometry.computeBoundingBox();
+  // plane.scale = new THREE.Vector3(500, 500, 500);
+  scene.add(plane)
+  new TWEEN.Tween(plane_geometry.vertices[0]).to({
+    x:-80,
+    y:200,
+    z:-180
+  },2000).easing( TWEEN.Easing.Quadratic.InOut ).delay(500).start();
+  new TWEEN.Tween(plane_geometry.vertices[2]).to({
+    x:50,
+    y:300,
+    z:0
+  },2000).easing( TWEEN.Easing.Quadratic.InOut ).delay(500).start();
+
+  new TWEEN.Tween(plane.rotation).to({y: 2.3*Math.PI},3000).easing(TWEEN.Easing.Quadratic.Out).start();
+
 }
