@@ -12,6 +12,8 @@ template(name='home')
             a(href="#core") Core values
           dd(data-arrival="data-science")
             a(href="#data-science") Data science
+          dd(data-arrival="process")
+            a(href="#process") Process
           dd(data-arrival="products")
             a(href="#products") Products
           dd(data-arrival="contact")
@@ -24,25 +26,25 @@ template(name='home')
     .row
       .medium-12.columns.intro
         .quote "Data is the new oil" - Neelie Kroes (2012).
-        h3 We build next-gen data applications. Data is valuable, but if unrefined it cannot be used. Orikami helps organisations exploiting their data.
+        h2 We build next-gen data applications. Data is valuable, but if unrefined it cannot be used. Orikami helps organisations exploiting their data.
 
-    .row
+    .row(data-equalizer)
       .medium-4.columns
-        img.svg(src="images/curiosity.svg")
+        img.svg(src="images/curiosity.svg" data-equalizer-watch)
         h4.green Curious
         p Orikami stimulates curiosity. We know how to ask the right questions and explore data.
         p That's how we uncover the most fascinating and rewarding stories.
         p The stories that we fold into products.
 
       .medium-4.columns
-        img.svg(src="images/analytical.svg")
+        img.svg(src="images/analytical.svg" data-equalizer-watch)
         h4.orange Analytic
         p Data always has its secrets. Our data scientists are fully equipped with modern tools and mathematics.
         p We are ready to reveal and build. Enriching data by coupling open datasets and api's? No problem!
         p Cluster analysis on noisy data? Cool!
 
       .medium-4.columns
-        img.svg.last(src="images/together.svg")
+        img.svg.last(src="images/together.svg" data-equalizer-watch)
         h4.red Together
         p At orikami we collaborate. We partner up. We co-create.
         p We have the technical know-how to develop next-gen data applications.
@@ -73,11 +75,37 @@ template(name='home')
         p Science is about discovery and building knowledge, which requires motivating questions about the world and hypotheses that can be brought to data and tested with statistical methods. Domain relevant questions first, then data.
 
 
+  .section.parallax.process(data-destination="process")
+    a(name="process")
+    .row
+      .small-12.columns
+        h2 Process
+
+  .section
+    .row
+      .small-12.columns
+        ul.small-block-grid-5.process-block-grid
+          li
+            img.svg(src="images/process/bulb.svg")
+            h4 Your idea
+          li
+            img.svg(src="images/process/atoms.svg")
+            h4 Core idea
+          li
+            img.svg(src="images/process/clipboard.svg")
+            h4 Validation
+          li
+            img.svg(src="images/process/controller.svg")
+            h4 MVP
+          li
+            img.svg(src="images/process/cogs.svg")
+            h4 Optimalization
+
   .section.parallax.s3(data-destination="products")
     a(name="products")
     .row
       .small-12.columns
-        h2 At Orikami we fold data into products
+        h2 At orikami we fold data into products
 
 
   .section.s4
@@ -86,14 +114,6 @@ template(name='home')
         h3 Orikami is a product innovation boutique. Together with our partners we innovate by creating excellent data products. We investigate and build the most elegant algorithms, the most predictive models and the smartest sensors.
         +similarBeers
 
-
-
-  //- .section.parallax.showcase
-
-  //- .section
-  //-   .row
-  //-     .small-12.columns
-  //-       object.bayes-eq(type="image/svg+xml" data="images/nbc.svg")
 
   .section.parallax.s7
     .row

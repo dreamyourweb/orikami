@@ -16,7 +16,7 @@ html, body{
 }
 
 img[src*=".svg"] {
-  width: 100%; 
+  width: 100%;
 }
 
 @font-face {
@@ -131,7 +131,7 @@ h1{
   background: $primary-color;
   color: $white;
   @extend .text-center;
-  h3, h4{
+  h2, h4{
     color: $white;
     @extend .text-center;
   }
@@ -162,6 +162,10 @@ h1{
 }
 .s6{
 
+}
+.parallax.process{
+  background: url(/images/boat_water.jpg);
+  background-size: 100% auto;
 }
 .s7{
   background: url(/images/orikami_team.jpg);
@@ -418,4 +422,13 @@ object.fill{
 
 span.orikami-blue{
   color: $primary-color;
+}
+
+.process-block-grid{
+  h4{
+    @extend .text-center;
+  }
+  img{
+    padding: 0 10px 10px 10px;
+  }
 }
