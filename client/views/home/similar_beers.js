@@ -15,7 +15,7 @@ var tip = d3.tip().attr('class', 'd3-tip').html(function(d) {
               "<img src='" + d.img + "'></img>" +
             "</div>" +
             "<div class='small-9 columns'>" +
-              "<p><strong>Style:</strong>" + d.style + "</p><p><strong>Taste:</strong> " + d.taste + "</p>" +
+              "<p><strong>Style: </strong>" + d.style + "</p><p><strong>Taste:</strong> " + d.taste + "</p>" +
             "</div>" +
           "</div>"
 });
