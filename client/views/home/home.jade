@@ -123,24 +123,18 @@ template(name='home')
 
   .section.our-team
     .row
-      .medium-4.columns
-        .team-image
-          .hex.andres: img(src="images/andres-hex.png")
-          .hex.andres.back: img(src="images/andres-hex-original.png")
-        h4 Andres Lamont
-        h5 Data Scientist / Developer
-      .medium-4.columns
-        .team-image
-          .hex.bram: img(src="images/bram-hex.png")
-          .hex.bram.back: img(src="images/bram-hex-original.png")
-        h4 Bram den Teuling
-        h5 Data Scientist / Inspirator
-      .medium-4.columns
-        .team-image
-          .hex.luc: img(src="images/luc-hex.png")
-          .hex.luc.back: img(src="images/luc-hex-original.png")
-        h4 Luc Vandewall
-        h5 Business Developer / Realisator
+      .medium-8.columns.medium-centered.hex-container
+        .hex-push
+          +hex url="http://lorempixel.com/500/500/people/1" background_id="bg1"
+        +hex url="http://lorempixel.com/500/500/people/2" background_id="bg2"
+        +hex url="http://lorempixel.com/500/500/people/3" background_id="bg3"
+        .hex-invisible
+          +hex url=""
+        +hex url="http://lorempixel.com/500/500/people/4" background_id="bg4"
+        .hex-push
+          +hex url="http://lorempixel.com/500/500/people/5" background_id="bg5"
+        +hex url="http://lorempixel.com/500/500/people/6" background_id="bg6"
+
 
   .section.contact(data-destination="contact")
     a(name="contact")

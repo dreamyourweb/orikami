@@ -190,36 +190,6 @@ h1{
   h4,h5{
     text-align: center;
   }
-  .team-image{
-    margin: 20px;
-    position: relative;
-    img{
-      // visibility:hidden;
-    }
-    .back{
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      transform: rotateY(-180deg);
-    }
-    .hex{
-      width: 100%;
-      background-size: 100%;
-      background-repeat: no-repeat;
-      backface-visibility: hidden;
-      transition: transform 500ms ease-in-out;
-    }
-    &:hover{
-      .hex{
-        transform: rotateY(180deg);
-      }
-      .hex.back{
-        transform: rotateY(0deg);
-      }
-    }
-  }
 }
 
 .section.map{
@@ -256,29 +226,6 @@ button:hover, button:focus, .button:hover, .button:focus{
 .bottom{
   position: absolute;
   bottom: 20px;
-}
-
-.hexes li{
-  text-align: center;
-}
-
-.hex{
-  /*background: url('images/hex-green.png');*/
-  font-size: 500%;
-  font-family: "Santor";
-  position: relative;
-  svg{
-    display: block;
-    margin: 0 auto;
-  }
-  line-height: 0;
-}
-
-.hex span{
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  padding-top: 75px;
 }
 
 .green{ color: #47b39d; }
@@ -429,4 +376,35 @@ span.orikami-blue{
   img{
     padding: 0 10px 10px 10px;
   }
+}
+
+.section.our-team{
+
+  .hex-container{
+    margin-top: 9.525%;
+  }
+
+  .hex-push .hex-wrapper{
+    margin-left: 16.66666%;
+  }
+
+  .hex-invisible .hex-wrapper{
+    opacity: 0;
+  }
+
+  .hex-wrapper{
+    float: left;
+    width: 33%;
+    height: 0;
+    padding-bottom: 38.10%;
+    position: relative;
+    margin-top: -9.525%;
+  }
+
+  .hex{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
 }
