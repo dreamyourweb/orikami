@@ -181,7 +181,9 @@ function animate() {
 
   requestAnimationFrame( animate );
 
-  render();
+  if ($(window).scrollTop() < window.innerHeight - 50){
+    render();
+  }
 
 }
 
