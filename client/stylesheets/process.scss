@@ -8,6 +8,29 @@
   padding-bottom: 100%;
   position: relative;
 
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  .big-loop{
+    position: absolute;
+    display: table;
+    width: 50%;
+    height: 50%;
+    left: 50%;
+    top: 50%;
+    margin-left: -25%;
+    margin-top: -25%;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1500%;
+    color: $secondary-color;
+    animation: spin 30s infinite linear;
+    i{
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
   .circle{
     width: 20%;
     height: 20%;

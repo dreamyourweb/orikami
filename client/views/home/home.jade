@@ -13,7 +13,7 @@ template(name='home')
           dd(data-arrival="data-science")
             a(href="#data-science") Data science
           dd(data-arrival="process")
-            a(href="#process") Process
+            a(href="#process") Agile
           dd(data-arrival="products")
             a(href="#products") Products
           dd(data-arrival="contact")
@@ -79,12 +79,28 @@ template(name='home')
     a(name="process")
     .row
       .small-12.columns
-        h2 Process
+        h2 Agile data science process
 
   .section
     .row
+      .small-12.columns
+        h3.center Our workflow ensures frequent feedback and iterations between out data scientists and all other stakeholders.
+
+    .row
       .small-10.columns.small-centered
         +process
+
+    .row
+      .medium-4.columns
+        h4.center Scalable
+        p By using the power of the cloud we have immediate access to virtually infinite on-demand computational power and storage allowing us to scale infinitely.
+      .medium-4.columns
+        h4.center Platform
+        p We make extensive use of third-party PaaS services. This leaves us free to focus on the problem at hand instead of worrying about the setup and maintenance of complex computational infrastructures.
+      .medium-4.columns
+        h4.center Expectations
+        p Data science can be unpredictable. To make sure that expectations are met, we determine the lower and upper bounds on model performance as early as possible during the process.
+
 
   .section.parallax.s3(data-destination="products")
     a(name="products")

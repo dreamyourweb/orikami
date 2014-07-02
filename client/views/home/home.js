@@ -8,6 +8,8 @@ Template.home.rendered = function (){
 	$('.s3').attr('data-stellar-vertical-offset', -400);
 	$('.s5').attr('data-stellar-background-ratio', 0.8);
 	$('.s5').attr('data-stellar-vertical-offset', -400);
+	$('.process').attr('data-stellar-background-ratio', 0.8);
+	$('.process').attr('data-stellar-vertical-offset', -400);
 	$('.s7').attr('data-stellar-background-ratio', 0.8);
 	$('.s7').attr('data-stellar-vertical-offset', -600);
   $.stellar();
