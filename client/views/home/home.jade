@@ -83,23 +83,8 @@ template(name='home')
 
   .section
     .row
-      .small-12.columns
-        ul.small-block-grid-5.process-block-grid
-          li
-            img.svg(src="images/process/bulb.svg")
-            h4 Your idea
-          li
-            img.svg(src="images/process/atoms.svg")
-            h4 Core idea
-          li
-            img.svg(src="images/process/clipboard.svg")
-            h4 Validation
-          li
-            img.svg(src="images/process/controller.svg")
-            h4 MVP
-          li
-            img.svg(src="images/process/cogs.svg")
-            h4 Optimalization
+      .small-10.columns.small-centered
+        +process
 
   .section.parallax.s3(data-destination="products")
     a(name="products")
