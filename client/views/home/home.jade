@@ -125,15 +125,22 @@ template(name='home')
     .row
       .medium-8.columns.medium-centered.hex-container
         .hex-push
-          +hex url="images/andres-hex-original.png" background_id="bg1"
-        +hex url="images/vera.jpg" background_id="bg2"
-        +hex url="images/vera.jpg" background_id="bg3"
+          +hex url="images/andres-hex-original.png" background_id="bg1" align="right" x="-220" name="Andres Lamont" descr="lean developer"
+
+        +hex url="images/vera3.jpg" background_id="bg2" align="left" x="200" name="Vera Rutten" descr="interaction designer"
+
+        +hex url="images/boat_hex.png" background_id="bg3" align="right" x="-220" name="Werken bij orikami?"
+
         .hex-invisible
           +hex url=""
-        +hex url="images/bram-hex-original.png" background_id="bg4"
+
+        +hex url="images/bram-hex-original.png" background_id="bg4" align="left" x="200" name="Bram den Teuling" descr="data scientist & lean innovator"
+
         .hex-push
-          +hex url="images/joris.jpg" background_id="bg5"
-        +hex url="images/vera.jpg" background_id="bg6"
+          +hex url="images/joris.jpg" background_id="bg5" align="right" x="-220" name="Joris Cuppen" descr="data wizard in training"
+
+        +hex url="images/boat_hex.png" align="left" x="200" name="Werken bij orikami?" background_id="bg6" 
+
 
 
   .section.contact(data-destination="contact")
