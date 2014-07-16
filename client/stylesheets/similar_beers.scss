@@ -1,6 +1,8 @@
 #similarBeersChart{
   width: 100%;
-  padding: 50px;
+  // padding: 50px;
+  margin-top: -50px;
+  margin-bottom: -50px;
   svg{
     overflow: visible;
   }
@@ -63,7 +65,7 @@
 }
 
 path.arc {
-  fill: #fff;
+  fill: none;
 }
 
 .node {
@@ -91,7 +93,7 @@ path.arc {
 // }
 
 .link.source {
-  stroke: #000;
+  stroke: #fff;
 }
 
 // .node.source {
@@ -99,11 +101,11 @@ path.arc {
 // }
 
 .link.target {
-  stroke: #000;
+  stroke: #fff;
 }
 
 .node.source, .node.target{
-  text{fill: black !important;}
+  text{fill: #fff !important;}
 }
 
 .node:hover{
@@ -115,6 +117,7 @@ path.arc {
 }
 
 .d3-tip {
+  z-index: 5;
   line-height: 1;
   p{
     font-size: 0.75rem;

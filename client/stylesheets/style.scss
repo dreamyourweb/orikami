@@ -1,7 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import "functions";
 
 $base-font-size: 14px;
-// $rem-base: $base-font-size;
+
+$row-width: rem-calc(1300);
 
 @import "colors";
 @import "packages/foundation5-sass/foundation";
@@ -41,6 +43,16 @@ img[src*=".svg"] {
     padding-top: 30px;
     padding-bottom: 30px;
   };
+  &.gray{
+    background: #e0e2e2;
+  }
+  &.dark-gray{
+    background: #303232;
+    color: white;
+    h1,h2,h3,h4,h5,h6{
+      color: white;
+    }
+  }
 }
 
 .wireframe-wrapper{
@@ -82,8 +94,8 @@ body{
 
 h1,h2,h3,h4,h5,h6{
   font-family: "Santor";
-  text-shadow: 1px 1px 0px darken($white, 30%);
-  text-shadow: 0.5px 0.5px 0px darken($white, 30%);
+  // text-shadow: 1px 1px 0px darken($white, 30%);
+  // text-shadow: 0.5px 0.5px 0px darken($white, 30%);
   &.center{
     text-align: center;
   }
@@ -128,13 +140,13 @@ h1{
 .s2{
   background: $primary-color;
   color: $white;
-  @extend .text-center;
+  // @extend .text-center;
   h2, h4{
     color: $white;
-    @extend .text-center;
+    // @extend .text-center;
   }
   .intro{
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
   }
   img.svg{
     width: 100%;
@@ -419,4 +431,8 @@ span.orikami-blue{
     position: absolute;
   }
 
+}
+
+p.lead{
+  font-size: 125%;
 }

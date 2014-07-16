@@ -137,12 +137,13 @@ function mouseup() {
 }
 
 function mouseover(d) {
-  tip.direction(function(d) {
-    if(d.x > 45 && d.x <= 135) return 'e';
-    if(d.x > 135 && d.x <= 225) return 's';
-    if(d.x > 225 && d.x <= 315) return 'w';
-    if(d.x > 315 || d.x <= 45) return 'n';
-  })
+  // tip.direction(function(d) {
+  //   if(d.x > 45 && d.x <= 135) return 'e';
+  //   if(d.x > 135 && d.x <= 225) return 's';
+  //   if(d.x > 225 && d.x <= 315) return 'w';
+  //   if(d.x > 315 || d.x <= 45) return 'n';
+  // })
+  tip.direction('w');
   tip.show(d);
   svg.selectAll("path.link.target-" + d.key)
       .classed("target", true)
@@ -194,7 +195,7 @@ var packages = {
           node.parent = find(name.substring(0, i = name.lastIndexOf("//")));
           node.parent.children.push(node);
           node.key = name.substring(i + 2).replace(/\W/g,"-");
-          node.pretty_key = name.substring(i + 2);
+          node.pretty_key = _.truncate(name.substring(i + 2), 16);
           if (data){
             node.taste = data['taste'] || "";
           }

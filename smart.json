@@ -10,6 +10,7 @@
     "autoform": {},
     "notifications": {},
     "animate-css": {},
-    "font-awesome": {}
+    "font-awesome": {},
+    "underscore-string-latest": {}
   }
 }
