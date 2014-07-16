@@ -116,6 +116,37 @@ template(name='home')
       .medium-6.small-12.columns
         +similarBeers
 
+  .section.cases.s8
+    .row
+      .medium-3.small-12.centered.columns
+        img.png(src="images/result.png" float="center" width="50%" data-equalizer-watch)
+        h4.center KplusV
+      .medium-3.small-12.centered.columns
+        img.png(src="images/graph.png" float="center" width="50%" data-equalizer-watch)
+        h4.center U-map
+      .medium-3.small-12.centered.columns
+        img.png(src="images/bierapp.png" float="center" width="50%" data-equalizer-watch)
+        h4.center Bier App
+      .medium-3.small-12.centered.columns
+        img.png(src="images/top40.png" float="center" width="50%" data-equalizer-watch)
+        h4.center Top40
+    .row
+      svg(height='70', width='100%')
+        line(x1='0', y1='15', x2='10000', y2='15', style='stroke: #999999; stroke-width: 3;')
+        polygon(points='80,15 160,15 120,28', style='fill: #999999;, stroke-color: #d8d8d8, stroke-width: 2;')
+    .row.s8.kplusv
+      .small-4.columns
+        img.png(src="images/result.png" width="90%" float="left" )
+        h6 (www.cultureelondernemenscan.nl)
+        p techniques used: Ruby on Rails, HTML5, D3.js, Linear Algebra & Geometry
+      .small-8.columns
+        h3 data accessability
+        p In co-creation with KplusV we developed a web application, which maps the vitality of a cultural organisation. By means of a questionnaire we measure innovativity, distinctiveness, strategy and business execution. When the questionnaire is finished, the application presents a diagnosis.
+        h3 insight
+        p The diagnosis is presented in an interactive data visualization. This way the user can learn about the different aspects of his/her organisation.
+        h3 intelligence
+        p Together with the experts of KplusV we made a mathematical model of the available knowledge about cultural entrepreneurship. While the aforementioned diagnosis is loosely based on this model we took it one step further and incorporated an organisation specific advise for action. The advise focuses on how this specific organisation should act to become more entrepreneurial and adapt to modern times with their unique challenges.
+
 
   //- .section.parallax.s7
   //-   .row
