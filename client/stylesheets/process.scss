@@ -46,9 +46,20 @@
     backface-visibility: hidden;
     cursor: pointer;
 
-    span{
+    .span-wrapper{
+      padding: 20%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
       vertical-align: middle;
+      display: table;
+      overflow: hidden;
+    }
+
+    span{
       display: table-cell;;
+      vertical-align: middle;
       font-size: 80%;
       h5{ color: $white; }
     }
