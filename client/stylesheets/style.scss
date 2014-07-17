@@ -48,7 +48,7 @@ img[src*=".svg"] {
     background: #e0e2e2;
   }
   &.dark-gray{
-    background: #303232;
+    background: $dark-gray;
     color: white;
     h1,h2,h3,h4,h5,h6{
       color: white;
@@ -184,7 +184,7 @@ h1{
   background-color: #49c2e6;
 }
 .s8{
-  background-color: #e8e8e8;
+  background-color: $light-gray;
   .kplusv{
     h3,h6 {color: #559922;}
   }
@@ -316,23 +316,25 @@ span.brand{
   padding-bottom: 5px;
   line-height: $topnav-height;
   font-family: "Santor";
-  color: $primary-color;
+  color: $white;
+  span{
+    color: $primary-color;
+  }
   letter-spacing: 6px;
   small{
     letter-spacing: 0;
-    color: $white;
     font-size: 50%;
   }
   object.navbar-logo{
     height: $topnav-height - 22px;
     // margin-top: 5px;
     // margin-bottom: 15px;
-    margin-right: 10px;
+    // margin-right: 10px;
     display: inline;
   }
 }
 
-footer.section{
+.section.footer-site{
   background: $black;
   color: $white;
   h3{color: $white;}
@@ -340,8 +342,39 @@ footer.section{
     width: 100%;
     display: block;
     margin: 0 auto;
-    // height: 250px;
     padding: 50px;
+  }
+}
+
+.section.footer-sharing{
+  background: $dark-gray;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  span.orikami{
+    color: $white;
+    font-family: "Santor";
+    font-size: 200%;
+    vertical-align: middle;
+    line-height: 2em;
+  }
+  span.blue{
+    color: $primary-color;
+    display: inline;
+    margin-right: 10px;
+  }
+  span.fa-stack{
+    color: $dark-gray;
+    font-size: 60%;
+    vertical-align: middle;
+  }
+  .fa-circle{
+    color: $dark-white;
+  }
+  a:hover .fa-circle{
+    color: $primary-color;
+  }
+  .legal{
+    color: lighten($dark-gray, 10%);
   }
 }
 
@@ -403,4 +436,11 @@ span.orikami-blue{
 
 p.lead{
   font-size: 125%;
+}
+
+.site-map{
+  @include side-nav();
+  li a:not(.button){
+    padding-left: 0;
+  }
 }
