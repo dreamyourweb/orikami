@@ -1,12 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 @import "functions";
+@import "../../packages/zf5/scss/normalize";
 
 $base-font-size: 14px;
 
 $row-width: rem-calc(1300);
 
 @import "colors";
-@import "packages/foundation5-sass/foundation";
+@import "../../packages/zf5/scss/foundation";
 
 html, body{
   height: 100%;
@@ -205,12 +206,6 @@ h1{
   };
 }
 
-.section.our-team{
-  h4,h5{
-    text-align: center;
-  }
-}
-
 .section.map{
   height: 350px;
   padding: 0;
@@ -395,49 +390,6 @@ span.orikami-blue{
   img{
     padding: 0 10px 10px 10px;
   }
-}
-
-.section.our-team{
-
-  .teamName{
-    font-family: santor; 
-    font-size: 18px;
-    color: $primary-color;
-  }
-  
-  .teamDescr{
-    font-family: santor; 
-    font-size: 14px;
-  }
-
-  .hex-container{
-    margin-top: 9.525%;
-  }
-
-  .hex-push .hex-wrapper{
-    margin-left: 16.66666%;
-  }
-
-  .hex-invisible .hex-wrapper{
-    opacity: 0;
-  }
-
-  .hex-wrapper{
-    float: left;
-    width: 33%;
-    height: 0;
-    padding-bottom: 38.10%;
-    position: relative;
-    overflow: visible;
-    margin-top: -9.525%;
-  }
-
-  .hex{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-  }
-
 }
 
 p.lead{
