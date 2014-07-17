@@ -2,7 +2,7 @@
   "packages": {
     "jquery-scrollTo": {},
     "iron-router": {},
-    "foundation5-sass": {},
+    "zf5": {},
     "jade": {},
     "stellar": {},
     "npm": {},
