@@ -342,7 +342,8 @@ span.brand{
     width: 100%;
     display: block;
     margin: 0 auto;
-    padding: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 
@@ -443,4 +444,13 @@ p.lead{
   li a:not(.button){
     padding-left: 0;
   }
+}
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip{
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.leaflet-marker-shadow{
+  display: none;
 }
