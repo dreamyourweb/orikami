@@ -15,9 +15,19 @@ Template.brain.helpers({
 })
 
 Template.brain.events({
-  "click .next-brain": function(e){
+  "click .next-brain, click #BrainContainer": function(e){
     e.preventDefault();
-    if(TWEEN.getAll().length == 0){
+    advanceAnimation();
+  }
+
+  // 'click [data-arrival]': function(event){
+  //   $.scrollTo($("[data-destination=" + $(event.currentTarget).data("arrival") + "]"), 500);
+  // }
+
+})
+
+function advanceAnimation(){
+  if(TWEEN.getAll().length == 0){
       state += 1;
       switch(state){
         case 1:
@@ -79,13 +89,8 @@ Template.brain.events({
     if (state > 2 && state < 10){
       $("#BrainContainer .logo-container").addClass('animated fadeOut');
     }
-  }
+}
 
-  // 'click [data-arrival]': function(event){
-  //   $.scrollTo($("[data-destination=" + $(event.currentTarget).data("arrival") + "]"), 500);
-  // }
-
-})
 
 var container, stats;
 var camera, scene, renderer, particles, geometry, n, m, state = 0, velocities, brain, brain_json, brainMaterial, brainBox, brainBoxMaterial, sparklines;
