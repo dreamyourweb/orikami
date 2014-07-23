@@ -11,6 +11,7 @@
     "notifications": {},
     "animate-css": {},
     "font-awesome": {},
-    "underscore-string-latest": {}
+    "underscore-string-latest": {},
+    "tabs": {}
   }
 }

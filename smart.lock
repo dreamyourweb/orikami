@@ -13,7 +13,8 @@
       "notifications": {},
       "animate-css": {},
       "font-awesome": {},
-      "underscore-string-latest": {}
+      "underscore-string-latest": {},
+      "tabs": {}
     },
     "packages": {
       "jquery-scrollTo": {
@@ -75,6 +76,11 @@
         "git": "https://github.com/TimHeckel/meteor-underscore-string.git",
         "tag": "v2.3.3",
         "commit": "4a5d70eee48fbd90a6e6fc78747250d704a0b3bb"
+      },
+      "tabs": {
+        "git": "https://github.com/andrewreedy/meteor-tabs.git",
+        "tag": "v0.0.6",
+        "commit": "cde166031e8f1560e0d2ab2bb1cb9de789b5bab6"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

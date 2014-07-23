@@ -1,0 +1,41 @@
+template(name='cases')
+  +tabs id="cases-tabs" settings=tabSettings
+
+    div
+      .row
+        svg(height='70', width='100%')
+          line(x1='0', y1='15', x2='10000', y2='15', style='stroke: #999999; stroke-width: 3;')
+          polygon(points='95,15 175,15 135,28', style='fill: #999999;')
+      .row.s8.kplusv
+        .small-4.columns
+          img.png(src="images/kplusv.png" width="90%" float="left" )
+          a(href='www.cultureelondernemenscan.nl', target='blank') www.cultureelondernemenscan.nl
+          p techniques used: Ruby on Rails, HTML5, D3.js, Linear Algebra & Geometry
+        .small-8.columns
+          h3 data accessability
+          p In co-creation with KplusV we developed a web application, which maps the vitality of a cultural organisation. By means of a questionnaire we measure innovativity, distinctiveness, strategy and business execution. When the questionnaire is finished, the application presents a diagnosis.
+          h3 insight
+          p The diagnosis is presented in an interactive data visualization. This way the user can learn about the different aspects of his/her organisation.
+          h3 intelligence
+          p Together with the experts of KplusV we made a mathematical model of the available knowledge about cultural entrepreneurship. While the aforementioned diagnosis is loosely based on this model we took it one step further and incorporated an organisation specific advise for action. The advise focuses on how this specific organisation should act to become more entrepreneurial and adapt to modern times with their unique challenges.
+
+
+    div
+      .row
+        svg(height='70', width='100%')
+          line(x1='0', y1='15', x2='10000', y2='15', style='stroke: #999999; stroke-width: 3;')
+          polygon(points='320,15 400,15 360,28', style='fill: #999999;')
+      .row.s8.umap
+        .small-4.columns
+          img.png(src="images/umap.png" width="90%" float="left" )
+          a(href='www.u-map.eu', target='blank') www.u-map.eu
+          p Ruby on Rails, Javascript, SVG, raphael.js, Nearest Neighbour algorithm, data visualisation, mongoDB, postgreSQL
+        .small-8.columns
+          h3 data accessability
+          p Together with the Center for Higher Educational Policy Studies, an institute linked to University Twente, we developed a web application that maps universities on 29 dimensions. The data application we developed lets you search, filter and compare universities on all of these dimensions. Furthermore, the back-end is fully equiped for gathering standardized information about higher educational institutions in countries with differ-ent traditions and ways of presenting their data. The U-map application validates data input thoroughly.
+          h3 insight
+          p The multidimensional classification is presented in an interactive and simple way.
+          h3 intelligence
+          p There is a lot of information In the 29 dimensional data of all universities. This data encloses connections between uni-versities never seen before. We devel-oped a simple but efficient algorithm to discover and compare universities based on similarity.
+
+        

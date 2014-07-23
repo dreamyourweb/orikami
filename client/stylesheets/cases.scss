@@ -1,0 +1,22 @@
+.tab-item{
+    font-size: 18px;
+    font-family:"santor";
+	line-height: 160%;
+    display: inline-block;
+    width: 30%;
+    margin-right: 20px;
+    list-style: none;
+    float: center;
+    &.active{
+    	text-decoration: underline;
+    	color: #559922;
+    }
+ }
+
+
+.tab-content{
+	display: none;
+	&.active{
+		display: block;
+	}
+}

@@ -15,6 +15,13 @@ Template.home.rendered = function (){
   $.stellar();
   $(document).foundation();
   leaflet();
+  $(document).foundation({
+    tab: {
+      callback : function (tab) {
+        console.log(tab);
+      }
+    }
+  });
 }
 
 

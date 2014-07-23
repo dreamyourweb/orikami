@@ -186,15 +186,17 @@ h1{
 .s8{
   background-color: #e8e8e8;
   .kplusv{
-    h3,h6 {color: #559922;}
+    h3,h6,a {color: #559922;}  
+  }
+  .umap{
+    h3,h6,a {color: #ee33aa;}  
   }
   a {
     font-family:"santor";
     text-decoration: underline;
     font-size: 130%;
-    color: #559922;
     line-height: 160%;
-  }
+    }
   p {font-size: 100%;}
 }
 
