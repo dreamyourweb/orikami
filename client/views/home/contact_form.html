@@ -1,5 +1,5 @@
 <template name="contactForm">
-  #contactForm
+  <div id="contactForm">
     {{#autoForm schema=contactFormSchema id="contactForm" type="method" meteormethod="sendEmail"}}
       {{> afQuickField name="name"}}
       {{> afQuickField name="email"}}
@@ -8,4 +8,5 @@
         <button type="submit" class="button">Submit</button>
       </div>
     {{/autoForm}}
+  </div>
 </template>

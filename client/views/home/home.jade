@@ -5,7 +5,7 @@ template(name='home')
       .small-12.columns
         span.brand
           object.navbar-logo(type="image/svg+xml" data="images/logo_boat.svg")
-          | orikami
+          span orikami
           small  data science boutique
         dl.sub-nav.right
           //- dd(data-arrival="core")
@@ -51,7 +51,6 @@ template(name='home')
     //-     p At orikami we collaborate. We partner up. We co-create.
     //-     p We have the technical know-how to develop next-gen data applications.
     //-     p We need you for knowledge about the problem domain. Together, we are an unbeatable team!
-
   //- .section.parallax.s5(data-destination="data-science")
   //-   a(name="data-science")
   //-   .row
@@ -161,13 +160,17 @@ template(name='home')
 
   .section.our-team(data-destination="team")
     .row
+      .small-12.columns
+        h2 Meet our team
+        p.lead At orikami we collaborate. We partner up. We co-create. We have the technical know-how to develop next-gen data applications. We need you for knowledge about the problem domain. Together, we are an unbeatable team!
+    .row
       .medium-8.columns.medium-centered.hex-container
         .hex-push
           +hex url="images/andres-hex-original.png" background_id="bg1" name="Andres Lamont" descr="data scientist" text_align="left"
 
         +hex url="images/vera3.jpg" background_id="bg2" name="Vera Rutten" descr="interaction designer" text_align="right"
 
-        +hex url="images/boat_hex.png" background_id="bg3" name="Werken bij orikami?" text_align="left"
+        +hex url="images/boat_hex.png" background_id="bg3" name="You?" text_align="left"
 
         .hex-invisible
           +hex url="" 
@@ -177,7 +180,7 @@ template(name='home')
         .hex-push
           +hex url="images/joris.jpg" background_id="bg5" name="Joris Cuppen" descr="data wizard in training" text_align="left"
 
-        +hex url="images/boat_hex.png" name="Werken bij orikami?" background_id="bg6"  text_align="right"
+        +hex url="images/boat_hex.png" name="You?" background_id="bg6"  text_align="right"
 
 
 
@@ -219,20 +222,51 @@ template(name='home')
   .section.map
     #map.large
 
-  footer.section
+  .section.footer-site
     .row
       .medium-6.columns
         object.footer-logo(type="image/svg+xml" data="images/logo.svg")
       .medium-6.columns
-        p Do you have problems creating value from data? Call us!
-        span.all-caps We are a data science boutique. Your partner in delivering value with information.
+        p Do you want to create value from data? Call us!
+        span.all-caps We are a data science boutique. Your partner in delivering value with data.
 
-        ul.side-nav
-          li(data-arrival="core")
-            a(href="#core") Core values
+        ul.site-map
+          li(data-arrival="science")
+            a(href="#data-science") Data science
+          li(data-arrival="process")
+            a(href="#process") Agile
           li(data-arrival="products")
             a(href="#products") Products
-          li(data-arrival="data-science")
-            a(href="#data-science") Data science
-          li(data-arrival="contact")
+          li(data-arrival="team")
+            a(href="#team") Team
+          li(data-arrival="team")
             a(href="#contact") Contact
+
+  .section.footer-sharing
+    .row
+      .small-12.columns
+        span.pull-left.orikami Follow
+          span.blue orikami
+          a(href="http://twitter.com/#!/dreamyourweb" target="_blank" title="Twitter")
+            span.fa-stack.fa-lg
+              i.fa.fa-circle.fa-stack-2x
+              i.fa.fa-twitter.fa-stack-1x
+          a(href="http://www.facebook.com/dreamyourweb" target="_blank" title="Twitter")
+            span.fa-stack.fa-lg
+              i.fa.fa-circle.fa-stack-2x
+              i.fa.fa-facebook.fa-stack-1x
+          a(href="http://www.linkedin.com/company/dreamyourweb" target="_blank" title="Twitter")
+            span.fa-stack.fa-lg
+              i.fa.fa-circle.fa-stack-2x
+              i.fa.fa-linkedin.fa-stack-1x
+          a(href="https://github.com/dreamyourweb" target="_blank" title="Github")
+            span.fa-stack.fa-lg
+              i.fa.fa-circle.fa-stack-2x
+              i.fa.fa-github.fa-stack-1x
+          a(href="skype:info-dyw?call" title="Skype")
+            span.fa-stack.fa-lg
+              i.fa.fa-circle.fa-stack-2x
+              i.fa.fa-skype.fa-stack-1x
+    .row
+      .small-12.columns
+        .legal © 2014 orikami, All rights reserved.
