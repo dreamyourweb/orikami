@@ -18,5 +18,11 @@
 	display: none;
 	&.active{
 		display: block;
+		.umappoly{margin-left: 200px; fill: #992222;}
 	}
+	.poly{
+		fill: #999999;
+	}
+	.umap{fill: #992222;}
+
 }
