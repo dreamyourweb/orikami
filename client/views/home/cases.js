@@ -1,21 +1,27 @@
 Template['cases'].helpers({
   tabSettings: function() {
     return {
-      defaultPath: this.tab || "kplusv",
+      defaultPath: this.tab || "1",
       type: 'horizontal',
       tabs: [
         {
 
-          path: 'kplusv',
-          name: 'ik wil hier een plaatje'
+          path: '1',
+          name: 'KplusV'
           //img.png(src="images/kplusv.png" float="center" width="20%" data-equalizer-watch)
 
         }, {
 
-          path: 'umap',
+          path: '2',
           name: 'U-map'
+        }, {
+
+          path: '3',
+          name: 'empty'
+          
         }
       ]
     };
   }
+
 });

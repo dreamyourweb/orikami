@@ -3,13 +3,11 @@
     font-family:"santor";
 	line-height: 160%;
     display: inline-block;
-    width: 30%;
-    margin-right: 20px;
+    width: 33%;
     list-style: none;
-    float: center;
+  	text-align: center;
     &.active{
-    	text-decoration: underline;
-    	color: #559922;
+    	font-weight: bold;
     }
  }
 
@@ -18,11 +16,11 @@
 	display: none;
 	&.active{
 		display: block;
-		.umappoly{margin-left: 200px; fill: #992222;}
 	}
-	.poly{
-		fill: #999999;
+	.polygon{
+		@if tab == 'umap' {fill: #992222;}
+		@else {fill: #999999;}
 	}
-	.umap{fill: #992222;}
+	
 
 }
