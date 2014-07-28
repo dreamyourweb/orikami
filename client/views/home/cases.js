@@ -17,7 +17,7 @@ Template['cases'].helpers({
         }, {
 
           path: '3',
-          name: 'empty'
+          name: 'BierApp'
           
         }
       ]
