@@ -5,20 +5,17 @@ Template['cases'].helpers({
       type: 'horizontal',
       tabs: [
         {
-
           path: '1',
           name: 'KplusV'
-          //img.png(src="images/kplusv.png" float="center" width="20%" data-equalizer-watch)
-
         }, {
-
           path: '2',
           name: 'U-map'
         }, {
-
           path: '3',
+          name: 'Mozart'          
+        }, {
+          path: '4',
           name: 'BierApp'
-          
         }
       ]
     };
