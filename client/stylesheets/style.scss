@@ -139,6 +139,8 @@ h1{
 }
 
 .s2{
+  padding-top:0px;
+  padding-bottom:0px;
   background: $primary-color;
   color: $white;
   // @extend .text-center;
@@ -158,6 +160,10 @@ h1{
   .quote{
     @extend .text-left;
     margin-bottom: 20px;
+  }
+  .row{
+    position: absolute;
+    padding-top: 80px;
   }
 }
 .s3{

@@ -1,7 +1,7 @@
 Template['cases'].helpers({
   tabSettings: function() {
     return {
-      defaultPath: this.tab || "1",
+      defaultPath: this.path,
       type: 'horizontal',
       tabs: [
         {
