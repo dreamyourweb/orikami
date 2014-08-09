@@ -142,10 +142,12 @@ h1{
   padding-top:0px;
   padding-bottom:0px;
   background: $primary-color;
+  height:250px;
   color: $white;
-  // @extend .text-center;
+  @extend .text-center;
   h2, h4{
     color: $white;
+
     // @extend .text-center;
   }
   .intro{
@@ -157,13 +159,10 @@ h1{
     padding-right: 30px;
     margin-bottom: 20px;
   }
-  .quote{
-    @extend .text-left;
-    margin-bottom: 20px;
-  }
   .row{
     position: absolute;
     padding-top: 80px;
+    margin-left: 6.2rem;
   }
 }
 .s3{
