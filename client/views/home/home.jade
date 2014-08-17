@@ -10,12 +10,12 @@ template(name='home')
         dl.sub-nav.right
           //- dd(data-arrival="core")
           //-   a(href="#core") Core values
-          dd(data-arrival="data-science")
-            a(href="#data-science") Data science
-          dd(data-arrival="process")
-            a(href="#process") Agile
+          dd(data-arrival="science")
+            a(href="#science") Science
           dd(data-arrival="products")
             a(href="#products") Products
+          dd(data-arrival="process")
+            a(href="#process") Agile
           dd(data-arrival="team")
             a(href="#team") Team
           dd(data-arrival="contact")
@@ -26,61 +26,53 @@ template(name='home')
 
   +delau
 
-  .row(data-equalizer)
-    .medium-4.columns
-      h4.green Intelligent algorithms
-        p We work towards goals data-driven
-    .medium-4.columns
-      h4.orange Real-time insight
-        p Measuring is knowing. We lift scientific power by measuring everything and creating insightful visualizations.
-        p We can get make your organisation data-driven by harnassing this power of real-time performance insight.
-    .medium-4.columns
-      h4.red Data insight
-        p blabla
-    //- .row(data-equalizer)
-    //-   .medium-4.columns
-    //-     img.svg(src="images/curiosity.svg" data-equalizer-watch)
-    //-     h4.green Curious
-    //-     p Orikami stimulates curiosity. We know how to ask the right questions and explore data.
-    //-     p That's how we uncover the most fascinating and rewarding stories.
-    //-     p The stories that we fold into products.
-
-    //-   .medium-4.columns
-    //-     img.svg(src="images/analytical.svg" data-equalizer-watch)
-    //-     h4.orange Analytic
-    //-     p Data always has its secrets. Our data scientists are fully equipped with modern tools and mathematics.
-    //-     p We are ready to reveal and build. Enriching data by coupling open datasets and api's? No problem!
-    //-     p Cluster analysis on noisy data? Cool!
-
-    //-   .medium-4.columns
-    //-     img.svg.last(src="images/together.svg" data-equalizer-watch)
-    //-     h4.red Together
-    //-     p At orikami we collaborate. We partner up. We co-create.
-    //-     p We have the technical know-how to develop next-gen data applications.
-    //-     p We need you for knowledge about the problem domain. Together, we are an unbeatable team!
-  //- .section.parallax.s5(data-destination="data-science")
-  //-   a(name="data-science")
-  //-   .row
-  //-     .small-12.columns
-  //-       h2 Excellence in data science
-
-  .section.s6(data-destination="data-science")
+  .section.s4.dark-gray(data-destination="products")
     .row
       .medium-6.small-12.columns
-        h2 Real data scientists.
-        p.lead Orikami is not your run-of-the-mill data science company. We are not statisticians. We are computational neuroscientists. We are artificial intelligence scientists. We are real data scientists.
+        h2 data products
+        p.lead Orikami is specialised in building data products. Together with our partners we investigate and build the most elegant algorithms, the most predictive models and the smartest sensors.
+       .medium-6.small-12.columns
+    .row
+      +portfolio
 
-        h3 Hacking Skills
-        p Data is a commodity traded electronically, therefore, we need to speak hacker. Far from 'black hat' activities, data hackers must be able to manipulate text files at the command-line, thinking algorithmically, and be interested in learning new tools.
+    .row(data-equalizer)
+      .medium-4.columns
+        h4.green Accurate predictions
+        p Our brain is able to recognize patterns from the past and makes predictions for the future based on these patterns. We studied the brain and its powerfull abilities for recognizing patterns and building predictive models. Our data products lift the power of prediction!
+      .medium-4.columns
+        h4.orange Real-time insight
+        p We love old sayings like: "Measuring is knowing" and "knowledge is power". However it gets confusing when "Time is money". That's why we help you to get your insights as quickly as possible. We make data real-time available, through easy to understand interactive data visualizations!
+      .medium-4.columns
+        h4.red Self-learning algorithms
+        p People learn by giving them feedback. Software can learn too! We use the power of giving our software feedback, so it can learn. We just tell it when it did something right (give it a carrot) and wrong (hit it softly with a stick). Carrot and stick are very helpfull in training our software to do the right thing.
+    // .row(data-equalizer)
+    //   .medium-4.columns
+    //     img.svg(src="images/curiosity.svg" data-equalizer-watch)
+    //     h4.green Curious
+    //     p Orikami stimulates curiosity. We know how to ask the right questions and explore data.
+    //     p That's how we uncover the most fascinating and rewarding stories.
+    //     p The stories that we fold into products.
 
-        h3 Math & Statistics
-        p Once we have acquired and cleaned the data, the next step is to actually extract insight from it. We need to apply appropriate math and statistics methods, which requires familiarity with these tools.
+    //   .medium-4.columns
+    //     img.svg(src="images/analytical.svg" data-equalizer-watch)
+    //     h4.orange Analytic
+    //     p Data always has its secrets. Our data scientists are fully equipped with modern tools and mathematics.
+    //     p We are ready to reveal and build. Enriching data by coupling open datasets and api's? No problem!
+    //     p Cluster analysis on noisy data? Cool!
 
-        h3 Domain Expertise
-        p Science is about discovery and building knowledge, which requires motivating questions about the world and hypotheses that can be brought to data and tested with statistical methods. Domain relevant questions first, then data.
+    //   .medium-4.columns
+    //     img.svg.last(src="images/together.svg" data-equalizer-watch)
+    //     h4.red Together
+    //     p At orikami we collaborate. We partner up. We co-create.
+    //     p We have the technical know-how to develop next-gen data applications.
+    //     p We need you for knowledge about the problem domain. Together, we are an unbeatable team!
+          
+  // .section.parallax.s5(data-destination="data-science")
+  //   a(name="data-science")
+  //   .row
+  //     .small-12.columns
+  //       h2 Excellence in data science
 
-      .medium-6.small-12.columns
-        object.fill.venn(type="image/svg+xml" data="images/venn.svg")
 
   //- .section.parallax.process(data-destination="process")
   //-   a(name="process")
@@ -113,15 +105,7 @@ template(name='home')
   //-       h2 At orikami we fold data into products
 
 
-  .section.s4.dark-gray(data-destination="products")
-    .row
-      .medium-6.small-12.columns
-        h2 product innovation boutique
-        p.lead Orikami is a product innovation boutique. Together with our partners we innovate by creating excellent data products. We investigate and build the most elegant algorithms, the most predictive models and the smartest sensors.
-
-      .medium-6.small-12.columns
-        +similarBeers
-
+ 
   .section.cases.s8
 
     .row
