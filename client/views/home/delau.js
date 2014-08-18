@@ -52,7 +52,7 @@ function init(element) {
     for (var i = 0; i < triangles.length; i+=3) {
 
         color = new THREE.Color();
-        color.setHSL(0.549, 0.76, 0.525 + 0.2*Math.random());        
+        color.setHSL(0.549, 0.76, 0.645 + 0.2*Math.random());        
 
         geometry.faces.push( new THREE.Face3( triangles[i+2], triangles[i+1], triangles[i] , new THREE.Vector3(0,0,1), color ));
     }
