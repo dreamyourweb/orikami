@@ -5,9 +5,8 @@ var w = 1024,
       m0,
       rotate = 0;
 
-  var splines = [];
-
-  var svg;
+var splines = [];
+var svg;
 
 var tip = d3.tip().attr('class', 'd3-tip').html(function(d) {
   return "<div class='row'>" +

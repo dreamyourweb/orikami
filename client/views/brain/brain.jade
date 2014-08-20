@@ -1,7 +1,7 @@
 template(name='brain')
   #BrainContainer
     .logo-container
-      object#logo(type="image/svg+xml" data="images/logo.svg")
+      object#logo(type="image/svg+xml" data="images/logo_1.svg")
     .content-container
       .text#text1
         | We 
@@ -26,15 +26,12 @@ template(name='brain')
         | ...integrates 
         span.orikami-blue data...
       .text#text7
-        | ...with brainy 
+        | ...with self-learning 
         span.orikami-blue algorithms...
       .text#text8
         | …and 
         span.orikami-blue folds 
-        | this into smart products
-      .text#text9
-        | folds data into 
-        span.orikami-blue products
+        | this into intelligent products
 
     .navigation-container
       .row
@@ -54,8 +51,9 @@ template(name="brainNav")
   ul.inline-list.animated.fadeInUp
     li: button.round.next-brain
       i.fa.fa-long-arrow-right
-    li: button.round(data-arrival="core") Skip
+    li: button.round(data-arrival="science")
+      i.fa.fa-long-arrow-down
 
 template(name="brainNavEnd")
   ul.inline-list.animated.fadeInUp
-    li: button.round(data-arrival="core") Continue
+    li: button.round(data-arrival="science") Continue

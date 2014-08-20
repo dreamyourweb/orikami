@@ -139,11 +139,13 @@ h1{
 }
 
 .s2{
+  padding-top:0px;
+  padding-bottom:0px;
   background: $primary-color;
   color: $white;
-  // @extend .text-center;
   h2, h4{
     color: $white;
+
     // @extend .text-center;
   }
   .intro{
@@ -155,9 +157,10 @@ h1{
     padding-right: 30px;
     margin-bottom: 20px;
   }
-  .quote{
-    @extend .text-left;
-    margin-bottom: 20px;
+  .row{
+    position: absolute;
+    padding-top: 80px;
+    margin-left: 6.2rem;
   }
 }
 .s3{
@@ -172,14 +175,13 @@ h1{
   background-size: 100% auto;
 }
 .s6{
-
 }
 .parallax.process{
   background: url(/images/boat_water.jpg);
   background-size: 100% auto;
 }
 .s7{
-  background: url(/images/orikami_team.jpg);
+  background: url(/images/boat-team.jpg);
   background-size: 100% auto;
   background-color: #49c2e6;
 }
