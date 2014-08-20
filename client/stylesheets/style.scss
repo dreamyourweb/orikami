@@ -45,7 +45,7 @@ img[src*=".svg"] {
     padding-bottom: 30px;
   };
   &.gray{
-    background: #e0e2e2;
+    background: $light-gray; //#e0e2e2
   }
   &.dark-gray{
     background: $dark-gray;
@@ -138,7 +138,7 @@ h1{
   @media #{$small-only} { font-size: 200%};
 }
 
-.s2{
+.s1{
   padding-top:0px;
   padding-bottom:0px;
   background: $primary-color;
@@ -162,6 +162,9 @@ h1{
     padding-top: 80px;
     margin-left: 6.2rem;
   }
+}
+.s2{
+  background-color: $boutique-blue;
 }
 .s3{
   background: url(/images/origami_hand.jpg);
