@@ -140,28 +140,7 @@ h1{
 
 .s1{
   padding-top:0px;
-  padding-bottom:0px;
   background: $primary-color;
-  color: $white;
-  h2, h4{
-    color: $white;
-
-    // @extend .text-center;
-  }
-  .intro{
-    // margin-bottom: 50px;
-  }
-  img.svg{
-    width: 100%;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-bottom: 20px;
-  }
-  .row{
-    position: absolute;
-    padding-top: 80px;
-    margin-left: 6.2rem;
-  }
 }
 .s2{
   background-color: $boutique-blue;

@@ -28,8 +28,8 @@ function init(element) {
 
     element.appendChild( renderer.domElement );
 
-    w = 16 * 1.5;
-    h = 9 * 1.5;
+    w = 16 * 2;
+    h = 9 * 2;
 
     geometry = new THREE.Geometry();
     lines_geometry = new THREE.Geometry();
