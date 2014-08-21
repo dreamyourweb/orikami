@@ -33,6 +33,7 @@ img[src*=".svg"] {
   position: absolute;
   left: 40%;
   margin-bottom: 20px;
+  margin-top: 100px;
 }
 
 .section{
@@ -134,7 +135,6 @@ h1{
   h2{
     color: darken($secondary-color,20%);
   }
-
 }
 
 .parallax.section h2{
@@ -146,9 +146,23 @@ h1{
 }
 
 .s1{
-  padding-top:0px;
   background: $primary-color;
+  h2 {
+    color: white;
+    font-size: 300%;
+    @media #{$medium-only} { font-size: 250%};
+    @media #{$small-only} { font-size: 200%};
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  p {
+    text-align: justify;
+    padding-right: 15px;
+  }
+  padding-top: 50px;
+  height: 400px;
 }
+
 .s2{
   background-color: #f0f0f0;
   .right{text-align: right;}
