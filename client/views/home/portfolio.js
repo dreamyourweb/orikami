@@ -1,5 +1,5 @@
 var w = 1024,
-      h = 1024,
+      h = w/2,
       rx = w / 2,
       ry = h / 2,
       m0,
@@ -20,9 +20,9 @@ var tip = d3.tip().attr('class', 'd3-tip').html(function(d) {
 });
 
 Template.portfolio.rendered = function(){
-  $('#portfolio').height($('#portfolio').width());
+  $('#portfolio').height($('#portfolio').width()*0.5);
   $(window).resize(function() {
-    $('#portfolio').height($('#portfolio').width());
+    $('#portfolio').height($('#portfolio').width()*0.5);
   });
   svg = d3.select("#portfolio").append("svg:svg")
       .attr("viewBox", "0 0 " + w + " " + h)
@@ -34,13 +34,19 @@ Template.portfolio.rendered = function(){
                  .enter()
                  .append("circle");
   circles.attr("cx", function(d, i) {
-            return (i * 50) + 50;
+            return (i * 150) + 50;
         })
        .attr("cy", h/2)
        .attr("r", function(d) {
-            return d.hours;
+            return Math.sqrt(d.hours);
+       })
+       .attr("fill", function(d) {
+        return "rgb(" + (Math.round(Math.random() * 300)) + ", " + (Math.round(Math.random() * 300)) + ", " + (Math.round(Math.random() * 300)) + ")";
        });
 
+  circles.on("click", function () {
+    alert("test");
+  })
 
   d3.select("#portfolio").selectAll("p")
     .data(PortfolioData)
