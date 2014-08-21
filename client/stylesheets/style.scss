@@ -146,22 +146,7 @@ h1{
 }
 
 .s1{
-  background: $primary-color;
-  h2 {
-    color: white;
-    font-size: 300%;
-    @media #{$medium-only} { font-size: 250%};
-    @media #{$small-only} { font-size: 200%};
-    text-align: center;
-    padding-bottom: 20px;
-  }
-  p {
-    text-align: justify;
-    padding-right: 15px;
-  }
-  padding-top: 50px;
-  height: 400px;
-}
+ }
 
 .s2{
   background-color: #f0f0f0;
