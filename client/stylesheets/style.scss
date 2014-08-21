@@ -14,7 +14,7 @@ html, body{
 }
 
 img[src*=".svg"] {
-  width: 100%;
+  //width: 100%;
 }
 
 @font-face {
@@ -26,6 +26,13 @@ img[src*=".svg"] {
          url('/fonts/santor-webfont.svg#santorregular') format('svg');
     font-weight: normal;
     font-style: normal;
+}
+
+.venn{
+  width: 20%; 
+  position: absolute;
+  left: 40%;
+  margin-bottom: 20px;
 }
 
 .section{
@@ -144,6 +151,10 @@ h1{
 }
 .s2{
   background-color: #f0f0f0;
+  .right{text-align: right;}
+  .center{text-align: center;}
+  .padding{padding-top: 140px;}
+  .pad{padding-top: 24px;}
 }
 .s3{
   background: url(/images/origami_hand.jpg);
@@ -405,10 +416,7 @@ object.fill{
   display: block;
 }
 
-.venn{
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
+
 
 .review{
   color: red;
