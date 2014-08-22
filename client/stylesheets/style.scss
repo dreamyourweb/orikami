@@ -33,7 +33,7 @@ img[src*=".svg"] {
   position: absolute;
   left: 40%;
   margin-bottom: 20px;
-  margin-top: 100px;
+  margin-top: 24px;
 }
 
 .section{
@@ -138,7 +138,8 @@ h1{
 }
 
 .parallax.section h2{
-  padding-top: 250px;
+  padding-top: 150px;
+  text-align: center;
   color: white;
   font-size: 300%;
   @media #{$medium-only} { font-size: 250%};
@@ -152,9 +153,35 @@ h1{
   background-color: #f0f0f0;
   .right{text-align: right;}
   .center{text-align: center;}
-  .padding{padding-top: 140px;}
-  .pad{padding-top: 24px;}
+  .padding{padding-top: 170px;}
+  .pad{padding-top: 28px;}
 }
+
+p.lead{
+  font-size: 125%;
+  color: #fff;
+  text-align: center;
+}
+
+.s2b{
+  background-color: #c0e0f0;
+  text-align: justify;
+  .sm{ 
+    padding-top: 20px;
+    padding-bottom: 20px;
+    //padding-right: 20px;
+    padding-left: 15px;
+  }
+  p,h2,h3{
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  h1{
+    text-align: center;
+    color: black;
+  }
+}
+
 .s3{
   background: url(/images/origami_hand.jpg);
   background-size: 100% auto;
@@ -434,9 +461,7 @@ span.orikami-blue{
   }
 }
 
-p.lead{
-  font-size: 125%;
-}
+
 
 .site-map{
   @include side-nav();
