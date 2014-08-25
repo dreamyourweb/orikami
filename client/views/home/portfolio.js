@@ -46,6 +46,7 @@ Template.portfolio.rendered = function(){
 
   circles.on("click", function () {
     alert("test");
+    line = svg.append("line")
   })
 
   d3.select("#portfolio").selectAll("p")
