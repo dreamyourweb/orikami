@@ -45,10 +45,16 @@ Template.portfolio.rendered = function(){
        .attr("fill", function(d) {
         return d.color;
        })
-       .text(function(d) { 
-          return d.name;
-       });
 
+  var text = portfolioGroup.append("text");
+  var textLabels = text
+                 .attr("x", function(d) { return d.x_pos; })
+                .attr("y", function(d) { return (d.y_pos + 5); })
+                .text( function (d) { return d.name; })
+                .attr("font-family", "santor")
+                .attr("font-size", "16px")
+                .attr("fill", "#fff")
+                .attr("text-anchor", "middle");
 
   portfolioGroup.on("click", function() {
     d3.select(this)
