@@ -44,8 +44,10 @@ Template.portfolio.rendered = function(){
        })
        .attr("fill", function(d) {
         return d.color;
+       })
+       .text(function(d) { 
+          return d.name;
        });
-       .text(function(d) { return d.name;})
 
 
   portfolioGroup.on("click", function() {
