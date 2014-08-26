@@ -20,8 +20,6 @@ var tip = d3.tip().attr('class', 'd3-tip').html(function(d) {
 });
 
 Template.similarBeers.rendered = function(){
-
-
   $('#similarBeersChart').height($('#similarBeersChart').width());
   $(window).resize(function() {
     $('#similarBeersChart').height($('#similarBeersChart').width());

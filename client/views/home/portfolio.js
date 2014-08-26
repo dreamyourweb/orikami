@@ -27,32 +27,49 @@ Template.portfolio.rendered = function(){
   svg = d3.select("#portfolio").append("svg:svg")
       .attr("viewBox", "0 0 " + w + " " + h)
       .attr("preserveAspectRatio", "xMidYMid")
-  svg.call(tip);
 
-  var circles = svg.selectAll("circle")
-                 .data(PortfolioData)
+  var portfolioGroup = svg.selectAll("g")
+                  .data(PortfolioData)
                  .enter()
-                 .append("circle");
-  circles.attr("cx", function(d, i) {
-            return (i * 150) + 50;
+                 .append("g")
+  var circles = portfolioGroup.append("circle")
+  circles.attr("cx", function(d) {
+            return d.x_pos;
         })
-       .attr("cy", h/2)
+       .attr("cy", function(d) {
+            return d.y_pos;
+        })
        .attr("r", function(d) {
             return Math.sqrt(d.hours);
        })
        .attr("fill", function(d) {
-        return "rgb(" + (Math.round(Math.random() * 300)) + ", " + (Math.round(Math.random() * 300)) + ", " + (Math.round(Math.random() * 300)) + ")";
+        return d.color;
        });
+       .text(function(d) { return d.name;})
 
-  circles.on("click", function () {
-    alert("test");
-    line = svg.append("line")
-  })
 
-  d3.select("#portfolio").selectAll("p")
-    .data(PortfolioData)
-    .enter()
-    .append("p")
-    .text(function(d) { return "name = " + d.name; })
-    .style("color","red");
-};
+  portfolioGroup.on("click", function() {
+    d3.select(this)
+    .append("line")
+    .attr("x1", function(d) {
+      return d.x_pos;
+    })
+    .attr("y1", function(d) {
+      return d.y_pos;
+    })
+    .attr("x2", function(d) {
+      return d.x_pos;
+    })
+    .attr("y2",  function(d) {
+      return 500;
+    })
+    .attr("stroke-width", 7)
+    .attr("stroke", function(d) {
+      return d.color;
+    })
+    .transition()
+    .duration(250)
+    .append('div')
+  });
+
+}
