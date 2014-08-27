@@ -1,3 +1,14 @@
-//d3 data viz of portfolio
 template(name="portfolio")
   #portfolio
+    dl.tabs(data-tab='data-tab', role='tablist')
+      +each portfolio_data
+        dd.tab-title.active(role='presentational', style="transform: translateY(#{y_pos}px); background-color: #{color}; width: #{size}px; height: #{size}px ")
+          .line(style="background: #{color}; top: #{y_mid}px;")
+          a(href="#portfolio-panel-#{index}", role='tab', tabindex='0', aria-selected='true', controls="portfolio-panel-#{index}")
+            .span-wrapper
+              span #{name}
+
+    .tabs-content
+      +each portfolio_data
+        section.content.panel(id="portfolio-panel-#{index}", role='tabpanel', aria-hidden='false', class="{{ first_active index }}", style="border-color: #{color}; color: #{color}")
+          h2(style="color: #{color}") #{index} panel content goes here...x
