@@ -10,7 +10,6 @@ arunoda:npm@0.2.6
 natestrauser:animate-css@3.1.1
 natestrauser:font-awesome@4.1.0
 mrt:underscore-string-latest@2.3.3
-mrt:tabs@0.0.6
 natestrauser:jquery-scrollto
 gfk:notifications
 d3
@@ -23,4 +22,3 @@ tween
 three
 http
 arunoda:kadira
-
