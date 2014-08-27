@@ -146,5 +146,5 @@ function onWindowResize() {
 
     renderer.setSize( window.innerWidth, window.innerHeight );
     // $('.wireframe-wrapper canvas').parallax({ "coeff":0.5});
-
+    render();
 }
