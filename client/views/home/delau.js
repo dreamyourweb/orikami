@@ -1,7 +1,6 @@
 Template.delau.rendered = function (){
     init(this.find(".delau-wrapper"));
     animate();
-    $('.delau-wrapper canvas').parallax({ "coeff":0.5});
 }
 var container, stats;
 var camera, scene, renderer, particles, geometry, materials = [], parameters, i, h, w, color, velocities, polygons, pointLight, initial_z=[];
@@ -145,6 +144,6 @@ function onWindowResize() {
     camera.updateProjectionMatrix();
 
     renderer.setSize( window.innerWidth, window.innerHeight );
-    $('.wireframe-wrapper canvas').parallax({ "coeff":0.5});
+    // $('.wireframe-wrapper canvas').parallax({ "coeff":0.5});
 
 }

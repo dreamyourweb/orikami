@@ -23,7 +23,7 @@
     vertical-align: middle;
     text-align: center;
     font-size: 1500%;
-    color: $secondary-color;
+    color: @secondary-color;
     animation: spin 30s infinite linear;
     i{
       display: table-cell;
@@ -34,7 +34,7 @@
   .circle{
     width: 20%;
     height: 20%;
-    background-color: $primary-color;
+    background-color: @primary-color;
     border-radius: 10000000px;
     position: absolute;
     margin-left: -10%;
@@ -61,7 +61,7 @@
       display: table-cell;;
       vertical-align: middle;
       font-size: 80%;
-      h5{ color: $white; }
+      h5{ color: @white; }
     }
 
     &.circle-1 { left: 50%; top: 10%; }
@@ -73,7 +73,7 @@
 
     &.back{
       transform: rotateY(-180deg);
-      background-color: $secondary-color;
+      background-color: @secondary-color;
       pointer-events: none;
     }
 
@@ -87,12 +87,11 @@
 
   }
 
-  .arrow{
-    @extend .text-center;
+  .arrow:extend(.text-center){
     width: 20%;
     height: 20%;
     text-align: center;
-    color: $secondary-color;
+    color: @secondary-color;
     position: absolute;
     margin-left: -10%;
     margin-top: -10%;

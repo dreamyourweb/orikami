@@ -1,20 +1,20 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
-@import "functions";
-@import "../../packages/zf5/scss/normalize";
 
-$base-font-size: 14px;
-
-$row-width: rem-calc(1300);
+@row-width: rem-calc(1300);
 
 @import "colors";
-@import "../../packages/zf5/scss/foundation";
 
 html, body{
   height: 100%;
+  font-size: 14px;
 }
 
 img[src*=".svg"] {
   //width: 100%;
+}
+
+.svg-image{
+  width: 100%;
 }
 
 @font-face {
@@ -29,9 +29,9 @@ img[src*=".svg"] {
 }
 
 .venn{
-  width: 25%; 
+  width: 35%; 
   position: absolute;
-  left: 37%;
+  left: 33%;
   margin-bottom: 20px;
   margin-top: 35px;
 }
@@ -44,19 +44,19 @@ img[src*=".svg"] {
   position: relative;
   background: white;
   overflow: hidden;
-  @media #{$medium-only} {
+  @media only screen and (min-width: 40.063em) and (max-width: 64em) {
     padding-top: 40px;
     padding-bottom: 40px;
   };
-  @media #{$small-only} {
+ @media only screen and (max-width: 40em) {
     padding-top: 30px;
     padding-bottom: 30px;
   };
   &.gray{
-    background: $light-gray; //#e0e2e2
+    background: @light-gray; //#e0e2e2
   }
   &.dark-gray{
-    background: $dark-gray;
+    background: @dark-gray;
     color: white;
     h1,h2,h3,h4,h5,h6{
       color: white;
@@ -70,8 +70,8 @@ img[src*=".svg"] {
 }
 
 .wireframe-wrapper .button{
-  color: $primary-color;
-  border-color: $primary-color;
+  color: @primary-color;
+  border-color: @primary-color;
   margin: 0 auto;
   display: block;
 }
@@ -93,7 +93,7 @@ img[src*=".svg"] {
 }
 
 body{
-  background: $white;
+  background: @white;
   width: 100%;
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
@@ -103,8 +103,8 @@ body{
 
 h1,h2,h3,h4,h5,h6{
   font-family: "Santor";
-  // text-shadow: 1px 1px 0px darken($white, 30%);
-  // text-shadow: 0.5px 0.5px 0px darken($white, 30%);
+  // text-shadow: 1px 1px 0px darken(@white, 30%);
+  // text-shadow: 0.5px 0.5px 0px darken(@white, 30%);
   &.center{
     text-align: center;
   }
@@ -112,6 +112,10 @@ h1,h2,h3,h4,h5,h6{
 
 h1{
   color: white;
+}
+
+.row{
+  max-width: 70rem;
 }
 
 #logo{
@@ -126,14 +130,14 @@ h1{
 
 #uvp{
   h1{
-    color: $primary-color;
+    color: @primary-color;
     font-size: 1000%;
     line-height: 0.9;
-    @media #{$medium-only} { font-size: 800%};
-    @media #{$small-only} { font-size: 600%};
+    @media only screen and (min-width: 40.063em) and (max-width: 64em) { font-size: 800%};
+    @media only screen and (max-width: 40em) { font-size: 600%};
   }
   h2{
-    color: darken($secondary-color,20%);
+    color: darken(@secondary-color,20%);
   }
 }
 
@@ -141,8 +145,8 @@ h1{
   padding-top: 250px;
   color: white;
   font-size: 300%;
-  @media #{$medium-only} { font-size: 250%};
-  @media #{$small-only} { font-size: 200%};
+  @media only screen and (min-width: 40.063em) and (max-width: 64em) { font-size: 250%};
+  @media only screen and (max-width: 40em) { font-size: 200%};
 }
 
 .s1{
@@ -202,7 +206,7 @@ p.lead{
   background-color: #49c2e6;
 }
 .s8{
-  background-color: $light-gray;
+  background-color: @light-gray;
   .kplusv{
     h3,h6,a {color: #559922;}  
   }
@@ -229,12 +233,12 @@ p.lead{
 .section.parallax{
   height: 400px;
   background-position-x: center !important;
-  @media #{$medium-only} {
+  @media only screen and (min-width: 40.063em) and (max-width: 64em) {
     background-size: 155% auto;
     height: 300px;
     h2{padding-top: 180px;}
   };
-  @media #{$small-only} {
+  @media only screen and (max-width: 40em) {
     background-size: 175% auto;
     height: 200px;
     h2{padding-top: 110px;}
@@ -254,22 +258,22 @@ p.lead{
   }
 }
 .section.contact{
-  background-color: lighten($secondary-color,10%);
+  background-color: lighten(@secondary-color,10%);
   input, textarea{
-    background: lighten($secondary-color,20%);
-    border-color: lighten($primary-color,20%);
+    background: lighten(@secondary-color,20%);
+    border-color: lighten(@primary-color,20%);
   }
 }
 
 .button{
   font-family: 'Montserrat', sans-serif;
-  color: $primary-color;
+  color: @primary-color;
   background: none;
   border: solid 1px #29abe2;
 }
 
 button:hover, button:focus, .button:hover, .button:focus{
-  background: $primary-color;
+  background: @primary-color;
 }
 
 .bottom{
@@ -289,32 +293,32 @@ button:hover, button:focus, .button:hover, .button:focus{
   width: 100%;
 }
 
-$topnav-height: 50px;
+@topnav-height: 50px;
 .topnav{
   font-family: "Santor";
   position: fixed;
   top: 0;
   z-index: 5000;
-  height: $topnav-height;
-  background: $black;
+  height: @topnav-height;
+  background: @black;
   overflow: hidden;
   width: 100%;
   transition: top 200ms linear;
   &.closed{
     // margin: 0;
-    top: -$topnav-height;
+    top: -@topnav-height;
     // transition: top 200ms linear;
   }
   .row, .columns{
     height: 100%;
   }
   // .sub-nav{display: none;}
-  // @media #{$large-up} {.sub-nav{display: block;}}
+  // @media #{@large-up} {.sub-nav{display: block;}}
   .sub-nav{
     margin-left: 20px;
     dd{
       margin-left: 0;
-      line-height:  $topnav-height;
+      line-height:  @topnav-height;
       font-weight: bold;
       a{
         color: #eee;
@@ -326,9 +330,9 @@ $topnav-height: 50px;
       &.active{
         a{
           font-weight: bold;
-          color: $black;
+          color: @black;
           border-radius: 0;
-          background-color: $primary-color;
+          background-color: @primary-color;
         }
       }
     }
@@ -337,14 +341,14 @@ $topnav-height: 50px;
 
 span.brand{
   height: 100%;
-  font-size: $topnav-height - 10px;
+  font-size: @topnav-height - 10px;
   padding-top: 5px;
   padding-bottom: 5px;
-  line-height: $topnav-height;
+  line-height: @topnav-height;
   font-family: "Santor";
-  color: $white;
+  color: @white;
   span{
-    color: $primary-color;
+    color: @primary-color;
   }
   letter-spacing: 6px;
   small{
@@ -352,7 +356,7 @@ span.brand{
     font-size: 50%;
   }
   object.navbar-logo{
-    height: $topnav-height - 22px;
+    height: @topnav-height - 22px;
     // margin-top: 5px;
     // margin-bottom: 15px;
     // margin-right: 10px;
@@ -361,9 +365,9 @@ span.brand{
 }
 
 .section.footer-site{
-  background: $black;
-  color: $white;
-  h3{color: $white;}
+  background: @black;
+  color: @white;
+  h3{color: @white;}
   .footer-logo{
     width: 100%;
     display: block;
@@ -374,34 +378,34 @@ span.brand{
 }
 
 .section.footer-sharing{
-  background: $dark-gray;
+  background: @dark-gray;
   padding-top: 15px;
   padding-bottom: 15px;
   span.orikami{
-    color: $white;
+    color: @white;
     font-family: "Santor";
     font-size: 200%;
     vertical-align: middle;
     line-height: 2em;
   }
   span.blue{
-    color: $primary-color;
+    color: @primary-color;
     display: inline;
     margin-right: 10px;
   }
   span.fa-stack{
-    color: $dark-gray;
+    color: @dark-gray;
     font-size: 60%;
     vertical-align: middle;
   }
   .fa-circle{
-    color: $dark-white;
+    color: @dark-white;
   }
   a:hover .fa-circle{
-    color: $primary-color;
+    color: @primary-color;
   }
   .legal{
-    color: lighten($dark-gray, 10%);
+    color: lighten(@dark-gray, 10%);
   }
 }
 
@@ -412,12 +416,10 @@ span.all-caps{
 
 ul.notifications{
   position: fixed;
-  top: $topnav-height;
+  top: @topnav-height;
 }
 
-span.help-block{
-  @extend small.error;
-}
+span.help-block:extend(small.error){}
 
 .form-group{
   span.help-block{
@@ -446,13 +448,11 @@ object.fill{
 }
 
 span.orikami-blue{
-  color: $primary-color;
+  color: @primary-color;
 }
 
 .process-block-grid{
-  h4{
-    @extend .text-center;
-  }
+  h4:extend(.text-center){}
   img{
     padding: 0 10px 10px 10px;
   }
@@ -460,8 +460,7 @@ span.orikami-blue{
 
 
 
-.site-map{
-  @include side-nav();
+.site-map:extend(.side-nav){
   li a:not(.button){
     padding-left: 0;
   }
