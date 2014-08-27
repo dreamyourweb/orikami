@@ -25,6 +25,7 @@
     font-size: 1500%;
     color: @secondary-color;
     animation: spin 30s infinite linear;
+    pointer-events: none;
     i{
       display: table-cell;
       vertical-align: middle;
@@ -49,6 +50,7 @@
 
     .span-wrapper{
       pointer-events: none;
+      cursor: pointer;
       padding: 20%;
       position: absolute;
       top: 0;
@@ -63,7 +65,13 @@
       display: table-cell;;
       vertical-align: middle;
       font-size: 80%;
-      h5{ color: @white; }
+      pointer-events: none;
+      cursor: pointer;
+      h5{
+        color: @white;
+        pointer-events: none;
+        cursor: pointer;
+      }
     }
 
     &.circle-1 { left: 50%; top: 10%; }
