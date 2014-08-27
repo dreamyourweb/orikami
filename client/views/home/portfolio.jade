@@ -2,7 +2,7 @@ template(name="portfolio")
   #portfolio
     dl.tabs(data-tab='data-tab', role='tablist')
       +each portfolio_data
-        dd.tab-title.active(role='presentational', style="transform: translateY(#{y_pos}px); background-color: #{color}; width: #{size}px; height: #{size}px ")
+        dd.tab-title(role='presentational', class="{{ first_active index }}", style="transform: translateY(#{y_pos}px); background-color: #{color}; width: #{size}px; height: #{size}px ")
           .line(style="background: #{color}; top: #{y_mid}px;")
           a(href="#portfolio-panel-#{index}", role='tab', tabindex='0', aria-selected='true', controls="portfolio-panel-#{index}")
             .span-wrapper
