@@ -1,6 +1,7 @@
 Template.delau.rendered = function (){
     init(this.find(".delau-wrapper"));
-    animate();
+    // animate();
+    render();
 }
 var container, stats;
 var camera, scene, renderer, particles, geometry, materials = [], parameters, i, h, w, color, velocities, polygons, pointLight, initial_z=[];
