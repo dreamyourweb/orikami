@@ -1,14 +1,23 @@
 template(name="portfolio")
   #portfolio
-    dl.tabs(data-tab='data-tab', role='tablist')
-      +each portfolio_data
-        dd.tab-title(role='presentational', class="{{ first_active index }}", style="transform: translateY(#{y_pos}px); background-color: #{color}; width: #{size}px; height: #{size}px ")
-          .line(style="background: #{color}; top: #{y_mid}px;")
-          a(href="#portfolio-panel-#{index}", role='tab', tabindex='0', aria-selected='true', controls="portfolio-panel-#{index}")
-            .span-wrapper
-              span #{name}
+    #portfolioSVG
+      svg(xmlns="http://www.w3.org/2000/svg", width="100%", height="100%", viewBox="0 0 100 30", preserveAspectRatio="xMinYMin meet")
+        //- +each portfolio_svg_data
+        //-   rect(x="#{x_line}", y="#{y}", width="1", height="30", style="fill:#{color}")
+        //-   circle.portfolio-circle(cx="#{x}", cy="#{y}", r="#{r}", fill="#{color}", data-panel-target="#{index}")
+        //-   text(x="#{x}", y="#{y_text}", fill="#ffffff", font-size="2") #{label}
 
-    .tabs-content
-      +each portfolio_data
-        section.content.panel(id="portfolio-panel-#{index}", role='tabpanel', aria-hidden='false', class="{{ first_active index }}", style="border-color: #{color}; color: #{color}")
-          h2(style="color: #{color}") #{index} panel content goes here...x
+    +each portfolio_data
+      .panel.portfolio-panel(class="{{first_active index}}", id="portfolioPanel#{index}")
+        .row
+          .small-3.columns
+            img(src=img)
+          .small-9.columns
+            h2 #{name}
+            .content
+              p #{data_product}
+        .row
+          .small-12.columns
+            .techniques
+              +each techniques
+                span.label #{this}

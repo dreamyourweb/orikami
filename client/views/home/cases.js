@@ -12,7 +12,7 @@ Template['cases'].helpers({
           name: 'U-map'
         }, {
           path: '3',
-          name: 'Mozart'          
+          name: 'Mozart'
         }, {
           path: '4',
           name: 'BierApp'
@@ -20,5 +20,4 @@ Template['cases'].helpers({
       ]
     };
   }
-
 });

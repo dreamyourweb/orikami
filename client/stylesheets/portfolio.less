@@ -2,56 +2,94 @@
 
 #portfolio{
 
-  overflow: hidden;
-  margin-bottom: 0;
+  width: 100%;
 
-  .tab-title{
-    border-radius: 99999px;
-    a{
-      background: none;
-      width: 100%;
-      height: 100%;
-      border-radius: 99999px;
-      padding: 0;
-      .span-wrapper{
-        display: table;
-        width: 100%;
-        height: 100%;
-      }
-      span{
-        vertical-align: middle;
-        text-align: center;
-        display: table-cell;
-      }
+  svg{
+    width: 100%;
+    circle{
+      cursor: pointer;
     }
-    .line{
-      position: absolute;
-      width: 12px;
-      margin-left: auto;
-      margin-right: auto;
-      left: 0;
-      right: 0;
-      height: 0;
-      z-index: -10;
-      transition: height 300ms linear;
-    }
-    &.active .line{
-      height: 600px;
+    text{
+      text-anchor: middle;
+      font-family: santor;
+      pointer-events: none;
+      fill: white;
+      font-size: 15%;
     }
   }
 
-  .tabs-content{
-    margin-top: 500px;
-    margin-bottom: 0;
-    height: 300px;
+  .panel{
+    display: none;
+    &.active{
+      display: block;
+    }
+    h2{
+      color: @black;
+    }
+    p{
+      font-size: 80%;
+    }
+    .techniques{
+      margin-top: 10px;
+      .label { margin-right: 5px; }
+    }
     .content{
-      margin-bottom: 0;
-      padding: 1.25rem;
-      border: 2px solid @primary-color;
-      position: absolute;
-      height: 300px;
-      p{ color: @black; }
+      -webkit-column-count: 3;
+     -moz-column-count: 3;
+     column-count: 3;
     }
   }
+
+  // overflow: hidden;
+  // margin-bottom: 0;
+
+  // .tab-title{
+  //   border-radius: 99999px;
+  //   a{
+  //     background: none;
+  //     width: 100%;
+  //     height: 100%;
+  //     border-radius: 99999px;
+  //     padding: 0;
+  //     .span-wrapper{
+  //       display: table;
+  //       width: 100%;
+  //       height: 100%;
+  //     }
+  //     span{
+  //       vertical-align: middle;
+  //       text-align: center;
+  //       display: table-cell;
+  //     }
+  //   }
+  //   .line{
+  //     position: absolute;
+  //     width: 8px;
+  //     margin-left: auto;
+  //     margin-right: auto;
+  //     left: 0;
+  //     right: 0;
+  //     height: 0;
+  //     z-index: -10;
+  //     transition: height 300ms linear;
+  //   }
+  //   &.active .line{
+  //     height: 600px;
+  //   }
+  // }
+
+  // .tabs-content{
+  //   margin-top: 400px;
+  //   margin-bottom: 0;
+  //   height: 300px;
+  //   .content{
+  //     margin-bottom: 0;
+  //     padding: 1.25rem;
+  //     border: 2px solid @primary-color;
+  //     position: absolute;
+  //     height: 300px;
+  //     p{ color: @black; }
+  //   }
+  // }
 
 }
