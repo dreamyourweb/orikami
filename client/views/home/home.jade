@@ -94,15 +94,13 @@ template(name='home')
         +process
 
 
-  .section.parallax.s7
-    .row
-      .small-12.columns
-        h2 Our team
-
-  .section.our-team(data-destination="team")
+  .section.parallax.s7(data-destination="team")
     .row
       .small-12.columns
         h2 Meet our team
+  .section.our-team
+    .row
+      .small-12.columns
         p.lead At orikami we collaborate. We partner up. We co-create. We have the technical know-how to develop next-gen data applications. We need you for knowledge about the problem domain. Together, we are an unbeatable team!
     .row
       .medium-8.columns.medium-centered.hex-container
@@ -122,31 +120,6 @@ template(name='home')
           +hex url="images/joris.jpg" background_id="bg5" name="Joris Cuppen" descr="data wizard in training" text_align="left"
 
         +hex url="images/boat_hex.png" name="You?" background_id="bg6"  text_align="right"
-
-
-    // .row(data-equalizer)
-    //   .medium-4.columns
-    //     img.svg(src="images/curiosity.svg" data-equalizer-watch)
-    //     h4.green Curious
-    //     p Orikami stimulates curiosity. We know how to ask the right questions and explore data.
-    //     p That's how we uncover the most fascinating and rewarding stories.
-    //     p The stories that we fold into products.
-
-    //   .medium-4.columns
-    //     img.svg(src="images/analytical.svg" data-equalizer-watch)
-    //     h4.orange Analytic
-    //     p Data always has its secrets. Our data scientists are fully equipped with modern tools and mathematics.
-    //     p We are ready to reveal and build. Enriching data by coupling open datasets and api's? No problem!
-    //     p Cluster analysis on noisy data? Cool!
-
-    //   .medium-4.columns
-    //     img.svg.last(src="images/together.svg" data-equalizer-watch)
-    //     h4.red Together
-    //     p At orikami we collaborate. We partner up. We co-create.
-    //     p We have the technical know-how to develop next-gen data applications.
-    //     p We need you for knowledge about the problem domain. Together, we are an unbeatable team!
-          
-
 
   .section.contact(data-destination="contact")
     a(name="contact")
@@ -194,16 +167,16 @@ template(name='home')
         p Do you want to create value from data? Call us!
         span.all-caps We are a data science boutique. Your partner in delivering value with data.
 
-        ul.site-map
-          li(data-arrival="science")
-            a(href="#science") Data Science
-          li(data-arrival="process")
-            a(href="#process") Agile Process
-          li(data-arrival="products")
-            a(href="#products") Data Products
-          li(data-arrival="team")
+        dl.site-map.side-nav
+          dd(data-arrival="science")
+            a(href="#science") Science
+          dd(data-arrival="products")
+            a(href="#products") Products
+          dd(data-arrival="process")
+            a(href="#process") Agile
+          dd(data-arrival="team")
             a(href="#team") Team
-          li(data-arrival="team")
+          dd(data-arrival="contact")
             a(href="#contact") Contact
 
   .section.footer-sharing
