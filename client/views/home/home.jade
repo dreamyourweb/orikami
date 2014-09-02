@@ -50,24 +50,26 @@ template(name='home')
   .section.s4.dark-gray(data-destination="products")
     .row
       .small-12.columns
-        p.lead Orikami builds custom data products. Data products are not about the data, but about discovery and covert action. Data should get out of our way. With our partners we build products that deliver real-time insights, make accurate prediction and behave as smart sensors. 
+        p.lead 
+          span.orikami-blue Discover our portfolio.
+          | Orikami builds custom data products. Data products are not about the data, but about discovery and covert action. Data should get out of our way. 
     .row
       .small-12.columns
         +portfolio
   .section.s2b
     .row
       .small-12.columns
-        h1 How can we be of service for you?
+        h1 How can we be of service to you?
     .row(data-equalizer)
       .medium-6.columns
-        object.sm.svg-image(type="image/svg+xml" data="images/ins3.svg")
         h3 Data Lab
         p Data is the new oil. If you are sitting on a "big data deposit", you probably know it can bring a lot of wealth. However, do you know how to drill that deposit? Do you know how to refine the data for interesting patterns and couple rich data sources? Is your culture ready to un-silo its data? We know how to kickstart your endeavours! Together, we setup a data lab. We investigate your data information quality. We help you setup your data wells and exploit your data fields.
       .medium-6.columns
-        object.sm.svg-image(type="image/svg+xml" data="images/learn3.svg")
         h3 Data products
         p Crude oil cannot be used. Petroleum has to be refined to create fuels and plastics. The same with data. Unrefined data is meaningless. Data products are the result of a process of refining data. We build data products and tailor them to your specific needs. We have a very flexible process to deliver fast and with high quality.
-        p See our process? See our portfolio / example products / Contact us
+    .row
+      .small-12.columns
+        .button.round.center See our process? See our portfolio / example products / Contact us
 
   .section.parallax.process(data-destination="process")
     a(name="process")
@@ -109,17 +111,17 @@ template(name='home')
 
         +hex url="images/vera3.jpg" background_id="bg2" name="Vera Rutten" descr="interaction designer" text_align="right"
 
-        +hex url="images/boat_hex.png" background_id="bg3" name="You?" text_align="left"
+        +hex url="images/saiden1.jpg" background_id="bg3" name="Syed Saiden Abbas" descr="hacker" text_align="left"
 
         .hex-invisible
           +hex url="" 
 
-        +hex url="images/bram-hex-original.png" background_id="bg4" name="Bram den Teuling" descr="data scientist & lean innovator" text_align="right"
+        +hex url="images/bram-hex-original.png" background_id="bg4" name="Bram den Teuling" descr="data scientist" text_align="right"
 
         .hex-push
-          +hex url="images/joris.jpg" background_id="bg5" name="Joris Cuppen" descr="data wizard in training" text_align="left"
+          +hex url="images/joris.jpg" background_id="bg5" name="Joris Cuppen" descr="educational data wizzard" text_align="left"
 
-        +hex url="images/boat_hex.png" name="You?" background_id="bg6"  text_align="right"
+        +hex url="images/hanneke.jpg" name="Hanneke van den Akker" descr="health care data wizzard" background_id="bg6"  text_align="right"
 
   .section.contact(data-destination="contact")
     a(name="contact")
@@ -162,7 +164,7 @@ template(name='home')
   .section.footer-site
     .row
       .medium-6.columns
-        object.footer-logo(type="image/svg+xml" data="images/logo.svg")
+        object.footer-logo(type="image/svg+xml" data="images/orikami.svg")
       .medium-6.columns
         p Do you want to create value from data? Call us!
         span.all-caps We are a data science boutique. Your partner in delivering value with data.
