@@ -40,6 +40,9 @@ template(name='home')
         object.sm.svg-image(type="image/svg+xml" data="images/pred3.svg")
         h3 Accurate predictions
         p Our brain is able to recognize patterns over time and make predictions for the future based on these patterns. We study the brain and its powerful abilities for recognizing patterns and building predictive models. Our data products lift the power of prediction!
+      .row
+        .small-12.columns
+          .button.round.centered(data-arrival="products") Want to see some examples? Checkout our portfolio!
 
 
   .section.parallax.s3(data-destination="products")
@@ -56,27 +59,26 @@ template(name='home')
     .row
       .small-12.columns
         +portfolio
-  .section.s2b
+  .section.s4b
     .row
       .small-12.columns
         h1 How can we be of service to you?
     .row(data-equalizer)
       .medium-6.columns
         h3 Data Lab
-        p Data is the new oil. If you are sitting on a "big data deposit", you probably know it can bring a lot of wealth. However, do you know how to drill that deposit? Do you know how to refine the data for interesting patterns and couple rich data sources? Is your culture ready to un-silo its data? We know how to kickstart your endeavours! Together, we setup a data lab. We investigate your data information quality. We help you setup your data wells and exploit your data fields.
+        p Data is the new oil. If you are sitting on a "big data deposit", you probably know it can bring a lot of wealth. However, do you know how to drill that deposit? Do you know how to refine the data for interesting patterns and couple rich data sources? Is your culture ready to un-silo its data? We know how to kickstart your endeavours! We help you setup your data lab.
       .medium-6.columns
         h3 Data products
         p Crude oil cannot be used. Petroleum has to be refined to create fuels and plastics. The same with data. Unrefined data is meaningless. Data products are the result of a process of refining data. We build data products and tailor them to your specific needs. We have a very flexible process to deliver fast and with high quality.
     .row
       .small-12.columns
-        .button.round.center See our process? See our portfolio / example products / Contact us
+        a.button.round.centered(data-arrival="process") Take a look in our kitchen and checkout our awesome process!
 
   .section.parallax.process(data-destination="process")
     a(name="process")
     .row
       .small-12.columns
         h2 Agile data science process
-
   .section.gray(data-destination="process")
     .row
       .medium-6.small-12.columns.medium-push-6
@@ -108,20 +110,14 @@ template(name='home')
       .medium-8.columns.medium-centered.hex-container
         .hex-push
           +hex url="images/andres-hex-original.png" background_id="bg1" name="Andres Lamont" descr="data scientist" text_align="left"
-
         +hex url="images/vera3.jpg" background_id="bg2" name="Vera Rutten" descr="interaction designer" text_align="right"
-
-        +hex url="images/saiden1.jpg" background_id="bg3" name="Syed Saiden Abbas" descr="hacker" text_align="left"
-
+        +hex url="images/saiden2.jpg" background_id="bg3" name="Syed Saiden Abbas" descr="data hacker" text_align="left"
         .hex-invisible
           +hex url="" 
-
         +hex url="images/bram-hex-original.png" background_id="bg4" name="Bram den Teuling" descr="data scientist" text_align="right"
-
         .hex-push
           +hex url="images/joris.jpg" background_id="bg5" name="Joris Cuppen" descr="educational data wizzard" text_align="left"
-
-        +hex url="images/hanneke.jpg" name="Hanneke van den Akker" descr="health care data wizzard" background_id="bg6"  text_align="right"
+        +hex url="images/hanneke.jpg" name="Hanneke van den Akker" descr="healthcare data wizzard" background_id="bg6"  text_align="right"
 
   .section.contact(data-destination="contact")
     a(name="contact")
@@ -136,7 +132,7 @@ template(name='home')
         .row
           .medium-6.columns
             ul.no-bullet
-              li Stationsplein 13-22
+              li Stationsplein 13
               li 6512 AB Nijmegen
               li Room 2.07 and 2.08
           .medium-6.columns
