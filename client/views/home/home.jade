@@ -29,15 +29,15 @@ template(name='home')
         h1 What do our data science teams deliver?
     .row(data-equalizer)
       .medium-4.columns
-        object.sm.svg-image(type="image/svg+xml" data="images/ins3.svg")
+        object.svg-image(type="image/svg+xml" data="images/insX.svg")
         h3 Real-time insight
         p We love old sayings like: "to measure is to know" and "knowledge is power". However it gets confusing when "time is money". That's why we help you to get your insights as quickly as possible. We make data real-time available, through easy to understand interactive data visualizations!
       .medium-4.columns
-        object.sm.svg-image(type="image/svg+xml" data="images/learn3.svg")
+        object.svg-image(type="image/svg+xml" data="images/learnX.svg")
         h3 Self-learning algorithms
         p People learn by receiving feedback. Computers can learn too! We give our software feedback, so it can learn. We just tell it when it did something right (give it a carrot) or wrong (hit it softly with a stick). Carrot and stick are very helpful in training our software to do the right thing.
       .medium-4.columns
-        object.sm.svg-image(type="image/svg+xml" data="images/pred3.svg")
+        object.svg-image(type="image/svg+xml" data="images/predX.svg")
         h3 Accurate predictions
         p Our brain is able to recognize patterns over time and make predictions for the future based on these patterns. We study the brain and its powerful abilities for recognizing patterns and building predictive models. Our data products lift the power of prediction!
       .row
@@ -49,7 +49,7 @@ template(name='home')
     a(name="products")
     .row
       .small-12.columns
-        h2 At orikami we fold data into products
+        h2.white At orikami we fold data into products
   .section.s4.dark-gray(data-destination="products")
     .row
       .small-12.columns
@@ -59,10 +59,11 @@ template(name='home')
     .row
       .small-12.columns
         +portfolio
-  .section.s4b
+  
+  .section.s2b
     .row
       .small-12.columns
-        h1 How can we be of service to you?
+        h1 How can we be of service?
     .row(data-equalizer)
       .medium-6.columns
         h3 Data Lab
@@ -78,13 +79,13 @@ template(name='home')
     a(name="process")
     .row
       .small-12.columns
-        h2 Agile data science process
+        h2.white Agile data science process
   .section.gray(data-destination="process")
     .row
+      h2 Agile workflow
+      p.lead Our workflow ensures frequent feedback and iterations between out data scientists and all other stakeholders.
+    .row
       .medium-6.small-12.columns.medium-push-6
-        h2 Agile workflow
-        p.lead Our workflow ensures frequent feedback and iterations between out data scientists and all other stakeholders.
-
         h3 Scalable
         p By using the power of the cloud we have immediate access to virtually infinite on-demand computational power and storage allowing us to scale infinitely.
 
@@ -98,10 +99,10 @@ template(name='home')
         +process
 
 
-  .section.parallax.s7(data-destination="team")
+  .black.section.parallax.s7(data-destination="team")
     .row
       .small-12.columns
-        h2 Meet our team
+        h2.black Meet our team
   .section.our-team
     .row
       .small-12.columns
@@ -109,15 +110,15 @@ template(name='home')
     .row
       .medium-8.columns.medium-centered.hex-container
         .hex-push
-          +hex url="images/andres-hex-original.png" background_id="bg1" name="Andres Lamont" descr="data scientist" text_align="left"
-        +hex url="images/vera3.jpg" background_id="bg2" name="Vera Rutten" descr="interaction designer" text_align="right"
-        +hex url="images/saiden2.jpg" background_id="bg3" name="Syed Saiden Abbas" descr="data hacker" text_align="left"
+          +hex url="images/andres-hex-original.png" background_id="bg1" name="Andres Lamont" title="Master of Hacking Hard" descr="data scientist" text_align="left"
+        +hex url="images/vera3.jpg" background_id="bg2" name="Vera Rutten" title="Bachelor of Information and Communication Technology" descr="interaction designer" text_align="right"
+        +hex url="images/saiden2.jpg" background_id="bg3" name="Syed Saiden Abbas" title="PhD of Being Mysterious" descr="data hacker" text_align="left"
         .hex-invisible
           +hex url="" 
-        +hex url="images/bram-hex-original.png" background_id="bg4" name="Bram den Teuling" descr="data scientist" text_align="right"
+        +hex url="images/bram-hex-original.png" background_id="bg4" name="Bram den Teuling" title="Master of Having Good Hair" descr="data scientist" text_align="right"
         .hex-push
-          +hex url="images/joris.jpg" background_id="bg5" name="Joris Cuppen" descr="educational data wizard" text_align="left"
-        +hex url="images/hanneke.jpg" name="Hanneke van den Akker" descr="healthcare data wizard" background_id="bg6"  text_align="right"
+          +hex url="images/joris.jpg" background_id="bg5" name="Joris Cuppen" title="Bachelor of Being Brilliant" descr="educational data wizard" text_align="left"
+        +hex url="images/hanneke.jpg" name="Hanneke van den Akker" title="Bachelor of Cheering Up Thursdays" descr="healthcare data wizard" background_id="bg6"  text_align="right"
 
   .section.contact(data-destination="contact")
     a(name="contact")
