@@ -5,7 +5,6 @@ PortfolioData = [
         techniques: [
             "Ruby on Rails",
             "SVG",
-            "raphael.js",
             "Linear Algebra",
             "Nearest Neighbour Algorithm",
             "MongoDB",
@@ -25,7 +24,6 @@ PortfolioData = [
         name: "Mozart",
         techniques: [
             "Hadoop",
-            "Pig",
             "Julia",
             "Python",
             "MongoDB",
@@ -34,7 +32,7 @@ PortfolioData = [
             "Bayesian classifiers",
             "Lucene"
         ],
-        data_product: "Mozart is being developed in deep collaboration with market research company DVJ insights. On one side we directly listen to open sources like Twitter, Facebook and Last.FM to learn what people are saying. We combine this with specialized information from radio airplay, spotify and youtube. The last piece of information comes from a large user panel. We sample feedback from users about what they like.",
+        data_product: "Mozart we develop in deep collaboration with market research company DVJ insights. Mozart listens to open sources like Twitter, Facebook, YouTube and Last.FM to learn what people are saying. We combine this with specialized information from radio airplay, spotify and youtube. The last piece of information comes from a large user panel. We sample feedback from users about what they like.",
         intelligent: "There is a lot of information In the 29 dimensional data of all universities. This data encloses connections between uni-versities never seen before. We devel-oped a simple but efficient algorithm to discover and compare universities based on similarity.",
         insights: "The multidimensional classification is presented in an interactive and simple way.",
         website: "www.u-map.org",
