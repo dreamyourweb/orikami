@@ -11,7 +11,7 @@ PortfolioData = [
             "Data Visualisation"
         ],
         data_product: "Together with the Center for Higher Educational Policy Studies we map universities worldwide on 29 dimensions (read: not just scientific output!). The multi-dimensional classification is gathered from universities. Source information is rigorlously checked and standardized over countries and measurement standards. The mapping gives rise to unforeseen connections and similarities between universities. A simple, but efficient algorithm calculates similarity between universities.",
-        website: "www.u-map.org",
+        website: "http://www.u-map.org",
         hours: 50,
         x: 18,
         y: 15,
