@@ -16,9 +16,16 @@ template(name="portfolio")
             h2 #{name}
             .content
               p #{data_product}
-              a(href="#{website}" target="_blank") Go to website
+               +if website
+                a(href="#{website}" target="_blank") Website
+
+
         .row
           .small-12.columns
             .techniques
               +each techniques
                 span.label #{this}
+
+
+
+
