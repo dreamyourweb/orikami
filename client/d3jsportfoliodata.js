@@ -2,6 +2,7 @@ PortfolioData = [
     {
         img: "images/umap.png",
         name: "U-map",
+        img2: "images/umap2.jpg",
         techniques: [
             "Ruby on Rails",
             "SVG",
@@ -17,11 +18,13 @@ PortfolioData = [
         y: 15,
         r: 9,
         color: "#29abe2",
-        index: 1
+        index: 1,
+
     },
         {
         img: "images/mozart2.png",
         name: "Mozart",
+        img2: "images/mozart1.jpg",
         techniques: [
             "Hadoop",
             "Julia",
@@ -45,6 +48,7 @@ PortfolioData = [
         {
         img: "images/bierapp.png",
         name: "BierApp",
+        img2: "images/bierapp1.jpg",
         techniques: [
             "Objective-C",
             "Java",
@@ -71,6 +75,7 @@ PortfolioData = [
         {
         img: "images/sotp.png",
         name: ("Smell of the place"),
+        img2: "images/sotp1.jpg",
         techniques: [
             "meteor.js",
             "d3.js",
@@ -91,6 +96,7 @@ PortfolioData = [
         {
         img: "images/youbedo.png",
         name: "YouBeDo",
+        img2: "images/youbedo1.jpg",
         techniques: [
             "Elastic Search",
             "node.js"
