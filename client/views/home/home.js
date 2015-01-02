@@ -24,6 +24,7 @@ Template.home.rendered = function (){
   });
 }
 
+$('.color-picker').colorpicker('show');
 
 Template.home.helpers({
 	showNavBar: function(){
