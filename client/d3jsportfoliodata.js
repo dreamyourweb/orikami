@@ -2,7 +2,9 @@ PortfolioData = [
     {
         img: "images/umap.png",
         name: "U-map",
-        techniques: [
+        img2: "images/umap2.png",
+        img3: "images/umap3.png",
+          techniques: [
             "Ruby on Rails",
             "SVG",
             "Linear Algebra",
