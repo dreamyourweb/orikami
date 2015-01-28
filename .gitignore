@@ -1,3 +1,6 @@
 public/images/Thumbs.db
 *.db
 .meteor/*
+*.sublimne-project
+*.sublime-workspace
+*.sublime-project

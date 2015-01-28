@@ -55,5 +55,15 @@ template(name="brainNav")
       i.fa.fa-long-arrow-down
 
 template(name="brainNavEnd")
-  ul.inline-list.animated.fadeInUp
+  ul.inline-list.animated.fadeInUp.brainNavEnd
     li: button.round(data-arrival="science") Continue
+
+template(name="brainLame")
+  #BrainContainer
+    .logo-container
+      object#logo(type="image/svg+xml" data="images/orikami.svg")
+
+    .navigation-container
+      .row
+        .small-12.columns
+          +brainNavEnd
