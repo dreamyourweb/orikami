@@ -2,7 +2,9 @@ PortfolioData = [
     {
         img: "images/umap.png",
         name: "U-map",
-        techniques: [
+        img2: "images/umap2.png",
+        img3: "images/umap3.png",
+          techniques: [
             "Ruby on Rails",
             "SVG",
             "Linear Algebra",
@@ -10,8 +12,8 @@ PortfolioData = [
             "MongoDB",
             "Data Visualisation"
         ],
-        data_product: "Together with the Center for Higher Educational Policy Studies we map universities worldwide on 29 dimensions (read: not just scientific output!). The multi-dimensional classification is gathered from universities. Source information is rigorlously checked and standardized over countries and measurement standards. The mapping gives rise to unforeseen connections and similarities between universities. A simple, but efficient algorithm calculates similarity between universities.",
-        website: "http://www.u-map.org",
+        data_product: "Together with the Center for Higher Educational Policy Studies we map universities worldwide on 29 dimensions (read: not just scientific output!). The multi-dimensional classification is gathered from universities. Source information is rigorlously checked and standardized over countries and measurement standards. The mapping gives rise to unforeseen connections and similarities between universities. A simple, but efficient algorithm calculates similarity between universities. \r\n",
+        umap: "http://www.u-map.org",
         hours: 50,
         x: 15,
         y: 15,
@@ -62,10 +64,10 @@ PortfolioData = [
             "Collaborative Filters",
             "Bayesian classifiers"
         ],
-        data_product: "Discover your favorite beer, know where this beer is served and build your personal beer journal; This is the BierApp. It gives you advice on what to drink next and shows the beer listings of cafes. The 'BierApp' makes sure you always drink the right beer on the right occasion.      ",
+        data_product: "Discover your favorite beer, know where this beer is served and build your personal beer journal; This is the BierApp. It gives you advice on what to drink next and shows the beer listings of cafes. The 'BierApp' makes sure you always drink the right beer on the right occasion. \n",
         intelligent: "There is a lot of information In the 29 dimensional data of all universities. This data encloses connections between uni-versities never seen before. We devel-oped a simple but efficient algorithm to discover and compare universities based on similarity.",
         insights: "The multidimensional classification is presented in an interactive and simple way.",
-        website: "http://www.debierapp.nl/",
+        Bierapp: "http://www.debierapp.nl/",
         hours: 5000,
         x: 50,
         y: 25,
@@ -110,7 +112,7 @@ PortfolioData = [
         data_product: "YouBeDo wants to do good. They achieve this by giving 10% of your purchase to a charity of your choice. Their online bookstore offers over two million books for sale. We help them search this vast amount of book titles. We developed the search engine behind YouBeDo.com and are analyzing its performance on conversion. After optimization YouBeDo and orikami will help you find books like never before.",
         intelligent: "There is a lot of information In the 29 dimensional data of all universities. This data encloses connections between uni-versities never seen before. We devel-oped a simple but efficient algorithm to discover and compare universities based on similarity.",
         insights: "The multidimensional classification is presented in an interactive and simple way.",
-        website: "http://www.youbedo.com/",
+        YouBeDo: "http://www.youbedo.com/",
         hours: 5000,
         x: 87,
         y: 28,

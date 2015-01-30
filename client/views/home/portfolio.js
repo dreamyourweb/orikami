@@ -23,6 +23,11 @@ Template.portfolio.rendered = function(){
       });
     });
 
+  $("#portfolioPanel1 #carousel").slick({
+        dots: true,
+        arrows: true
+      });
+
   portfolioGroup
     .append("circle")
       .attr("cx", function(d){return d.x})

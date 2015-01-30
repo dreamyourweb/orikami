@@ -19,8 +19,11 @@ template(name='home')
           dd(data-arrival="contact")
             a(href="#contact") Contact
 
-  +brain
-
+  +if webglAvailable
+    +brain
+  +else
+    +brainLame
+  
   +delau
 
   .section.s2b

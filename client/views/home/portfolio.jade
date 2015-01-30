@@ -18,8 +18,15 @@ template(name="portfolio")
               p #{data_product}
                +if website
                 a(href="#{website}" target="_blank") Website
+               +if umap
+                a(href="#{umap}" target="_blank") <br /> U-map
+               +if Bierapp
+                a(href="#{Bierapp}" target="_blank") <br /> De Bierapp
+               +if YouBeDo
+                a(href="#{YouBeDo}" target="_blank") <br /> YouBeDo
 
 
+ 
         .row
           .small-12.columns
             .techniques

@@ -1,3 +1,15 @@
+function webglAvailable() {
+  try {
+    var canvas = document.createElement('canvas');
+    return !!(window.WebGLRenderingContext && (
+      canvas.getContext('webgl') ||
+      canvas.getContext('experimental-webgl')));
+  } catch (e) {
+    return false;
+  }
+}
+
+
 Template.delau.rendered = function (){
     init(this.find(".delau-wrapper"));
     // animate();
@@ -22,8 +34,12 @@ function init(element) {
     // directionalLight = new THREE.DirectionalLight( 0xffffff, 0.125 );
     // directionalLight.position.z = 10
     // scene.add(directionalLight);
-
-    renderer = new THREE.WebGLRenderer({antialias: true});
+    if (webglAvailable()){
+        renderer = new THREE.WebGLRenderer({antialias: true});
+    } else {
+        renderer = new THREE.CanvasRenderer();
+    }
+    
     renderer.setSize( window.innerWidth, window.innerHeight );
 
     element.appendChild( renderer.domElement );
