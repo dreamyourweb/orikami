@@ -1,7 +1,6 @@
 var svg;
 
 Template.portfolio.rendered = function(){
-
   var containerHeight = $("#portfolioSVG").width();
   $("#portfolioSVG").height(containerHeight*0.4)
 
@@ -15,9 +14,13 @@ Template.portfolio.rendered = function(){
       d3.select(this).select("rect").transition().attr("height", 40);
 
       index = d3.select(this).select("circle").attr("panel-target");
+      $(".portfolio-panel.active #carousel").unslick();
       $(".portfolio-panel").removeClass("active");
       $("#portfolioPanel" + index).addClass("active");
-
+      $("#portfolioPanel" + index + " #carousel").slick({
+        dots: true,
+        arrows: true
+      });
     });
 
   portfolioGroup

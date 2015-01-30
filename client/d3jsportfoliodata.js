@@ -17,11 +17,13 @@ PortfolioData = [
         y: 15,
         r: 9,
         color: "#29abe2",
-        index: 1
+        index: 1,
+
     },
         {
         img: "images/mozart2.png",
         name: "Mozart",
+        img2: "images/mozart1.png",
         techniques: [
             "Hadoop",
             "Julia",
@@ -45,6 +47,10 @@ PortfolioData = [
         {
         img: "images/bierapp.png",
         name: "BierApp",
+        img2: "images/bierapp1.png",
+        img3: "images/bierapp2.png",
+        img4: "images/bierapp3.png",
+        img5: "images/bierapp4.png",
         techniques: [
             "Objective-C",
             "Java",
@@ -56,7 +62,7 @@ PortfolioData = [
             "Collaborative Filters",
             "Bayesian classifiers"
         ],
-        data_product: "Discover your favorite beer, know where this beer is served and build your personal beer journal; This is the BierApp. It gives you advice on what to drink next and shows the beer listings of café’s. The 'BierApp' makes sure you always drink the right beer on the right occasion.      ",
+        data_product: "Discover your favorite beer, know where this beer is served and build your personal beer journal; This is the BierApp. It gives you advice on what to drink next and shows the beer listings of cafes. The 'BierApp' makes sure you always drink the right beer on the right occasion.      ",
         intelligent: "There is a lot of information In the 29 dimensional data of all universities. This data encloses connections between uni-versities never seen before. We devel-oped a simple but efficient algorithm to discover and compare universities based on similarity.",
         insights: "The multidimensional classification is presented in an interactive and simple way.",
         website: "http://www.debierapp.nl/",
@@ -71,6 +77,10 @@ PortfolioData = [
         {
         img: "images/sotp.png",
         name: ("Smell of the place"),
+        img2: "images/sotp1.png",
+        img3: "images/sotp2.png",
+        img4: "images/sotp3.png",
+
         techniques: [
             "meteor.js",
             "d3.js",
@@ -91,6 +101,8 @@ PortfolioData = [
         {
         img: "images/youbedo.png",
         name: "YouBeDo",
+        img2: "images/youbedo2.png",
+        img3: "images/youbedo1.png",
         techniques: [
             "Elastic Search",
             "node.js"
