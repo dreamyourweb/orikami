@@ -46,7 +46,7 @@ template(name='home')
         p Our brain is able to recognize patterns over time and make predictions for the future based on these patterns. We study the brain and its powerful abilities for recognizing patterns and building predictive models. Our data products lift the power of prediction!
       .row
         .small-12.columns
-          .button.round.centered(data-arrival="products") Want to see some examples? Check out our portfolio!
+          .button.round.centered(data-arrival="products" onclick="ga('send', 'event', 'CallToAction', 'Button', 'portfolio');") Want to see some examples? Check out our portfolio!
 
 
   .section.parallax.s3(data-destination="products")
@@ -77,7 +77,7 @@ template(name='home')
         p Crude oil cannot be used. Petroleum has to be refined to create fuels and plastics. The same with data. Unrefined data is meaningless. Data products are the result of a process of refining data. We build data products and tailor them to your specific needs. We have a very flexible process to deliver fast and with high quality.
     .row
       .small-12.columns
-        a.button.round.centered(data-arrival="process") Take a look behind the scenes and check out our awesome process!
+        a.button.round.centered(data-arrival="process" onclick="ga('send', 'event', 'CallToAction', 'Button', 'process');") Take a look behind the scenes and check out our awesome process!
 
   .section.parallax.process(data-destination="process")
     a(name="process")
@@ -192,15 +192,15 @@ template(name='home')
       .small-12.columns
         span.pull-left.orikami Follow
           span.blue orikami
-          a(href="http://twitter.com/#!/orikami_NL" target="_blank" title="Twitter")
+          a(href="http://twitter.com/#!/orikami_NL" target="_blank" title="Twitter" onclick="ga('send', 'event', 'CallToAction', 'Social', 'Twitter');")
             span.fa-stack.fa-lg
               i.fa.fa-circle.fa-stack-2x
               i.fa.fa-twitter.fa-stack-1x
-          a(href="http://www.facebook.com/orikamiNL" target="_blank" title="Twitter")
+          a(href="http://www.facebook.com/orikamiNL" target="_blank" title="Facebook" onclick="ga('send', 'event', 'CallToAction', 'Social', 'Facebook');")
             span.fa-stack.fa-lg
               i.fa.fa-circle.fa-stack-2x
               i.fa.fa-facebook.fa-stack-1x
-          a(href="http://www.linkedin.com/company/dreamyourweb" target="_blank" title="Twitter")
+          a(href="https://www.linkedin.com/company/orikami-data-science-boutique" target="_blank" title="Linkedin" onclick="ga('send', 'event', 'CallToAction', 'Social', 'Linkedin');")
             span.fa-stack.fa-lg
               i.fa.fa-circle.fa-stack-2x
               i.fa.fa-linkedin.fa-stack-1x
@@ -214,4 +214,4 @@ template(name='home')
               i.fa.fa-skype.fa-stack-1x
     .row
       .small-12.columns
-        .legal © 2014 orikami, All rights reserved.
+        .legal © 2015 orikami, All rights reserved.

@@ -20,6 +20,7 @@ Template.brain.events({
   "click .next-brain, click #BrainContainer": function(e) {
     e.preventDefault();
     advanceAnimation();
+    ga('send', 'event', 'WatchBrain', 'ClickNext', 'State'+state);
   }
 
   // 'click [data-arrival]': function(event){

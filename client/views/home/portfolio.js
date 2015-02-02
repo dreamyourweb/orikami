@@ -14,6 +14,7 @@ Template.portfolio.rendered = function(){
       d3.select(this).select("rect").transition().attr("height", 40);
 
       index = d3.select(this).select("circle").attr("panel-target");
+      ga('send', 'event', 'WatchPortfolio', 'ClickCircle', 'Index'+index);
       $(".portfolio-panel.active #carousel").unslick();
       $(".portfolio-panel").removeClass("active");
       $("#portfolioPanel" + index).addClass("active");
