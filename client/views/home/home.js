@@ -24,6 +24,13 @@ Template.home.rendered = function() {
 	});
 };
 
+Tracker.autorun(function() {
+    var perc = Session.get("scrollPercentage");
+//    ga('send', 'event', 'ViewSite', 'Scroll', perc);
+    ga('send', 'pageview', "/Scroll#{perc}")
+});
+
+
 $('.color-picker').colorpicker('show');
 
 Template.home.helpers({
