@@ -148,8 +148,8 @@ template(name='home')
           .medium-6.columns
             ul.no-bullet
               li +31 (0)24-301 0100
-              li: a(href="skype:info-dyw?call") Call with Skype
-              li: a(href="mailto:info@orikami.nl") info@orikami.nl
+              li: a(href="skype:info-dyw?call" onclick="ga('send', 'event', 'CallToAction', 'Contact', 'Skype');") Call with Skype
+              li: a(href="mailto:info@orikami.nl" onclick="ga('send', 'event', 'CallToAction', 'Contact', 'Mail');") info@orikami.nl
         .row
           .medium-12.columns
             dl
