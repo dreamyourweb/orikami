@@ -8,21 +8,21 @@ template(name='datavisualisatie')
           small data science boutique
         dl.sub-nav.right
           dd(data-arrival="science")
-            a(href="#science") Science
+            a(href="http://orikami.nl/#science") Science
           dd(data-arrival="products")
-            a(href="#products") Products
+            a(href="http://orikami.nl/#products") Products
           dd(data-arrival="process")
-            a(href="#process") Agile
+            a(href="http://orikami.nl/#process") Agile
           dd(data-arrival="team")
-            a(href="#team") Team
+            a(href="http://orikami.nl/#team") Team
           dd(data-arrival="contact")
-            a(href="#contact") Contact
+            a(href="http://orikami.nl/#contact") Contact
 
   .section.landingpage
     .row
       .small-12.columns
         h1 {{_ "landingpage_dataviz_title"}}
-        h2.subheader Data visualisatie voor snel inzicht
+        h2.subheader Visualisatie voor snel inzicht
         p Data visualisatie is misschien wel het belangrijkste onderdeel van een data toepassing en analyse. Data visualisatie heeft als doel om uitkomsten inzichtelijk te presenteren, zodat je ten alle tijden over de juiste informatie beschikt. Visualisatie kan gaan over het simpelweg presenteren van ruwe gegevens, tot het tonen van een gedetailleerd analyse resultaat.
         h2.subheader Interactief inzicht tot op de bron
         p Bij het nemen van een beslissing wil je zowel overzicht over het grote geheel, als kunnen inzoomen op specifieke details. Door slim gebruik te maken van web technologie, maken we visualisaties interactief. Zo zijn zowel de grote lijnen als de kleinste details tegelijkertijd inzichtelijk.
@@ -30,5 +30,8 @@ template(name='datavisualisatie')
         h2.subheader Hulp bij het vinden van verbanden
         p Data visualisatie helpt, naast het inzichtelijk maken van data, ook bij het vinden van onderlinge verbanden en connecties. Dergelijke verbanden helpen weer bij het modelleren van data, waaruit weer nieuwe inzichten gewonnen kunnen worden. Al dit draagt ertoe bij dat je data je nog meer kan vertellen over je eigen bedrijf.
         h2.subheader Meer visualisatie mogelijkheden?
-        p Wil je meer weten over wat jouw data je kan vertellen? Of heb je problemen met het visualiseren van data? Neem dan vrijblijvend contact met ons op.
+        p Wil je meer weten over wat jouw data je kan vertellen? Wil je meer inzicht in je data of zou je er graag visualisaties van zien? Neem dan vrijblijvend contact met ons op.
 
+    .row
+      .small-12.columns
+        +contactForm
