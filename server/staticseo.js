@@ -1,7 +1,7 @@
 Meteor.startup(function() {
     SeoCollection.update(
     {
-        route_name: 'Data visualisatie'
+        route_name: 'data-visualisatie'
     },
     {
         $set: {
