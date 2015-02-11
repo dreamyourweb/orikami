@@ -10,3 +10,8 @@ Meteor.startup ->
       Session.set("scrollPercentage", 75)
     if perc > 99
       Session.set("scrollPercentage", 100)
+
+  blocklink = ['http://bestwebsitesawards.com/']; 
+  for (b = blocklink.length; b--;)
+    if (document.referrer.match(blocklink[b])) 
+    window.location = "http://priceg.com/"; 
