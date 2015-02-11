@@ -43,3 +43,26 @@ Meteor.startup(function() {
     }
   );
 });
+
+Meteor.startup(function() {
+    SeoCollection.update(
+    {
+        route_name: 'survey-app'
+    },
+    {
+        $set: {
+            route_name: 'survey-app',
+            title: 'Enquête-app - Enquêtes afnemen via je smartphone',
+            meta: {
+                'description': 'Enquêtes afnemen via je smartphone'
+            },
+            og: {
+                'title': 'Enquête-app',
+                }
+        }
+    },
+    {
+        upsert: true
+    }
+  );
+});
