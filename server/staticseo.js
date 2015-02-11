@@ -20,3 +20,26 @@ Meteor.startup(function() {
     }
   );
 });  // als je niet precies weet wat de route_name is, kan je in de console (bij element inspecteren) typen: 'Router.current().route.getName()'
+
+Meteor.startup(function() {
+    SeoCollection.update(
+    {
+        route_name: 'data-analyse'
+    },
+    {
+        $set: {
+            route_name: 'data-analyse',
+            title: 'Data analyse - Van data naar geïnformeerde beslissingen',
+            meta: {
+                'description': 'Maatwerk oplossingen om data inzichtelijk te maken, de juiste informatie uit uw data te halen en om de juiste beslissingen te maken.'
+            },
+            og: {
+                'title': 'Data analyse',
+                }
+        }
+    },
+    {
+        upsert: true
+    }
+  );
+});
