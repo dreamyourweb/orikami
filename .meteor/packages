@@ -33,3 +33,6 @@ coffeescript
 tap:i18n
 okgrow:iron-router-autoscroll
 meteorhacks:fast-render
+ryw:blog
+accounts-ui
+accounts-github
