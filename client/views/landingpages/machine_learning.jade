@@ -1,24 +1,73 @@
 template(name='machine_learning')
-	+headerflp
+    +headerflp
 
-	.section.landingpage
-		.row
-			.small-12.columns
-				h1 Toegepaste machine learning
+    .section.landingpage
+        .row
+            .small-12.columns
+                h1 Toegepaste machine learning
 
-				p Machine learning is een verzameling van technieken, waarmee computers in staat worden gesteld om data te interpreteren. Zo wordt machine learning bijvoorbeeld gebruikt om verdachte patronen bij het gebruik van creditcards te identificeren, of om risico’s in te schatten op basis van incomplete data.
+                p Machine learning is een verzameling van technieken, waarmee computers in staat worden gesteld om data te interpreteren. Zo wordt machine learning bijvoorbeeld gebruikt om verdachte patronen bij het gebruik van creditcards te identificeren, of om risico’s in te schatten op basis van incomplete data.
 
-				h2 Voorspellingen aan de hand van data
+                h2 Voorspellingen aan de hand van data
 
-				p Hoe meer data er voorhanden is, en hoe gerichter je vraag, hoe beter de resultaten van machine learning zullen zijn. Bij data van voldoende kwaliteit kunnen er met een bepaalde zekerheid zelfs voorspellingen worden gemaakt. Machine learning wordt dan ook onder andere toegepast bij de analyse van aandelenkoersen.
+                p Hoe meer data er voorhanden is, en hoe gerichter je vraag, hoe beter de resultaten van machine learning zullen zijn. Bij data van voldoende kwaliteit kunnen er met een bepaalde zekerheid zelfs voorspellingen worden gemaakt. Machine learning wordt dan ook onder andere toegepast bij de analyse van aandelenkoersen.
 
-				h2 Machine learning voor jouw bedrijf
+                h2 Machine learning voor jouw bedrijf
 
-				p Terwijl deze voorbeelden van machine learning in de top van de industrie worden toegepast, zijn deze moderne technieken ook voor midden- en kleinbedrijf interessant. Een slim aanbevelingsmechanisme kan bijvoorbeeld op basis van eerder verkochte boeken in combinatie met een bezoekersprofiel gerichte aanbevelingen doen. Een zelflerende risicodetector kan automatisch waarschuwen wanneer er iets dreigt mis te gaan. Of een classificatiesysteem kan zelf leren om gewenste van ongewenste aanvragen te scheiden.
+                p Terwijl deze voorbeelden van machine learning in de top van de industrie worden toegepast, zijn deze moderne technieken ook voor midden- en kleinbedrijf interessant. Een slim aanbevelingsmechanisme kan bijvoorbeeld op basis van eerder verkochte boeken in combinatie met een bezoekersprofiel gerichte aanbevelingen doen. Een zelflerende risicodetector kan automatisch waarschuwen wanneer er iets dreigt mis te gaan. Of een classificatiesysteem kan zelf leren om gewenste van ongewenste aanvragen te scheiden.
 
-				h2 Zelf leren of machine learning iets voor jou is
+                h2 Zelf leren of machine learning iets voor jou is
 
-				p Er zijn ontzettend veel mogelijkheden om machine learning voor je te laten werken. Wil je samen de mogelijkheden verkennen? Neem dan vrijblijvend contact met ons op.
-		.row
-			.small-12.columns
-				+contactForm
+                p Er zijn ontzettend veel mogelijkheden om machine learning voor je te laten werken. Wil je samen de mogelijkheden verkennen? Neem dan vrijblijvend contact met ons op.
+        .row
+            .small-12.columns
+                +contactForm
+
+    .section.footer-site
+        .row
+            .medium-6.columns
+                object.footer-logo(type="image/svg+xml" data="images/orikami.svg")
+            .medium-6.columns
+                p Do you want to create value from data? Call us!
+                span.all-caps We are a data science boutique. Your partner in delivering value with data.
+
+                dl.site-map.side-nav
+                dd(data-arrival="science")
+                    a(href="#science") Science
+                dd(data-arrival="products")
+                    a(href="#products") Products
+                dd(data-arrival="process")
+                    a(href="#process") Agile
+                dd(data-arrival="team")
+                    a(href="#team") Team
+                dd(data-arrival="contact")
+                    a(href="#contact") Contact
+
+    .section.footer-sharing
+        .row
+          .small-12.columns
+            span.pull-left.orikami Follow
+              span.blue orikami
+              a(href="http://twitter.com/#!/orikami_NL" target="_blank" title="Twitter" onclick="ga('send', 'event', 'CallToAction', 'Social', 'Twitter');")
+                span.fa-stack.fa-lg
+                  i.fa.fa-circle.fa-stack-2x
+                  i.fa.fa-twitter.fa-stack-1x
+              a(href="http://www.facebook.com/orikamiNL" target="_blank" title="Facebook" onclick="ga('send', 'event', 'CallToAction', 'Social', 'Facebook');")
+                span.fa-stack.fa-lg
+                  i.fa.fa-circle.fa-stack-2x
+                  i.fa.fa-facebook.fa-stack-1x
+              a(href="https://www.linkedin.com/company/orikami-data-science-boutique" target="_blank" title="Linkedin" onclick="ga('send', 'event', 'CallToAction', 'Social', 'Linkedin');")
+                span.fa-stack.fa-lg
+                  i.fa.fa-circle.fa-stack-2x
+                  i.fa.fa-linkedin.fa-stack-1x
+              a(href="https://github.com/dreamyourweb" target="_blank" title="Github")
+                span.fa-stack.fa-lg
+                  i.fa.fa-circle.fa-stack-2x
+                  i.fa.fa-github.fa-stack-1x
+              a(href="skype:info-dyw?call" title="Skype")
+                span.fa-stack.fa-lg
+                  i.fa.fa-circle.fa-stack-2x
+                  i.fa.fa-skype.fa-stack-1x
+        .row
+            .small-12.columns
+            .legal © 2015 orikami, All rights reserved.
