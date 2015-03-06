@@ -1,5 +1,5 @@
 template(name='ruby_on_rails')
-    +headerflp
+    +header
 
     .section.landingpage
         .row
@@ -20,51 +20,4 @@ template(name='ruby_on_rails')
             .small-12.columns
                 +contactForm
 
-    .section.footer-site
-        .row
-            .medium-6.columns
-                object.footer-logo(type="image/svg+xml" data="images/orikami.svg")
-            .medium-6.columns
-                p Do you want to create value from data? Call us!
-                span.all-caps We are a data science boutique. Your partner in delivering value with data.
-
-                dl.site-map.side-nav
-                dd(data-arrival="science")
-                    a(href="#science") Science
-                dd(data-arrival="products")
-                    a(href="#products") Products
-                dd(data-arrival="process")
-                    a(href="#process") Agile
-                dd(data-arrival="team")
-                    a(href="#team") Team
-                dd(data-arrival="contact")
-                    a(href="#contact") Contact
-
-    .section.footer-sharing
-        .row
-          .small-12.columns
-            span.pull-left.orikami Follow
-              span.blue orikami
-              a(href="http://twitter.com/#!/orikami_NL" target="_blank" title="Twitter" onclick="ga('send', 'event', 'CallToAction', 'Social', 'Twitter');")
-                span.fa-stack.fa-lg
-                  i.fa.fa-circle.fa-stack-2x
-                  i.fa.fa-twitter.fa-stack-1x
-              a(href="http://www.facebook.com/orikamiNL" target="_blank" title="Facebook" onclick="ga('send', 'event', 'CallToAction', 'Social', 'Facebook');")
-                span.fa-stack.fa-lg
-                  i.fa.fa-circle.fa-stack-2x
-                  i.fa.fa-facebook.fa-stack-1x
-              a(href="https://www.linkedin.com/company/orikami-data-science-boutique" target="_blank" title="Linkedin" onclick="ga('send', 'event', 'CallToAction', 'Social', 'Linkedin');")
-                span.fa-stack.fa-lg
-                  i.fa.fa-circle.fa-stack-2x
-                  i.fa.fa-linkedin.fa-stack-1x
-              a(href="https://github.com/dreamyourweb" target="_blank" title="Github")
-                span.fa-stack.fa-lg
-                  i.fa.fa-circle.fa-stack-2x
-                  i.fa.fa-github.fa-stack-1x
-              a(href="skype:info-dyw?call" title="Skype")
-                span.fa-stack.fa-lg
-                  i.fa.fa-circle.fa-stack-2x
-                  i.fa.fa-skype.fa-stack-1x
-        .row
-            .small-12.columns
-            .legal © 2015 orikami, All rights reserved.
+        +footer
