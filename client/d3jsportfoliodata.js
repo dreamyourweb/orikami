@@ -84,6 +84,7 @@ PortfolioData = [
         img2: "images/sotp1.png",
         img3: "images/sotp2.png",
         img4: "images/sotp3.png",
+        img5: "images/smell5.jpg",
 
         techniques: [
             "meteor.js",
