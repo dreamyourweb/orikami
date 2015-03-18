@@ -110,6 +110,30 @@
   }
 }
 
+.slick-prev {
+ left: -20px;
+}
+
+.slick-prev:before{
+ content:"\2039";
+}
+
 .slick-next {
-  background: grey;
- }
+ right: -20px;
+
+}
+
+.slick-next:before{
+ content: '\203a';
+}
+
+.slick-next:before, .slick-prev:before  {
+ color: black;
+ font-size:60px;
+}
+
+
+.slick-prev, .slick-next {
+ height: 60px;
+ width: 20px;
+}
