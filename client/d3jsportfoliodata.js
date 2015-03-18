@@ -6,7 +6,6 @@ PortfolioData = [
         img2: "images/umap2.png",
         img3: "images/umap3.png",
         img4: "images/umap4.png",
-        img2text: "hooi",
           techniques: [
             "Ruby on Rails",
             "SVG",
