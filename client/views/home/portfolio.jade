@@ -37,21 +37,28 @@ template(name="portfolio")
           +carousel
 
 template(name="carousel")
-  .row
-    .small-12.columns
-      #carousel
-        .hoi
-          img(src=img2 class="screenshots")
-        +if img3
-          .hoi
-            img(src=img3 class="screenshots")
-        +if img4
-          .hoi
-            img(src=img4 class="screenshots")
-        +if img5
-          .hoi
-            img(src=img5 class="screenshots")
-
+ .row
+   .small-12.columns
+     #carousel
+       .hoi
+         img(src=img2 class="screenshots")
+         +if img2text
+           p #{img2text}
+       +if img3
+         .hoi
+           img(src=img3 class="screenshots")
+           +if img3text
+             p #{img3text}
+       +if img4
+         .hoi
+           img(src=img4 class="screenshots")
+           +if img4text
+             p #{img4text}
+       +if img5
+         .hoi
+           img(src=img5 class="screenshots")
+           +if img5text
+             p #{img5text}
 
 
 
