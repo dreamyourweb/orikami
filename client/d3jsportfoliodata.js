@@ -27,6 +27,7 @@ PortfolioData = [
         img: "images/mozart2.png",
         name: "Mozart",
         img2: "images/mozart1.png",
+        img3: "images/top40.png",
         techniques: [
             "Hadoop",
             "Julia",
