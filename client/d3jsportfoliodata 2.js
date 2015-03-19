@@ -118,37 +118,39 @@ PortfolioData = [
         insights: "The multidimensional classification is presented in an interactive and simple way.",
         YouBeDo: "http://www.youbedo.com/",
         hours: 5000,
-        x: 70,
+        x: 73,
         y: 29,
         r: 6,
         y_mid: 100,
         color: "rgba(255, 153, 0, 1)",
         index: 5
     },
-    /*
+    
           {
-        img: "images/youbedo.png",
+        img: "images/partners/connectingmobility_copy.png",
         name: "Connecting Mobility",
-        img2: "images/",
-        img3: "images/",
+        img2: "images/como1.png",
+        img3: "images/como2.png",
+        img4: "images/como5.png",
+        img5: "images/como4.png",
+    //    img5text: "blablabla",
         techniques: [
             "Meteor",
             "MongoDB",
             "d3.js"
            
         ],
-        data_product: "Connecting Mobility bla bla ",
-        intelligent: "There is a lot of information In the 29 dimensional data of all universities. This data encloses connections between uni-versities never seen before. We devel-oped a simple but efficient algorithm to discover and compare universities based on similarity.",
-        insights: "The multidimensional classification is presented in an interactive and simple way.",
-        ConnectingMobility: "http://itsoverzicht.connectingmobility.nl/",
+        data_product: "Connecting Mobility integrates every initiative on the field of Intelligent Transport Systems (ITS) in the Netherlands. In cooperation with us, a dashboard is made which gives you insight quickly into the status of the current ITS field. The ITS overview offers clarity into projects, services and facilities. We have made the data visualisations and software for the dashboard that shows this overview. In this way, information from this complex field can be retrieved more easily. ",
+        Como: "http://itsoverzicht.connectingmobility.nl/",
         hours: 5000,
-        x: 85,
+        x: 89,
         y: 12,
         r: 9.6,
         y_mid: 100,
         color: "rgba(205, 197, 191, 1)",
         index: 6
     },
+    /*
           {
         img: "images/youbedo.png",
         name: "IRMA",
