@@ -27,8 +27,10 @@ PortfolioData = [
         {
         img: "images/mozart2.png",
         name: "Mozart",
-        img2: "images/mozart1.png",
+        img2: "images/mozart3.png",
+        img2text: "This image shows the intensity of tweets about 'Take Me To Church- Hozier'. ",
         img3: "images/top40.png",
+        img4: "images/mozart1.png",
         techniques: [
             "Hadoop",
             "Julia",
@@ -140,7 +142,7 @@ PortfolioData = [
             "d3.js"
            
         ],
-        data_product: "Connecting Mobility integrates every initiative on the field of Intelligent Transport Systems (ITS) in the Netherlands. In cooperation with us, a dashboard is made which gives you insight quickly into the status of the current ITS field. The ITS overview offers clarity into projects, services and facilities. We have made the data visualisations and software for the dashboard that shows this overview. In this way, information from this complex field can be retrieved more easily. ",
+        data_product: "Connecting Mobility integrates every initiative on the field of Intelligent Transport Systems (ITS) in the Netherlands. In cooperation with us, a dashboard is created which quickly gives you insight into the status of the current ITS field. The ITS overview offers clarity into projects, services and facilities. We have created the data visualisations and software for the dashboard that shows this overview. In this way, information from this complex field can be retrieved more easily. ",
         Como: "http://itsoverzicht.connectingmobility.nl/",
         hours: 5000,
         x: 89,
