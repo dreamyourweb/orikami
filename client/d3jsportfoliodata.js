@@ -123,8 +123,8 @@ PortfolioData = [
         name: "YouBeDo",
         img2: "images/youbedo2.png",
         img3: "images/youbedo1.png",
-        img2text:"" ,
-        img3text:"" ,
+        img2text:"A search outcome" ,
+        img3text:"This amount has been donated." ,
         techniques: [
             "Elastic Search",
             "node.js"
@@ -149,11 +149,10 @@ PortfolioData = [
         img3: "images/como2.png",
         img4: "images/como5.png",
         img5: "images/como4.png",
-        img2text:"" ,
-        img3text:"" ,
-        img4text:"" ,
-        img5text:"" ,
-    //    img5text: "blablabla",
+        img2text:"Home page of the overview of Intelligent Transport Systems" ,
+        img3text:"This service has reached the following plateus." ,
+        img4text:"A d3.js visualisation." ,
+        img5text:"A d3.js visualisation." ,
         techniques: [
             "Meteor",
             "MongoDB",
