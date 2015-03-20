@@ -6,6 +6,10 @@ PortfolioData = [
         img3: "images/umap5.png",
         img4: "images/umap6.png",
         img5: "images/umap3.png",
+        img2text: "The image above shows a comparison of three institutions for new entrants from the region. You can compare istitutions for each 29 indicators.",
+        img3text: "Benchmark your institution.",
+        img4text: "Benchmark your institution.",
+        img5text: "This is part of an elaborate comparison of four institutions.",
           techniques: [
             "Ruby on Rails",
             "SVG",
@@ -15,7 +19,7 @@ PortfolioData = [
             "Data Visualisation"
         ],
         data_product: "Together with the Center for Higher Educational Policy Studies we map universities worldwide on 29 dimensions (read: not just scientific output!). The multi-dimensional classification is gathered from universities. Source information is rigorlously checked and standardized over countries and measurement standards. The mapping gives rise to unforeseen connections and similarities between universities. A simple, but efficient algorithm calculates similarity between universities. \r\n",
-        umap: "http://www.u-map.org",
+        website: "http://www.u-map.org",
         hours: 50,
         x: 10,
         y: 25,
@@ -30,7 +34,9 @@ PortfolioData = [
         img2: "images/mozart3.png",
         img2text: "This image shows the intensity of tweets about 'Take Me To Church- Hozier'. ",
         img3: "images/top40.png",
+        img3text: "Our data scientists developed a new method for top 40 ranking by taking into account social media.",
         img4: "images/mozart1.png",
+        img4text: "This is an overview of songs on social media.",
         techniques: [
             "Hadoop",
             "Julia",
@@ -58,6 +64,10 @@ PortfolioData = [
         img3: "images/bierapp2.png",
         img4: "images/bierapp3.png",
         img5: "images/bierapp4.png",
+        img2text:"" ,
+        img3text:"" ,
+        img4text:"" ,
+        img5text:"" ,
         techniques: [
             "Objective-C",
             "Java",
@@ -69,10 +79,10 @@ PortfolioData = [
             "Collaborative Filters",
             "Bayesian classifiers"
         ],
-        data_product: "Discover your favorite beer, know where this beer is served and build your personal beer journal; This is the BierApp. It gives you advice on what to drink next and shows the beer listings of cafes. The 'BierApp' makes sure you always drink the right beer on the right occasion. \n",
+        data_product: "Discover your favorite beer, know where this beer is served and build your personal beer journal; This is the BierApp. It gives you advice on what to drink next and shows the beer listings of cafes. The 'BierApp' makes sure you always drink the right beer on the right occasion. \n \n          ",
         intelligent: "There is a lot of information In the 29 dimensional data of all universities. This data encloses connections between uni-versities never seen before. We devel-oped a simple but efficient algorithm to discover and compare universities based on similarity.",
         insights: "The multidimensional classification is presented in an interactive and simple way.",
-        Bierapp: "http://www.debierapp.nl/",
+        website: "http://www.debierapp.nl/",
         hours: 5000,
         x: 45,
         y: 28,
@@ -88,6 +98,10 @@ PortfolioData = [
         img3: "images/sotp2.png",
         img4: "images/sotp3.png",
         img5: "images/smell5.jpg",
+        img2text:"" ,
+        img3text:"" ,
+        img4text:"" ,
+        img5text:"" ,
 
         techniques: [
             "meteor.js",
@@ -111,6 +125,8 @@ PortfolioData = [
         name: "YouBeDo",
         img2: "images/youbedo2.png",
         img3: "images/youbedo1.png",
+        img2text:"" ,
+        img3text:"" ,
         techniques: [
             "Elastic Search",
             "node.js"
@@ -118,7 +134,7 @@ PortfolioData = [
         data_product: "YouBeDo wants to do good. They achieve this by giving 10% of your purchase to a charity of your choice. Their online bookstore offers over two million books for sale. We help them search this vast amount of book titles. We developed the search engine behind YouBeDo.com and are analyzing its performance on conversion. After optimization YouBeDo and orikami will help you find books like never before.",
         intelligent: "There is a lot of information In the 29 dimensional data of all universities. This data encloses connections between uni-versities never seen before. We devel-oped a simple but efficient algorithm to discover and compare universities based on similarity.",
         insights: "The multidimensional classification is presented in an interactive and simple way.",
-        YouBeDo: "http://www.youbedo.com/",
+        website: "http://www.youbedo.com/",
         hours: 5000,
         x: 73,
         y: 29,
@@ -135,6 +151,10 @@ PortfolioData = [
         img3: "images/como2.png",
         img4: "images/como5.png",
         img5: "images/como4.png",
+        img2text:"" ,
+        img3text:"" ,
+        img4text:"" ,
+        img5text:"" ,
     //    img5text: "blablabla",
         techniques: [
             "Meteor",
@@ -142,8 +162,8 @@ PortfolioData = [
             "d3.js"
            
         ],
-        data_product: "Connecting Mobility strives to integrate all initiatives in the field of Intelligent Transport Systems (ITS) in the Netherlands. In cooperation with orikami, a dashboard has been developed which allows you to quickly and easily gain insight into the status of the current ITS field. The ITS dashboard offers a good overview of the various projects, services and facilities. We are responsible for the data visualizations and interactive components of the dashboard. This way, complex information from this particular field can be retrieved more easily.",
-        Como: "http://itsoverzicht.connectingmobility.nl/",
+        data_product: "Connecting Mobility strives to integrate all initiatives in the field of Intelligent Transport Systems (ITS) in the Netherlands. In cooperation with orikami, a dashboard has been developed which allows you to quickly and easily gain insight into the status of the current ITS field. The ITS dashboard offers a good overview of the various projects, services and facilities. We are responsible for the data visualizations and interactive components of the dashboard. This way, complex information from this particular field can be retrieved more easily.\n",
+        website: "http://itsoverzicht.connectingmobility.nl/",
         hours: 5000,
         x: 89,
         y: 12,

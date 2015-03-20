@@ -22,7 +22,6 @@ tween
 three
 http
 email
-meteorhacks:kadira
 mrt:bootstrap-colorpicker-2
 udondan:slick
 reywood:iron-router-ga
@@ -36,3 +35,4 @@ meteorhacks:fast-render
 ryw:blog
 accounts-ui
 accounts-github
+meteorhacks:kadira@2.20.1
