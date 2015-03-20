@@ -142,7 +142,7 @@ PortfolioData = [
             "d3.js"
            
         ],
-        data_product: "Connecting Mobility integrates every initiative on the field of Intelligent Transport Systems (ITS) in the Netherlands. In cooperation with us, a dashboard is created which quickly gives you insight into the status of the current ITS field. The ITS overview offers clarity into projects, services and facilities. We have created the data visualisations and software for the dashboard that shows this overview. In this way, information from this complex field can be retrieved more easily. ",
+        data_product: "Connecting Mobility strives to integrate all initiatives in the field of Intelligent Transport Systems (ITS) in the Netherlands. In cooperation with orikami, a dashboard has been developed which allows you to quickly and easily gain insight into the status of the current ITS field. The ITS dashboard offers a good overview of the various projects, services and facilities. We are responsible for the data visualizations and interactive components of the dashboard. This way, complex information from this particular field can be retrieved more easily.",
         Como: "http://itsoverzicht.connectingmobility.nl/",
         hours: 5000,
         x: 89,
