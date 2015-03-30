@@ -64,10 +64,12 @@ PortfolioData = [
         img3: "images/bierapp2.png",
         img4: "images/bierapp3.png",
         img5: "images/bierapp4.png",
+        img6: "images/bierapp5.png",
         img2text:"" ,
         img3text:"" ,
         img4text:"" ,
         img5text:"" ,
+        img6text:"",
         techniques: [
             "Objective-C",
             "Java",
@@ -162,36 +164,32 @@ PortfolioData = [
         data_product: "Connecting Mobility strives to integrate all initiatives in the field of Intelligent Transport Systems (ITS) in the Netherlands. In cooperation with orikami, a dashboard has been developed which allows you to quickly and easily gain insight into the status of the current ITS field. The ITS dashboard offers a good overview of the various projects, services and facilities. We are responsible for the data visualizations and interactive components of the dashboard. This way, complex information from this particular field can be retrieved more easily.\n",
         website: "http://itsoverzicht.connectingmobility.nl/",
         hours: 5000,
-        x: 89,
+        x: 87,
         y: 12,
         r: 9.6,
         y_mid: 100,
         color: "rgba(205, 197, 191, 1)",
         index: 6
     },
-    /*
+    
           {
-        img: "images/youbedo.png",
+        img: "images/irma_logo.png",
         name: "IRMA",
-        img2: "images/youbedo2.png",
-        img3: "images/youbedo1.png",
+        img2: "images/irma1.png",
         techniques: [
             "Angular", 
             "Firebase",
             "d3.js"
         ],
-        data_product: "YouBeDo wants to do good. They achieve this by giving 10% of your purchase to a charity of your choice. Their online bookstore offers over two million books for sale. We help them search this vast amount of book titles. We developed the search engine behind YouBeDo.com and are analyzing its performance on conversion. After optimization YouBeDo and orikami will help you find books like never before.",
-        intelligent: "There is a lot of information In the 29 dimensional data of all universities. This data encloses connections between uni-versities never seen before. We devel-oped a simple but efficient algorithm to discover and compare universities based on similarity.",
-        insights: "The multidimensional classification is presented in an interactive and simple way.",
-        IRMA: "http://www.youbedo.com/",
+        data_product: "IRMA (Integrity Risk Management App) is created for organisations to help them assess their integrity risks. During a session held for an organisation, the IRMA tool helps organisations in reflecting on their integrity policy and determine which integrity risks are present. The application is created for the Ministry of Education, Culture and Science and the National Integrity Office.",
         hours: 5000,
-        x: 95,
+        x: 94,
         y: 31,
         r: 5,
         y_mid: 100,
         color: "rgba(255, 215, 0, 1)",
         index: 7
-    }, */
+    }, 
 //        {
 //        img: "images/kplusv.png",
 //        name: "KplusV",
