@@ -25,7 +25,7 @@ template(name='home')
     +brain
   +else
     +brainLame
-  
+  a(name="science")
   +delau
 
   .section.s2b
@@ -49,7 +49,6 @@ template(name='home')
       .row
         .small-12.columns
           .button.round.centered(data-arrival="products" onclick="ga('send', 'event', 'CallToAction', 'Button', 'portfolio');") Want to see some examples? Check out our portfolio!
-
 
   .section.parallax.s3(data-destination="products")
     a(name="products")
@@ -106,6 +105,7 @@ template(name='home')
 
 
   .black.section.parallax.s7(data-destination="team")
+    a(name="team")
     .row
       .small-12.columns
         h2.black Meet our team
@@ -149,6 +149,7 @@ template(name='home')
     .row
       .small-12.columns
         +partners
+
 
   .section.contact(data-destination="contact")
     a(name="contact")
