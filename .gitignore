@@ -4,4 +4,4 @@ public/images/Thumbs.db
 *.sublimne-project
 *.sublime-workspace
 *.sublime-project
-*.DS_Store
+*/.DS_Store
