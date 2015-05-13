@@ -79,7 +79,7 @@ leaflet = function() {
 	L.Icon.Default.imagePath = 'packages/mrt_leaflet/images';
 
 	L.marker([51.8430446, 5.8545186]).addTo(map)
-		.bindPopup('<a href="https://www.google.com/maps/place/Stationsplein+13-22/@51.8430123,5.8546816,17z/data=!3m1!4b1!4m2!3m1!1s0x47c70867ecc0e2f5:0x56bc05c153e07f6" target="_blank">Orikami</a>')
+		.bindPopup('<a href="https://www.google.nl/maps/place/Ridderstraat+27,+6511+TM+Nijmegen/@51.8473808,5.8682741,17z" target="_blank">Orikami</a>')
 		.openPopup();
 	L.tileLayer.provider('OpenStreetMap.HOT').addTo(map);
 };
