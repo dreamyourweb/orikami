@@ -75,10 +75,10 @@ leaflet = function() {
 	map = L.map('map', {
 		scrollWheelZoom: false
 			// zoomControl: false
-	}).setView([51.8473808, 5.8682741], 18);
+	}).setView([51.84735, 5.868483], 17);
 	L.Icon.Default.imagePath = 'packages/mrt_leaflet/images';
 
-	L.marker([51.8473808, 5.8682741]).addTo(map)
+	L.marker([51.84735, 5.868483]).addTo(map)
 		.bindPopup('<a href="https://www.google.nl/maps/place/Ridderstraat+27,+6511+TM+Nijmegen/@51.8473808,5.8682741,17z" target="_blank">Orikami</a>')
 		.openPopup();
 	L.tileLayer.provider('OpenStreetMap.HOT').addTo(map);
