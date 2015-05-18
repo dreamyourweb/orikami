@@ -62,16 +62,18 @@ PortfolioData = [
         {
         img: "images/bierapp.png",
         name: "BierApp",
-        img2: "images/bierapp1.png",
-        img3: "images/bierapp2.png",
-        img4: "images/bierapp3.png",
-        img5: "images/bierapp4.png",
-        img6: "images/bierapp5.png",
-        img2text:"Screen shot of the BierApp." ,
-        img3text:"The location of a pub is also provided." ,
-        img4text:"Pubs are shown on a map." ,
-        img5text:"Based on your ratings, BierApp recommends beers." ,
-        img6text:"This is a visualisation of beers. All beers are clustered on similarity (using hierarchical k-means). Similar beers are next to each other. The square shows a similarity-matrix.",
+        img2: "images/bierapp4.png",
+        img3: "images/bierapp5.png",
+        img4: "images/bierapp1.png",
+        img5: "images/bierapp2.png",
+        img6: "images/bierapp3.png",
+        img2text:"Based on your ratings, the BierApp recommends beers." ,
+        img3text:"This is a visualisation of beers. All beers are clustered on similarity (using hierarchical k-means). Similar beers are next to each other. The square shows a similarity-matrix." ,
+        img4text:"Screen shot of the BierApp." ,
+        img5text:"The location of a pub is also provided." ,
+        img6text:"Pubs are shown on a map.",
+        
+
         techniques: [
             "Objective-C",
             "Java",
