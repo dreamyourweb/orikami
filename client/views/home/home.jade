@@ -16,6 +16,8 @@ template(name='home')
             a(href="#process") Agile
           dd(data-arrival="team")
             a(href="#team") Team
+          dd(data-arrival="blog")
+            a(href="#blog") Blog
           dd(data-arrival="partners")
             a(href="#partners") Partners
           dd(data-arrival="contact")
@@ -103,6 +105,24 @@ template(name='home')
       .medium-6.small-12.columns.medium-pull-6
         +process
 
+  .section.s2b(data-destination="blog")
+    .row
+      .small-12.columns
+        h1 Blog
+    .row
+      .small-6.columns
+        h3 At orikami, we never stop learning. 
+        p Our team shares their latest insights with you through our blog. It will be updated regularly and will discuss subjects ranging from machine learning to microservices to designing for content. 
+      .small-6.columns 
+        h3
+    .row
+      .small-12.columns
+        a.button.round.centered(href="http://orikami.nl/blog/"  target="_blank" title="orikamiBlog") Go to the blog
+
+      //- .small-6.columns
+      //-     a(href="http://orikami.nl/blog/"  target="_blank" title="orikamiBlog")
+      //-       img(src="images/orikami.png" class="img")
+
 
   .black.section.parallax.s7(data-destination="team")
     a(name="team")
@@ -137,8 +157,7 @@ template(name='home')
 
         .hex-push
         +hex url="images/Joris_new.png" background_id="bg5" name="Joris Cuppen" title="Master of Science" descr="educational data wizard" text_align="right"
-        
-
+ 
 
   .black.section.parallax.s9(data-destination="partners")
     a(name="partners")
