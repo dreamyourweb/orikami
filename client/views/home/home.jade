@@ -14,10 +14,10 @@ template(name='home')
             a(href="#products") Products
           dd(data-arrival="process")
             a(href="#process") Agile
-          dd(data-arrival="team")
-            a(href="#team") Team
           dd(data-arrival="blog")
             a(href="#blog") Blog
+          dd(data-arrival="team")
+            a(href="#team") Team
           dd(data-arrival="partners")
             a(href="#partners") Partners
           dd(data-arrival="contact")
@@ -106,6 +106,7 @@ template(name='home')
         +process
 
   .section.s2b(data-destination="blog")
+    a(name="blog")
     .row
       .small-12.columns
         h1 Blog
