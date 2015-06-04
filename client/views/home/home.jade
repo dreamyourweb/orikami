@@ -36,17 +36,21 @@ template(name='home')
         h1(style="text-align:center") What do our data science teams deliver?
         //input.color-picker(value="#5367ce")
     .row(data-equalizer)
+      .medium-4.columns
+        object.svg-image(type="image/svg+xml" data="images/insight2.svg" style="width:40%; margin-left:30%; margin-right:30%")
+      .medium-4.columns
+        object.svg-image(type="image/svg+xml" data="images/learning2.svg" style="width:40%; margin-left:30%; margin-right:30%")
+      .medium-4.columns
+        object.svg-image(type="image/svg+xml" data="images/predictions2.svg" style="width:40%; margin-left:30%; margin-right:30%")
+    .row
       .medium-4.columns(style="padding-right:56px")
-        object.svg-image(type="image/svg+xml" data="images/insight.svg" style="width:40%")
-        h3(style="margin-top:-30px") Real-time insights
+        h3.centered(style="margin-top:-5px") Real-time insights
         p We love old sayings like: "to measure is to know" and "knowledge is power". However it gets confusing when "time is money". That's why we help you to get your insights as quickly as possible. We make data real-time available, through easy to understand interactive data visualizations!
       .medium-4.columns(style="padding-right:56px")
-        object.svg-image(type="image/svg+xml" data="images/learning.svg" style="width:40%")
-        h3(style="margin-top:-30px") Self-learning algorithms
-        p People learn by receiving feedback. Computers can learn too! We give our software feedback, so it can learn. We just tell it when it did something right (give it a carrot) or wrong (hit it gently with a stick). Carrot and stick are very helpful in training our software to do the right thing.
+        h3(style="margin-top:-5px") Self-learning algorithms
+        p <br> People learn by receiving feedback. Computers can learn too! We give our software feedback, so it can learn. We just tell it when it did something right (give it a carrot) or wrong (hit it gently with a stick). Carrot and stick are very helpful in training our software to do the right thing.
       .medium-4.columns
-        object.svg-image(type="image/svg+xml" data="images/predictions.svg" style="width:35%; margin-top-20px")
-        h3(style="margin-top:-30px") Accurate predictions
+        h3.centered(style="margin-top:-5px") Accurate predictions
         p Our brain is able to recognize patterns over time and make predictions for the future based on these patterns. We study the brain and its powerful abilities for recognizing patterns and building predictive models. Our data products lift the power of prediction!
       .row
         .small-12.columns
