@@ -1,8 +1,11 @@
 <template name="myBlogIndexTemplate">
+<div>{{> header}}</div>
 <div class= "blogbackground"> 
-  <h1  style="padding: 20px;">Welcome to our Blog <br> </h1>
-  <h3 style="padding: 20px;"> <br> <br>At orikami, we never stop learning. <br> <br> <br> </h3>
+  <h1  class="row"> <br> <br> <br> <br> <br> Welcome to our Blog <br> </h1>
   </div>
-  <div style="padding: 20px;"> Our team shares their latest insights with you through our blog. <br> It will be updated regularly and will discuss subjects ranging from machine learning to microservices to designing for content. </div>
+  <h3 class="row"> At orikami, we never stop learning.</h3>
+  <div class="row"> Our team shares their latest insights with you through our blog. <br> It will be updated regularly and will discuss subjects ranging from machine learning to microservices to designing for content. </div>
   <div>{{> blogIndex}}</div>
 </template>
+
+<!-- style="padding-left: 150px;" -->
