@@ -1,11 +1,35 @@
 <template name="myBlogIndexTemplate">
-<div>{{> header}}</div>
-<div class= "blogbackground"> 
-  <h1  class="row"> <br> <br> <br> <br> <br> Welcome to our Blog <br> </h1>
+<!-- 	<div>{{> header}}</div> -->
+<div class="topnav">
+  <div class="row">
+    <div class="small-12 columns"> 
+    	<span class="brand">
+        	<img src="images/logo_boat.svg" style="width:32px" class="navbar-logo"/>
+        	<span>orikami</span>
+        	<small>data science boutique</small>
+        </span>
+      <dl class="sub-nav right">
+        <dd data-arrival="science"><a href="http://orikami.nl/#science">Science</a></dd>
+        <dd data-arrival="products"><a href="http://orikami.nl/#products">Products</a></dd>
+        <dd data-arrival="process"><a href="http://orikami.nl/#process">Agile</a></dd>
+        <dd data-arrival="blog"><a href="http://orikami.nl/blog">Blog</a></dd>
+        <dd data-arrival="team"><a href="http://orikami.nl/#team">Team</a></dd>
+        <dd data-arrival="partners"><a href="http://orikami.nl/#partners">Partners</a></dd>
+        <dd data-arrival="contact"><a href="http://orikami.nl/#contact">Contact</a></dd>
+      </dl>
+    </div>
   </div>
-  <h3 class="row"> At orikami, we never stop learning.</h3>
-  <div class="row"> Our team shares their latest insights with you through our blog. <br> It will be updated regularly and will discuss subjects ranging from machine learning to microservices to designing for content. </div>
-  <div>{{> blogIndex}}</div>
+</div>
+	<div class= "blogbackground"> 
+  		<h1 class="white row" style="padding-top: 180px; padding-bottom: 32px;"> Welcome to our Blog </h1>
+ 	</div>
+  	<div> 
+  		<h3 class="row" style="padding-top:32px"> At orikami, we never stop learning.</h3>
+  	</div>
+  	<div class="row"> 
+  		<p> Our team shares their latest insights with you through our blog. <br> It will be updated regularly and will discuss subjects ranging from machine learning to microservices to designing for content. <br> <br> </p>
+  	</div>
+  	<div>{{> blogIndex}}</div>
 </template>
 
 <!-- style="padding-left: 150px;" -->
