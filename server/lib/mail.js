@@ -15,5 +15,6 @@ Meteor.methods({
         subject: "Orikami Contact Form - Message From " + doc.name,
         text: text
     });
+    return true;
   }
 });
