@@ -1,0 +1,69 @@
+template(name='brain')
+  #BrainContainer
+    .logo-container
+      object#logo(type="image/svg+xml" data="images/orikami.svg")
+    .content-container
+      .text#text1
+        | We
+        span.orikami-blue love
+        | the brain
+      .text#text2
+        | We believe things also need
+        span.orikami-blue brains...
+      .text#text3
+        | ...to
+        span.orikami-blue understand
+        | their surroundings...
+      .text#text4
+        | ...and make our
+        span.orikami-blue life
+        | easier
+      .text#text5
+        | Our team of
+        span.orikami-blue hacking
+        | scientists...
+      .text#text6
+        | ...integrates
+        span.orikami-blue data...
+      .text#text7
+        | ...with self-learning
+        span.orikami-blue algorithms...
+      .text#text8
+        | …and
+        span.orikami-blue folds
+        | this into intelligent products
+
+    .navigation-container
+      .row
+        .small-12.columns
+          if animationEnd
+            +brainNavEnd
+          else
+            +brainNav
+
+  //- .section.s4(data-destination="beer")
+  //-   .row
+  //-     .small-12.columns
+  //-       h3 Orikami is a product innovation boutique. Together with our partners we innovate by creating excellent data products. We investigate and build the most elegant algorithms, the most predictive models and the smartest sensors.
+  //-       +similarBeers
+
+template(name="brainNav")
+  ul.inline-list.animated.fadeInUp
+    li: button.round.next-brain
+      i.fa.fa-long-arrow-right
+    li: button.round(data-arrival="science")
+      i.fa.fa-long-arrow-down
+
+template(name="brainNavEnd")
+  ul.inline-list.animated.fadeInUp.brainNavEnd
+    li: button.round(data-arrival="science") Continue
+
+template(name="brainLame")
+  #BrainContainer
+    .logo-container
+      object#logo(type="image/svg+xml" data="images/orikami.svg")
+
+    .navigation-container
+      .row
+        .small-12.columns
+          +brainNavEnd

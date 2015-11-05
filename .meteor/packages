@@ -1,0 +1,38 @@
+# Meteor packages used by this project, one per line.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+standard-app-packages
+iron:router
+noorderstorm:stellar@0.1.0
+arunoda:npm@0.2.6
+natestrauser:animate-css@3.1.1
+natestrauser:font-awesome@4.1.0
+mrt:underscore-string-latest@2.3.3
+natestrauser:jquery-scrollto
+gfk:notifications
+d3
+waitingkuo:jade
+aldeed:autoform
+ewall:foundation
+mrt:leaflet
+less
+tween
+three
+http
+email
+mrt:bootstrap-colorpicker-2
+udondan:slick
+reywood:iron-router-ga
+spiderable
+
+manuelschoebel:ms-seo
+coffeescript
+tap:i18n
+okgrow:iron-router-autoscroll
+meteorhacks:fast-render
+ryw:blog
+accounts-ui
+accounts-github
+meteorhacks:kadira@2.20.1

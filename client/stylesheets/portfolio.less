@@ -1,0 +1,139 @@
+@import "colors";
+
+#portfolio{
+
+  width: 100%;
+
+  svg{
+    width: 100%;
+    circle{
+      cursor: pointer;
+    }
+    text{
+      text-anchor: middle;
+      font-family: santor;
+      pointer-events: none;
+      fill: white;
+      font-size: 15%;
+    }
+  }
+
+  .panel{
+    display: none;
+    // background: none;
+    border: 8px solid;
+    margin-bottom: 0rem;
+    &.active{
+      display: block;
+    }
+    h2{
+      color: @black;
+    }
+    p{
+      font-size: 80%;
+      // color: @white
+    }
+    .techniques{
+      margin-top: 10px;
+      .label { margin-right: 5px; }
+    }
+    .content{
+      -webkit-column-count: 3;
+     -moz-column-count: 3;
+     column-count: 3;
+    }
+  }
+
+  // overflow: hidden;
+  // margin-bottom: 0;
+
+  // .tab-title{
+  //   border-radius: 99999px;
+  //   a{
+  //     background: none;
+  //     width: 100%;
+  //     height: 100%;
+  //     border-radius: 99999px;
+  //     padding: 0;
+  //     .span-wrapper{
+  //       display: table;
+  //       width: 100%;
+  //       height: 100%;
+  //     }
+  //     span{
+  //       vertical-align: middle;
+  //       text-align: center;
+  //       display: table-cell;
+  //     }
+  //   }
+  //   .line{
+  //     position: absolute;
+  //     width: 8px;
+  //     margin-left: auto;
+  //     margin-right: auto;
+  //     left: 0;
+  //     right: 0;
+  //     height: 0;
+  //     z-index: -10;
+  //     transition: height 300ms linear;
+  //   }
+  //   &.active .line{
+  //     height: 600px;
+  //   }
+  // }
+
+  // .tabs-content{
+  //   margin-top: 400px;
+  //   margin-bottom: 0;
+  //   height: 300px;
+  //   .content{
+  //     margin-bottom: 0;
+  //     padding: 1.25rem;
+  //     border: 2px solid @primary-color;
+  //     position: absolute;
+  //     height: 300px;
+  //     p{ color: @black; }
+  //   }
+  // }
+  .screenshots {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+  }
+
+}
+
+.hoi {
+  p {
+    text-align: center;
+  }
+}
+
+.slick-prev {
+ left: -20px;
+}
+
+.slick-prev:before{
+ content:"\2039";
+}
+
+.slick-next {
+ right: -20px;
+
+}
+
+.slick-next:before{
+ content: '\203a';
+}
+
+.slick-next:before, .slick-prev:before  {
+ color: black;
+ font-size:60px;
+}
+
+
+.slick-prev, .slick-next {
+ height: 60px;
+ width: 20px;
+}

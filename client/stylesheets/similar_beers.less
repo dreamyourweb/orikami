@@ -1,0 +1,137 @@
+#similarBeersChart{
+  width: 100%;
+  // padding: 50px;
+  margin-top: -50px;
+  margin-bottom: -50px;
+  svg{
+    overflow: visible;
+  }
+}
+
+.invert {
+  background: #1f1f1f;
+  color: #dcdccc;
+}
+
+.invert h2, .invert h3 {
+  color: #7f9f7f;
+}
+
+.string, .regexp {
+  color: #f39;
+}
+
+.keyword {
+  color: #00c;
+}
+
+.comment {
+  color: #777;
+  font-style: oblique;
+}
+
+.number {
+  color: #369;
+}
+
+.class, .special {
+  color: #1181B8;
+}
+
+.node .Blond{ fill: #1f77b4;}
+.node .Tripel{ fill: #ff7f0e;}
+.node .Dubbel{ fill: #2ca02c;}
+.node .Pilsener{ fill: #d62728;}
+.node .American-IPA{ fill: #9467bd;}
+.node .Bockbier{ fill: #8c564b;}
+.node .Sterke-Blonde{ fill: #e377c2;}
+.node .Fruitbier{ fill: #7f7f7f;}
+.node .Witbier{ fill: #bcbd22;}
+.node .Belgische-IPA{ fill: #17becf;}
+
+.link.Blond{ stroke: #1f77b4;}
+.link.Tripel{ stroke: #ff7f0e;}
+.link.Dubbel{ stroke: #2ca02c;}
+.link.Pilsener{ stroke: #d62728;}
+.link.American-IPA{ stroke: #9467bd;}
+.link.Bockbier{ stroke: #8c564b;}
+.link.Sterke-Blonde{ stroke: #e377c2;}
+.link.Fruitbier{ stroke: #7f7f7f;}
+.link.Witbier{ stroke: #bcbd22;}
+.link.Belgische-IPA{ stroke: #17becf;}
+
+.node{
+  transition: font-size 100ms linear;
+}
+
+path.arc {
+  fill: none;
+}
+
+.node {
+  font-size: 18px;
+}
+
+.node:hover {
+  fill: #1f77b4;
+}
+
+.link {
+  fill: none;
+  stroke: #1f77b4;
+  stroke-opacity: .4;
+  pointer-events: none;
+}
+
+.link.source, .link.target {
+  stroke-opacity: 1;
+  stroke-width: 2px;
+}
+
+// .node.target {
+//   fill: #d62728 !important;
+// }
+
+.link.source {
+  stroke: #fff;
+}
+
+// .node.source {
+//   fill: #2ca02c;
+// }
+
+.link.target {
+  stroke: #fff;
+}
+
+.node.source, .node.target{
+  text{fill: #fff !important;}
+}
+
+.node:hover{
+  font-size: 20px;
+}
+
+.node-tooltip{
+  position: absolute;
+}
+
+.d3-tip {
+  z-index: 5;
+  line-height: 1;
+  p{
+    font-size: 0.75rem;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+  max-width: 300px;
+  .columns {padding :0}
+  .columns:first-child{
+    padding-right: 12px;
+  }
+}

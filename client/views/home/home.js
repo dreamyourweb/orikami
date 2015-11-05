@@ -1,111 +1,87 @@
-Template.home.rendered = function (){
-	init(this.find(".wireframe-wrapper"));
-	animate();
-	$('.wireframe-wrapper canvas').parallax({ "coeff":0.5});
-}
+var map;
 
-Template.home.events({
-	'click .go-button': function(){
-		$.scrollTo( $('.s2'), 500);
+Template.home.rendered = function() {
+	// init(this.find(".wireframe-wrapper"));
+	// animate();
+	$('.wireframe-wrapper canvas').attr('data-stellar-ratio', 0.5);
+	$('.s3').attr('data-stellar-background-ratio', 0.8);
+	$('.s3').attr('data-stellar-vertical-offset', -400);
+	$('.s5').attr('data-stellar-background-ratio', 0.8);
+	$('.s5').attr('data-stellar-vertical-offset', -400);
+	$('.process').attr('data-stellar-background-ratio', 0.8);
+	$('.process').attr('data-stellar-vertical-offset', -400);
+	$('.s7').attr('data-stellar-background-ratio', 0.8);
+	$('.s7').attr('data-stellar-vertical-offset', -600);
+	$.stellar();
+	$(document).foundation();
+	leaflet();
+	$(document).foundation({
+		tab: {
+			callback: function(tab) {
+				console.log(tab);
+			}
+		}
+	});
+	Tracker.autorun(function() {
+    	var perc = Session.get("scrollPercentage");
+	//    ga('send', 'event', 'ViewSite', 'Scroll', perc);
+    	ga('send', 'pageview', "/Scroll"+perc);
+	});
+};
+
+
+
+
+$('.color-picker').colorpicker('show');
+
+Template.home.helpers({
+	showNavBar: function() {
+		if (!Session.get("navbar_visible")) {
+			return "closed";
+		}
+	},
+	webglAvailable: function() {
+		try {
+			var canvas = document.createElement('canvas');
+			return !!(window.WebGLRenderingContext && (
+				canvas.getContext('webgl') ||
+				canvas.getContext('experimental-webgl')));
+		} catch (e) {
+			return false;
+		}
 	}
 });
 
-var container, stats;
-var camera, scene, renderer, particles, geometry, materials = [], parameters, i, h, w, color, velocities, lines_geometry;
-var mouseX = 0, mouseY = 0;
-
-var windowHalfX = window.innerWidth / 2;
-var windowHalfY = window.innerHeight / 2;
-var clock = new THREE.Clock;
-
-function init(element) {
-	scene = new THREE.Scene();
-	camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-
-	renderer = new THREE.WebGLRenderer({antialias: true});
-	renderer.setSize( window.innerWidth, window.innerHeight );
-
-	element.appendChild( renderer.domElement );
-
-	w = 16;
-	h = 9;
-
-	geometry = new THREE.Geometry();
-	lines_geometry = new THREE.Geometry();
-	velocities = [];
-	for (var i = 100; i >= 0; i--) {
-		geometry.vertices.push( new THREE.Vector3( w * Math.random() - w/2, h * Math.random() - h/2, 0) );
-		velocities.push( new THREE.Vector3( 2 * Math.random() - 1, 2 *  Math.random() - 1, 0) );
-	}
-	window.g = geometry;
-	window.v = velocities;
-
-	material = new THREE.ParticleBasicMaterial( { color: 0x000000, size: 5 } );
-	particles = new THREE.ParticleSystem( geometry, material );
-
-	line_material = new THREE.LineBasicMaterial( {vertexColors: THREE.VertexColors, linewidth: 5} );
-	lines = new THREE.Line( lines_geometry, line_material, THREE.LinePieces );
-	// scene.add( particles );
-	scene.add( lines);
-
-	camera.position.z = 5;
-	window.addEventListener( 'resize', onWindowResize, false );
-	clock.start();
-}
-
-
-function render() {
-	var delta = clock.getDelta() * 1000;
-	for (var i = particles.geometry.vertices.length - 1; i >= 0; i--) {
-		particles.geometry.vertices[i].x += velocities[i].x / (1000 * (16.6666666 / delta));
-		particles.geometry.vertices[i].y += velocities[i].y / (1000 * (16.6666666 / delta));
-		if (particles.geometry.vertices[i].x > w/2) { particles.geometry.vertices[i].x -= w }
-		if (particles.geometry.vertices[i].x < -w/2) { particles.geometry.vertices[i].x += w }
-		if (particles.geometry.vertices[i].y > h/2) { particles.geometry.vertices[i].y -= h }
-		if (particles.geometry.vertices[i].y < -h/2) { particles.geometry.vertices[i].y += h }
+Template.home.events({
+	'click .go-button': function() {
+		$.scrollTo($('.s2'), 500, {
+			offset: -49
+		});
+		$("[data-arrival=core]").addClass("active");
+		// Session.set("navbar_visible", true);
+	},
+	'click [data-arrival]': function(event) {
+		$.scrollTo($("[data-destination=" + $(event.currentTarget).data("arrival") + "]"), 500, {
+			offset: -49
+		});
+		$("[data-arrival=core]").addClass("active");
 	}
 
-	lines.geometry.vertices = [];
-	lines.geometry.colors = [];
-	
-	for (var i = particles.geometry.vertices.length - 1; i >= 0; i--) {
-		for (var j = particles.geometry.vertices.length - 1; j >= 0; j--) {
-			// if (particles.geometry.vertices[i].length() < 4 && 
-			// 		particles.geometry.vertices[j].length() < 4){
+});
 
-				distance = particles.geometry.vertices[i].distanceTo(particles.geometry.vertices[j]);
-				if (distance < h/5){
-					lines.geometry.vertices.push(new THREE.Vector3( particles.geometry.vertices[i].x, particles.geometry.vertices[i].y, particles.geometry.vertices[i].z ));
-					lines.geometry.vertices.push(new THREE.Vector3( particles.geometry.vertices[j].x, particles.geometry.vertices[j].y, particles.geometry.vertices[j].z ));				
-					color = new THREE.Color();
-					color.setHSL(0.549, 0.76, 0.525 + ( 0.475 * (1 - distance/(h/5)))  );
-					lines.geometry.colors.push(color);
-					lines.geometry.colors.push(color);
-				}
-			// }
-		};
-	};	
 
-	particles.geometry.verticesNeedUpdate = true;
-	lines.geometry.verticesNeedUpdate = true;
-	lines.geometry.colorsNeedUpdate = true;
-	renderer.render(scene, camera);
-}
+leaflet = function() {
 
-function animate() {
+	map = L.map('map', {
+		scrollWheelZoom: false
+			// zoomControl: false
+	}).setView([51.84735, 5.868483], 17);
+	L.Icon.Default.imagePath = 'packages/mrt_leaflet/images';
 
-	requestAnimationFrame( animate );
+	L.marker([51.84735, 5.868483]).addTo(map)
+		.bindPopup('<a href="https://www.google.nl/maps/place/Ridderstraat+27,+6511+TM+Nijmegen/@51.8473808,5.8682741,17z" target="_blank">Orikami</a>')
+		.openPopup();
+	L.tileLayer.provider('OpenStreetMap.HOT').addTo(map);
+};
 
-	render();
 
-}
-
-function onWindowResize() {
-
-	camera.aspect = window.innerWidth / window.innerHeight;
-	camera.updateProjectionMatrix();
-
-	renderer.setSize( window.innerWidth, window.innerHeight );
-	$('.wireframe-wrapper canvas').parallax({ "coeff":0.5});
-
-}

@@ -1,0 +1,75 @@
+@import "colors";
+
+.section.our-team{
+
+  .team-name{
+    color: @primary-color;
+    padding: 10px 0 10px 0;
+    line-height: 1;
+  }
+
+  .team-title{
+    font-family: santor;
+    font-size: 14px;
+    color: @primary-color;
+    padding: 0 0 0 0;
+    line-height: 1;
+  }
+
+  .team-descr{
+    font-family: santor;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0 0 0 0;
+    line-height: 1;
+  }
+
+  .hex-container{
+    margin-top: 9.525%;
+  }
+
+  .hex-push .hex-wrapper{
+    margin-left: 16.66666%;
+  }
+
+   .hex-superpush .hex-wrapper{
+    margin-left: 33.33333%;
+  }
+
+  .hex-invisible .hex-wrapper{
+    opacity: 0;
+  }
+
+  .hex-wrapper{
+    float: left;
+    width: 33%;
+    height: 0;
+    padding-bottom: 38.10%;
+    position: relative;
+    overflow: visible;
+    margin-top: -9.525%;
+
+    .hex-text{
+      position: absolute;
+      overflow: visible;
+      white-space: nowrap;
+      top: 25%;
+      padding-right: 5%;
+      &.left{
+        right: 100%;
+        text-align: right;
+      }
+      &.right{
+        left: 100%;
+      }
+    }
+
+  }
+
+  .hex{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+}
