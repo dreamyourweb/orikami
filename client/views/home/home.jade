@@ -14,8 +14,6 @@ template(name='home')
             a(href="#products") Products
           dd(data-arrival="process")
             a(href="#process") Agile
-          dd(data-arrival="blog")
-            a(href="#blog") Blog
           dd(data-arrival="team")
             a(href="#team") Team
           dd(data-arrival="partners")
@@ -29,10 +27,7 @@ template(name='home')
     +brainLame
   a(name="science")
   +delau
-  .section
-      .row
-        .small-12.columns
-          +dataLab
+
 
   .section.s2b
     .row
@@ -112,25 +107,6 @@ template(name='home')
 
       .medium-6.small-12.columns.medium-pull-6
         +process
-
-  .section.s2b(data-destination="blog")
-    a(name="blog")
-    .row
-      .small-12.columns
-        h1 Blog
-    .row
-      .small-6.columns
-        h3 At orikami, we never stop learning. 
-        p Our team shares their latest insights with you through our blog. It will be updated regularly and will discuss subjects ranging from machine learning to microservices. 
-      .small-6.columns 
-        object.svg-image(type="image/svg+xml" data="images/blog.svg" style="width:70%")
-    .row
-      .small-12.columns
-        a.button.round.centered(href="/blog" target="_blank" title="orikamiBlog") Go to our blog
-
-      //- .small-6.columns
-      //-     a(href="http://orikami.nl/blog/"  target="_blank" title="orikamiBlog")
-      //-       img(src="images/orikami.png" class="img")
 
 
   .black.section.parallax.s7(data-destination="team")
