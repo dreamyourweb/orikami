@@ -194,7 +194,63 @@ PortfolioData = [
         y_mid: 100,
         color: "rgba(255, 215, 0, 1)",
         index: 7
-    }, 
+    },
+        {
+        img: "images/beslist.png",
+        name: "Beslist",
+        img2: "images/beslistrandomsessions.png",
+        img3: "images/beslistclusters.png",
+        img4: "images/beslistclusters16.png",
+        img5: "images/beslistROC.png",
+        img2text: "Some random users and their sessions over time.",
+        img3text: "Clustering of visitors using SVD to reduce dimensions and K-means clustering.",
+        img4text: "Clustering on visitors using all 2500 categories. Delivering 16 distinct clusters of user behaviour.",
+        img5text: "ROC curve telling how good we are at predicting click-outs of users.",
+        techniques: [
+            "Spark", 
+            "Hadoop",
+            "R",
+            "Julia",
+            "logistic regression",
+            "k-means clustering",
+            "decision trees",
+            "d3.js"
+        ],
+        data_product: "Beslist.nl wanted to know, from the behaviour on their website (500000 visitors daily), who their visitors are and the chance that they are going to buy a product. We devised a model to predict the chance to buy per user, did a cluster analysis which showed 16 types of visitors based on customer behaviour and adviced on how to adapt their internal search engine with these insights. We proposed a learning to rank algorithm on top of Elastic Search and were able to analyze every visitor in real-time.",
+        hours: 5000,
+        x: 15,
+        y: 11,
+        r: 11,
+        y_mid: 100,
+        color: "rgba(155, 215, 50, 1)",
+        index: 8
+    },
+        {
+        img: "images/diaproMS.png",
+        name: "DiaproMS",
+        img2: "images/diapromsapp.png",
+        img3: "images/diapromsinfograph.png",
+        img4: "images/diapromslandscape.png",
+        img2text: "A patient centered application combining all relevant indicators. Developed in co-creation with MS patients.",
+        img3text: "An infographic which gives an overview of all moving parts.",
+        img4text: "The molecular landscape of MS disease.",
+        techniques: [
+            "MongoDB", 
+            "OrientDB",
+            "JS",
+            "Philips Health Suite",
+            "open m-health"
+        ],
+        data_product: "MS is a highly heterogeneous neurodegenerative disease with a heavy personal, economic and societal burden. No two people have the same combination of symptoms and the rate of progression can not be determined. Current strategies work for large patient cohorts, but because of the variability of the disease, not for an individual patient. A personalized (genetic and longitudinal biochemical) patient profile is essential for individual MS (subtype) diagnosis, prognosis and treatment. With our approach we make personalized healthcare possible in MS disease.",
+        hours: 5000,
+        x: 55,
+        y: 15,
+        r: 12,
+        y_mid: 100,
+        color: "rgba(155, 215, 50, 1)",
+        index: 9
+    }
+    
 //        {
 //        img: "images/kplusv.png",
 //        name: "KplusV",
